@@ -1,0 +1,29 @@
+\section{Introduzione}
+
+\noindent I metodi di analisi lineare su tensori rappresentano un ambito di ricerca relativamente recente \cite{HOSVD}. Per questa ragione, il loro utilizzo in campo combustivo è ancora limitato. Tuttavia, i dati sperimentali e numerici provenienti da simulazioni sono frequentemente disponibili in forma tensoriale, rendendo lo studio di questi metodi particolarmente promettente per l'analisi di flussi reattivi.
+
+\noindent Queste note presentano una discussione intuitiva del significato fisico delle componenti di tali metodi quando applicati a dati combustivi. La trattazione matematica rigorosa è disponibile principalmente in \cite{HOSVD} e \cite{HOSVD1}.
+
+\noindent Esistono diverse strategie per decomporre un tensore, ciascuna con caratteristiche e applicazioni specifiche. La scelta del metodo dipende dalle proprietà dei dati e dagli obiettivi dell'analisi.
+
+\subsection{Rango tensoriale e metodologie di decomposizione}
+
+\noindent Il concetto di rango per un tensore è più complesso rispetto al caso matriciale. Per un tensore di ordine $N$, si possono definire diversi tipi di rango:
+
+\begin{itemize}
+    \item \textbf{Rango CP (CANDECOMP/PARAFAC)}: il numero minimo di tensori di rango 1 la cui somma ricostruisce il tensore originale
+    \item \textbf{Rango Tucker}: una generalizzazione del rango matriciale, definito per ciascuna modalità del tensore
+    \item \textbf{Rango multilineare}: legato alla dimensione del tensore core nella decomposizione di Tucker
+\end{itemize}
+\begin{comment}
+
+Le principali metodologie di decomposizione tensoriale includono:
+
+\textbf{Decomposizione CP}: esprime il tensore come somma di tensori di rango 1, offrendo interpretabilità ma potendo risultare numericamente instabile.
+
+\textbf{Decomposizione di Tucker (HOSVD)}: generalizza la SVD matriciale tramite un tensore core e matrici fattoriali per ciascuna modalità, fornendo una rappresentazione più flessibile e stabile.
+
+\textbf{Decomposizioni tensoriali train}: utilizzate per tensori di ordine elevato, offrono vantaggi computazionali in termini di storage e operazioni.
+\end{comment}
+
+\noindent Il main focus per ora e' HOSVD perche' e' quello che si collega meglio a i metodi gia' presenti nel campo.

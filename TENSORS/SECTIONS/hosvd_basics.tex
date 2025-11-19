@@ -1,0 +1,64 @@
+\section{Basi di HOSVD per flussi reattivi}
+Un dataset spaziotemporale di combustione è rappresentato come tensore di quinto ordine $\mathcal{X} \in \mathbb{R}^{I_x \times I_y \times I_z \times I_{\text{chem}} \times I_t}$, dove $I_x$, $I_y$ e $I_z$ denotano le tre dimensioni spaziali ($x$, $y$ e $z$), $I_{\text{chem}}$ rappresenta il numero di variabili termodinamiche, e $I_t$ corrisponde agli istanti temporali. L'HOSVD decompone questo tensore in un core tensor e matrici fattoriali ortogonali lungo ciascun modo:
+\begin{equation}
+\mathcal{X} = \mathcal{G} \times_1 \mathbf{U}^{(1)} \times_2 \mathbf{U}^{(2)} \times_3 \mathbf{U}^{(3)} \times_4 \mathbf{U}^{(4)} \times_5 \mathbf{U}^{(5)}
+\end{equation}
+dove $\mathcal{G} \in \mathbb{R}^{I_x \times I_y \times I_z \times I_{\text{chem}} \times I_t}$ è il core tensor contenente i coefficienti di interazione tra i modi, $\mathbf{U}^{(n)} \in \mathbb{R}^{I_n \times I_n}$ sono le matrici fattoriali ortogonali per il modo $n$, e $\times_n$ denota l'operazione di prodotto lungo il modo $n$. Nello specifico, $\mathbf{U}^{(1)}$, $\mathbf{U}^{(2)}$ e $\mathbf{U}^{(3)}$ catturano le strutture spaziali nelle direzioni $x$, $y$ e $z$, $\mathbf{U}^{(4)}$ identifica le correlazioni termochimiche, e $\mathbf{U}^{(5)}$ rappresenta l'evoluzione temporale.
+
+\noindent Per comprendere davvero come funziona questo algoritmo e' necessario capire bene le nozioni di unfolding, prodotto n e cosa rappresentino le matrici U. Tutte queste nozioni sono spiegate in maniera precisa in \cite{HOSVD}
+
+\subsection{Unfolding}
+La definizione di unfolding lungo il modo $n$ è abbastanza contorta dal punto di vista matematico, ma fortunatamente è abbastanza facile da visualizzare algoritmicamente. 
+L'unfolding di un tensore $\mathcal{T}$ lungo il modo $n$ si ottiene fissando l'indice $I_n$ come righe della matrice risultante e facendo variare una a una le matrici che si ottengono fissando in ordine gli altri indici. Per capire questa operazione nel caso tridimensionale semplice basta guardare la figura \ref{fig:tensor_unfolding_3d}.
+
+\FloatBarrier
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.4\textwidth]{IMAGES/tensor_unfolding_3d.png}
+    \caption{Visualizzazione dell'operazione di unfolding per un tensore tridimensionale lungo i tre modi possibili.}
+    \label{fig:tensor_unfolding_3d}
+\end{figure}
+\FloatBarrier
+
+\noindent Per identificare i blocchi nella matrice unfolded, si procede fissando sequenzialmente tutti gli indici tranne quello del modo lungo cui si sta effettuando l'unfolding. Ad esempio, per un tensore di quinto ordine $\mathcal{T} \in \mathbb{R}^{I_1 \times I_2 \times I_3 \times I_4 \times I_5}$, l'unfolding lungo il modo 3 produce una matrice $\mathbf{T}_{(3)} \in \mathbb{R}^{I_3 \times (I_1 \cdot I_2 \cdot I_4 \cdot I_5)}$ dove:
+
+\begin{itemize}
+    \item Le righe corrispondono all'indice $i_3 = 1, \ldots, I_3$
+    \item Le colonne sono organizzate in blocchi ottenuti fissando sequenzialmente $(i_1, i_2, i_4, i_5)$
+    \item Il primo blocco corrisponde a $(i_1=1, i_2=1, i_4=1, i_5=1)$, il secondo a $(i_1=2, i_2=1, i_4=1, i_5=1)$, e così via seguendo l'ordinamento lessicografico degli indici
+\end{itemize}
+
+\noindent Pertanto la matrice di unfolding lungo il modo n ha come righe le variazioni di tutto il tensore al fissarsi dell'indice n del tensore. Queste righe quindi contengono tutta la informazione riguardo a quanto variano i dati per un fissato parametro al loro interno. Le colonne di un unfolding non hanno nessun significato fisico visto che e' una brodaglia di tutto con tutto.
+
+\subsubsection{SVD degli unfolding}
+Le matrici fattoriali $\mathbf{U}^{(n)}$ dell'HOSVD si ottengono calcolando la Singular Value Decomposition (SVD) di ciascun unfolding $\mathbf{T}_{(n)}$:
+\begin{equation}
+\mathbf{T}_{(n)} = \mathbf{U}^{(n)} \mathbf{\Sigma}^{(n)} (\mathbf{V}^{(n)})^T
+\end{equation}
+dove:
+\begin{itemize}
+\item $\mathbf{U}^{(n)} \in \mathbb{R}^{I_n \times I_n}$ è la matrice ortogonale dei vettori singolari sinistri, che costituisce la base per il modo $n$
+\item $\mathbf{\Sigma}^{(n)} \in \mathbb{R}^{I_n \times (I_1 \cdots I_{n-1} I_{n+1} \cdots I_N)}$ contiene i valori singolari del modo $n$ ordinati per magnitudine decrescente
+\item $\mathbf{V}^{(n)}$ è la matrice dei vettori singolari destri (che non viene utilizzata nella ricostruzione HOSVD)
+\end{itemize}
+
+\noindent I vettori singolari sinistri in $\mathbf{U}^{(n)}$ sono le direzioni principali di variazione lungo il modo $n$. Dato che le righe dell'unfolding catturano le variazioni del tensore al fissarsi dell'indice $n$, i vettori in $\mathbf{U}^{(n)}$ identificano i pattern dominanti ossia le direzioni nello spazio in cui vivono i vettori riga dell'unfolding che meglio catturano la loro varianza. 
+
+\subsection{Prodotto lungo il modo $n$ ($n$-product)}
+Il prodotto lungo il modo $n$ (o $n$-product), denotato con $\times_n$, è la moltiplicazione di un tensore per una matrice lungo uno specifico modo. 
+
+\noindent Dato un tensore $\mathcal{T} \in \mathbb{R}^{I_1 \times I_2 \times \cdots \times I_N}$ e una matrice $\mathbf{M} \in \mathbb{R}^{J \times I_n}$, il prodotto $\mathcal{Y} = \mathcal{T} \times_n \mathbf{M}$ produce un nuovo tensore $\mathcal{Y} \in \mathbb{R}^{I_1 \times \cdots \times I_{n-1} \times J \times I_{n+1} \times \cdots \times I_N}$ dove:
+\begin{equation}
+\mathcal{Y} = \mathcal{T} \times_n \mathbf{M} \quad \Leftrightarrow \quad \mathbf{Y}_{(n)} = \mathbf{M} \cdot \mathbf{T}_{(n)}
+\end{equation}
+
+\noindent Il prodotto lungo il modo $n$ equivale a: effettuare l'unfolding del tensore lungo il modo $n$ $\rightarrow$ moltiplicare la matrice $\mathbf{M}$ per l'unfolding $\mathbf{T}_{(n)}$ $\rightarrow$ riorganizzare il risultato nella forma tensoriale
+
+\subsection{Costruzione core tensor}
+
+Il core tensor e' costruito attraverso:
+\begin{equation}
+\mathcal{G} = \mathcal{X} \times_1 (\mathbf{U}^{(1)})^T \times_2 (\mathbf{U}^{(2)})^T \times_3 (\mathbf{U}^{(3)})^T \times_4 (\mathbf{U}^{(4)})^T \times_5 (\mathbf{U}^{(5)})^T
+\end{equation}
+
+\noindent Questa operazione va pensata moltiplicazione per moltiplicazione per capire bene cosa significa. Moltiplicare il tensore unfoldato per la matrice $\mathbf{U}^{(n)}$ trasposta equivale a proiettare le sue righe nello spazio ortogonale che massimizza la varianza. Ricordiamo che le righe dell'unfolding lungo il modo $n$ contengono tutta la variazione del tensore al fissarsi dell'indice $n$-esimo. Proiettare queste righe sulla base dei vettori singolari di $\mathbf{U}^{(n)}$ significa esprimere questa variazione nelle direzioni principali che catturano la massima varianza.
