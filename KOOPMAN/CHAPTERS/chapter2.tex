@@ -1,0 +1,88 @@
+\chapter{Teoria di Koopman: basi teoriche}
+La teoria di queste cose è veramente ricchissima e richiede nozioni di matematica avanzata che attualmente mi mancano. In ogni caso sono stato in grado di seguire le lezioni di I. Mezić e ho provato a comprendere di cosa si parla anche da un punto di vista non così superficiale. In ogni caso qualora uno volesse davvero diventare un drago e affrontare sta disciplina come dio comanda servono:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Analisi funzionale}: teoria degli spazi di Hilbert e Banach, operatori lineari (limitati e illimitati), teoria spettrale, operatori compatti e autoaggiunti
+    \item \textbf{Teoria della misura}: spazi di misura, teoria ergodica, misure invarianti, trasformazioni che preservano la misura
+    \item \textbf{Sistemi dinamici}: teoria qualitativa dei sistemi dinamici, stabilità, varietà invarianti, teoria del chaos
+    \item \textbf{Geometria e topologia differenziale}: varietà differenziabili, campi vettoriali, forme differenziali, fibrati
+    \item \textbf{Analisi armonica}: trasformata di Fourier, teoria delle rappresentazioni (almeno le basi), analisi spettrale
+    \item \textbf{Equazioni alle derivate parziali}: teoria dei semigruppi, problemi di Cauchy, equazioni di evoluzione
+\end{itemize}
+Noi ci buttiamo comunque e vediamo cosa ne salta fuori :)
+
+\section{Osservabili e operatori evoluzione}
+
+Prendiamo un sistema dinamico $\mathbf{\dot{x}}(t) = \mathbf{F}(\mathbf{x}(t))$ definito su uno spazio delle fasi $\mathcal{M}$. $\mathcal{M}$ in generale puo' essere un oggetto abbastanza complicato, ma per ora si puo' pensare (e spesso nelle applicazioni e') un qualche $\mathbb{R}^n$. \\
+Un \textbf{osservabile} e' definito come  una funzione:
+    \begin{equation}
+    \mathbf{g}: \mathcal{M} \mapsto \mathbb{C}^n
+    \label{eq:def_osservabile}
+    \end{equation}
+Chiaramente se riprendo il flusso di un sistema dinamico $\mathbf{S}$ si ha che l'osservabile segue l'evoluzione di un sistema dinamico a partire da $\textbf{x}_0$ con $\mathbf{g}(t, \mathbf{x}_0)$ = $\mathbf{g}(\mathbf{S}^t(\mathbf{x}_0))$.
+Da questo posso definire una famiglia di operatori che agiscono sullo spazio degli osservabili e che descrivono la loro evoluzione nel tempo:
+\begin{equation}
+    \mathbf{U}^t[\mathbf{g}](\mathbf{x}_0) = \mathbf{g}(\mathbf{S}^t(\mathbf{x}_0))
+\end{equation}
+Se $\mathcal{M}$ e' un oggetto matematico continuo (non rigoroso, ma si capisce cosa si intende) allora gli operatori chiaramente sono oggetti infinito dimensionali, perche' su un continuo posso definire infinite funzioni (Questa roba qua e' spiegata da culo).
+La proprieta' forse piu' importante di tutte di questi operatori e' che sono \textbf{lineari}.
+
+\begin{proposition}[Linearità degli operatori di evoluzione]
+Gli operatori $\mathbf{U}^t$ definiti da
+$$\mathbf{U}^t[\mathbf{g}](\mathbf{x}_0) = \mathbf{g}(\mathbf{S}^t(\mathbf{x}_0))$$
+sono lineari sullo spazio degli osservabili.
+\end{proposition}
+
+\begin{proof}
+Un operatore è lineare se soddisfa:
+\begin{enumerate}
+    \item \textbf{Additività}: $\mathbf{U}^t[\mathbf{g}_1 + \mathbf{g}_2] = \mathbf{U}^t[\mathbf{g}_1] + \mathbf{U}^t[\mathbf{g}_2]$
+    \item \textbf{Omogeneità}: $\mathbf{U}^t[\alpha \mathbf{g}] = \alpha \mathbf{U}^t[\mathbf{g}]$ per ogni $\alpha \in \mathbb{C}$
+\end{enumerate}
+\textit{Additività:} Consideriamo due osservabili $\mathbf{g}_1, \mathbf{g}_2: \mathcal{M} \to \mathbb{C}^n$ e un punto iniziale $\mathbf{x}_0 \in \mathcal{M}$.
+\begin{align*}
+    \mathbf{U}^t[\mathbf{g}_1 + \mathbf{g}_2](\mathbf{x}_0) &= (\mathbf{g}_1 + \mathbf{g}_2)(\mathbf{S}^t(\mathbf{x}_0)) \\
+    &= \mathbf{g}_1(\mathbf{S}^t(\mathbf{x}_0)) + \mathbf{g}_2(\mathbf{S}^t(\mathbf{x}_0)) \\
+    &= \mathbf{U}^t[\mathbf{g}_1](\mathbf{x}_0) + \mathbf{U}^t[\mathbf{g}_2](\mathbf{x}_0)
+\end{align*}
+\textit{Omogeneità:} Consideriamo un osservabile $\mathbf{g}: \mathcal{M} \to \mathbb{C}^n$, uno scalare $\alpha \in \mathbb{C}$ e un punto iniziale $\mathbf{x}_0 \in \mathcal{M}$.
+\begin{align*}
+    \mathbf{U}^t[\alpha \mathbf{g}](\mathbf{x}_0) &= (\alpha \mathbf{g})(\mathbf{S}^t(\mathbf{x}_0)) \\
+    &= \alpha \cdot \mathbf{g}(\mathbf{S}^t(\mathbf{x}_0)) \\
+    &= \alpha \cdot \mathbf{U}^t[\mathbf{g}](\mathbf{x}_0)
+\end{align*}
+\end{proof}
+\noindent Vale la pena sottolineare che l'operatore agisce fra due spazi funzionali:
+$$\mathbf{U}^t: \mathcal{F}(\mathcal{M}, \mathbb{C}^n) \to \mathcal{F}(\mathcal{M}, \mathbb{C}^n)$$
+dove $\mathcal{F}(\mathcal{M}, \mathbb{C}^n)$ è lo spazio delle funzioni (osservabili) $\mathbf{g}: \mathcal{M} \to \mathbb{C}^n$. \\
+
+\noindent Quindi se anziche' studiare la dinamica del sistema $\mathbf{x}$ studio la dinamica degli osservabili $\mathbf{g}$ posso usare tutte le tecniche spettrali che usavo nell'analisi di sistemi lineari. Il problema e' appunto approssimare bene questo operatore $\mathbf{U}$ infinito dimensionale. Questo sara' visto piu' avanti, per ora ci si concentra sul fatto che l'operatore sia lineare e sul che struttura abbia il suo spettro.
+
+\section{Autofunzioni}
+Le autofunzioni di $\mathbf{U}^t$ sono osservabili $\mathbf{\phi}: \mathcal{M} \to \mathbb{C}^n$ che soddisfano:
+\begin{equation}
+    \mathbf{U}^t[\mathbf{\phi}](\mathbf{x}_0) = e^{\lambda t} \mathbf{\phi}(\mathbf{x}_0), \quad \forall \mathbf{x}_0 \in \mathcal{M}
+\label{eq:def_autofunzioni}
+\end{equation}
+dove $\lambda \in \mathbb{C}$ è l'autovalore associato. 
+\noindent E' ora utile vedere un caso semplice:
+\begin{example}[Sistema stabile]\label{es:sistema_stabile}
+Consideriamo il sistema dinamico:
+\begin{equation*}
+    \dot {z} = -\lambda z, \quad \lambda > 0
+\end{equation*}
+con condizione iniziale $z(0) = z_0$, si ha $z(t) = \mathbf{S}^t(z_0) = e^{-\lambda t}z_0$. Prendo $\phi(z) =z$:
+\begin{equation*}
+    \mathbf{U}^t[\phi](z) = \mathbf{S}^t(\phi(z)) = \mathbf{S}^t(z) = e^{-\lambda t}z
+\end{equation*}
+Dunque $\phi$ e' autofunzione con autovalore $\lambda$. 
+\end{example}
+\noindent Il risultato ottenuto nell'esempio e' generalizzabile (non lo faccio per ora) a tutti i sistemi lineari. Con cio' intendo che gli autovalori di $\mathbf{A}$ (matrice associata al sistema lineare) sono anche autovalori di $\mathbf{U}$.
+Una ulteriore proprieta' importante delle autofunzione puo' essere vista sull'esempio~\ref{es:sistema_stabile}
+\begin{align*}
+    \phi(z) &= z^n, \quad n \in \mathbb{N} \\
+    \mathbf{U}^t[\phi](z) &= \mathbf{S}^t(\phi(z)) = \mathbf{S}^t(z^n) = e^{-\lambda t}z^n
+\end{align*}
+Ossia anche la moltiplicazione di una autofunzione per se' stessa e' autofunzione. Questa proprieta' e' molto forte a vale la pena generalizzare.
+
+\subsection{Proprieta' algebriche delle autofunzioni}
+

@@ -1,0 +1,23 @@
+% Chapter 1
+\chapter{Introduzione}
+
+La teoria dell'operatore di Koopmane nasce come un nuovo approccio legato allo studio di sistemi dinamici. L'idea nasce mentre Koopman lavora alle basi della meccanica quantistica. L'idea che da inizio a tutto e' quella di studiare sistemi classici attraverso gli osservabili come si fa in meccanica quantistica.
+Questo approccio e' fondamentalmente diverso dai precedenti e come vedremo in queste note porta con se benefici e problemi unici. Prima di inizare con la vera e propria teoria, e' opportuno fare un breve recap dei 3 approcci storicamente (e tuttora) usati per lo studio dei sistemi dinamici.
+
+\begin{itemize}
+    \item \textbf{Newton}: $\mathbf{x}(t) \in \mathbb{R}^n$ descrive lo stato del sistema. L'evoluzione è governata dal sistema dinamico:
+    \begin{equation}
+    \mathbf{\dot{x}}(t) = \mathbf{F}(\mathbf{x}(t))
+    \label{eq:dynamical_system}
+    \end{equation}  
+    con $\mathbf{F}(\mathbf{x},t)$ campo vettoriale che descrive l'evoluzione del sistema. Se risolvo l'equazione per $\mathbf{x}(t)$ usando il vincolo e fisso una condizione iniziale $\mathbf{x}_0$ ottengo $\mathbf{x}(t) = \mathbf{S}(\mathbf{x}_0, t)$. $\mathbf{S}$ prende il nome di flusso e di solito viene vista come una funzione del tempo parametrizzata nella seguente maniera: $\mathbf{S}^t(\mathbf{x}_0)$ porta il sistema da $\mathbf{x}_0$ al tempo $0$ a $\mathbf{x}(t)$ al tempo $t$.
+    \item \textbf{Poincar\'e}: Poincar\'e si rende conto che ci sono sistemi per cui l'approccio di Newton non funziona, ad esempio per il problema dei 3 corpi l'equazione della dinamica non ha soluzioni analitiche. Cambia modo di guardare il problema e si rende conto che si può dire molto su un sistema dinamico studiando la parte destra dell'eq~\ref{eq:dynamical_system}. Questo approccio tende a essere quello preferito dai fisici e dalla teoria di Poincar\'e derivano le principali nozioni di interesse per un sistema dinamico: punti fissi $\mathbf{F}(\mathbf{x}) = \mathbf{0}$, orbite periodiche $\mathbf{x}(t+\tau) = \mathbf{x}(t)$, varietà stabili o instabili, mappe di Poincar\'e. Da questa teoria deriva anche il concetto importante per l'approccio operatoriale di \textbf{invariante}: quantità che rimangono costanti lungo l'evoluzione, $I(\mathbf{x}(t)) = I(\mathbf{x}_0)$ per ogni $t$. Gli invarianti hanno sempre un significato fisico (energia, momento angolare, carica) e caratterizzano la dinamica del sistema.  \\ Un problema ababstanza grosso e' pero' che quando aumentano i gradi di liberta' si incontrano difficolta'. La geometria di uno spazio molto alto dimensionale e' un bordello e non si puo' manco visualizzare.
+    \item \textbf{Wiener}: Dei tre decisamente il meno comune ma comunque molto utilizzato in problemi concreti. Me ne frego di definire un modello per il mio sistema dinamico e mi limito a osservare i dati che misuro. Una volta che ho preso i dati in ingresso e uscita guardo lo spettro di frequenze del mio sistema e come si comporta. E' giusto citare questo approccio perche' la teoria del controllo e' costruita principalmente su questa roba qua, per quanto riguarda la teoria degli operatori interessa abbastanza poco.
+\end{itemize}
+Conoscere le basi della teoria dei sistemi dinamici è fondamentale per avere un punto di appoggio solido nell'approccio operatoriale. Il caldo consiglio che do e' che prima di buttarsi a leggere le note di un dottorando uno si concentri piu' che altro su questi libri scritti da mostri sacri \cite{landau1960mechanics}, \cite{arnol2013mathematical}
+
+\subsection*{Approccio di Koopman}
+
+L'approccio di Koopman e' completamente differente da un punto di vista concettuale. Invece che studiare direttamente la dinamica del sistema si studia la dinamica di uno spazio di funzioni sul sistema. Il vantaggio che si trae da cio' e' che l'operatore che descrive l'evoluzione degli osservabili e' lineare, quindi si possono sfruttare tutte le conoscenze della dinamica di sistemi lineari a sistemi che in generale non lo sono. Lo svantaggio e' che lavorando in uno spazio funzionale questo operatore spesso e' infinito dimensionale perche' ho infinite funzioni scalari che vanno dallo spazio del mio sistema dinamico a $\mathbb{R}^n$.  \\
+
+\noindent L'idea e' vecchissima (1931) \cite{koopman1931hamiltonian}, e' soggetta a nuovo interesse perche' stanno nascendo recentissimamente delle tecniche in grado di approssimare molto bene numericamente questo operatore partendo da misure di un sistema dinamico.
