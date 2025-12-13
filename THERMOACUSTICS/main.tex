@@ -1,0 +1,47 @@
+\documentclass[12pt,a4paper]{book}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{cite}
+\usepackage{placeins}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{bbm}
+\usepackage{amsthm}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposizione}
+\newtheorem{corollary}[theorem]{Corollario}
+\newtheorem{example}{Esempio}[section]
+\geometry{margin=1in}
+
+% Title information
+\title{Introduzione alle instabilita' termoacustiche}
+\author{Isacco Faglioni}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+\input{CHAPTERS/chapter1.tex}
+\input{CHAPTERS/chapter2}
+\input{CHAPTERS/chapter3}
+
+\backmatter
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

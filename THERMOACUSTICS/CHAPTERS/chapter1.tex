@@ -1,0 +1,30 @@
+\chapter*{Introduzione}
+
+Queste note sono il frutto di un primissimo approccio alla discipllina  \textit{Thermoacustic instabilities}. E' un campo della combustione difficile, ma abbastanza figo che combina appunto la combustione con la teoria del controllo e la teoria dei sistemi dinamici nonlineari e in parte lineari. Nonostante Soledad dica che non ci sia spazio per Koopman in questo campo non sono convintissimo, e in ogni caso da questa primissima introduzione mi sembra un problema interessantissimo in generale anche per altri approcci.\\
+
+\noindent Queste note altro non sono che la bella degli appunti presi seguendo il corso di Jacqueline O'Connor alla Princeton summer school del 2024. Le 6 ore di lezione sono su youtube al seguente link: \url{https://www.youtube.com/watch?v=PhyY9HYRz8A&list=  PLbInEHTmP9VZ_etKwZZvrVutA7F4YN2h1} \\
+
+\noindent Le lezioni sono pensate per persone interessate alla combustione ma con nessuna conoscenza pregressa su termoacustica. Gli obbiettivi principali che si pone sono i seguenti:
+\begin{itemize}
+    \item Capire le tecnologie per cui le instabilità combustive sono importanti
+    \item Descrivere il coupling termo-acustico
+    \item Speigare la cinematica di fiamma e la risposta di essa a input armonici
+    \item Definire e capire le basi della \textit{Flame transfer function}
+    \item Spiegare la risposta di fiamma e come essa e' legata alle instabilita'
+\end{itemize}
+
+\noindent Queste note sono solo la base, se il lavoro prosegue ha senso ampliarle o direttamente scrivere delle note dove la parte fisica e tecnica e' approfondita meglio.
+\section*{Overview delle combustion instabilities}
+
+Le combustion instabilities sono un problema enorme in un sacco di ambiti: razzi, turbine a gas di ogni tipologia e anche fornaci industriali.
+Sono responsabili di danni gravissimi agli apparati combustivi, fra cui in alcuni casi anche la distruzione degli stessi. Le instabilita' causano danni economici, aumentano le emissioni e soprattutto riducono il range di instabilita'. In figura~\ref{fig:damaged_combustors} e' riportato un apparato usato per testing e quindi disgtrutto da instabilita' termoacustiche.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.48\textwidth]{IMAGES/themoacustic_effects2.jpg}
+    \caption{Apparati combustivi danneggiati da instabilità termoacustiche.}
+    \label{fig:damaged_combustors}
+\end{figure}
+
+\noindent Nella pratica e' raro che si arrivi al punto di distruggere un apparato combustivo (succede pero' eh), quello che succede e' che i range di operatibilita' degli apparati sono estremamente ridotti per evitare di entrare in zone pericolose in cui potrebbe succedere.
+Le instbilita' termoacustiche si presentano tutte le volte che una fiamma si trova in uno spazio chiuso. E' proprio per questo che e' un problema di cosi' larga scala. Nei laboratori che ricercano sta roba si testano dalle propulsioni dei razzi alle caldaie da casa. Un ottimo libro che riporta vari casi reali di instabilita' e come sono stati affrontati nella pratica e' \cite{lieuwen2005combustion}.
+
