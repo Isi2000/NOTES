@@ -208,6 +208,11 @@ INPUT ./CHAPTERS/chapter2.tex
 INPUT ./CHAPTERS/chapter2.tex
 INPUT ./CHAPTERS/chapter2.tex
 INPUT CHAPTERS/chapter2.tex
+INPUT ./IMAGES/long_wave.png
+INPUT ./IMAGES/long_wave.png
+INPUT ./IMAGES/long_wave.png
+INPUT ./IMAGES/long_wave.png
+INPUT ./IMAGES/long_wave.png
 INPUT ./CHAPTERS/chapter3.tex
 INPUT ./CHAPTERS/chapter3.tex
 INPUT ./CHAPTERS/chapter3.tex

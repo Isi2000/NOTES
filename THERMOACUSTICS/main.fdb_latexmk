@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1765646223.59861 "main.aux" "main.bbl" "main" 1765646226.38075 0
+["bibtex main"] 1765646579.85223 "main.aux" "main.bbl" "main" 1765646616.54838 0
   "./references.bib" 1765645753.5544 279 75fdf7cf3a384617eae5779ea7144843 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1765646225.53116 745 4588b995db1f12c9eac92395177c6749 "pdflatex"
+  "main.aux" 1765646615.73332 979 0971dc0e2a2988ce54332c5547c1a2a3 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1765646223.93633 "/home/isacco/NOTES/THERMOACUSTICS/main.tex" "main.pdf" "main" 1765646226.38135 0
+["pdflatex"] 1765646614.15967 "/home/isacco/NOTES/THERMOACUSTICS/main.tex" "main.pdf" "main" 1765646616.54884 0
   "/etc/texmf/web2c/texmf.cnf" 1757946577.80186 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/isacco/NOTES/THERMOACUSTICS/main.tex" 1765644503.18545 930 4723d11bcf02636414f4e5ef52bcad63 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -114,15 +114,16 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1757947762.57847 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1757947862 8214715 ba94643c8e299ceb432b22415534492d ""
-  "CHAPTERS/chapter1.tex" 1765645861.63606 3088 47fe3c5ba8cd64d8215cc7d288db12a3 ""
-  "CHAPTERS/chapter2.tex" 1765646210.17048 507 442b59224ba2ca90b9e408b0b0a139a2 ""
-  "CHAPTERS/chapter3.tex" 1765646220.71555 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "CHAPTERS/chapter1.tex" 1765646577.02239 3088 47fe3c5ba8cd64d8215cc7d288db12a3 ""
+  "CHAPTERS/chapter2.tex" 1765646613.745 742 e241a692fe7bc1e524827ec3d7190b1f ""
+  "CHAPTERS/chapter3.tex" 1765646236.62327 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "IMAGES/long_wave.png" 1765646433.96254 31126 036f73037477ad7b0904ea63095c3462 ""
   "IMAGES/themoacustic_effects2.jpg" 1765645277.48334 47755 12f29fd6b45de3fbb188533f4a342108 ""
-  "main.aux" 1765646225.53116 745 4588b995db1f12c9eac92395177c6749 "pdflatex"
-  "main.bbl" 1765646223.92329 312 f84d4f8f6c56b8af9b0325304b7eca6a "bibtex main"
-  "main.out" 1765646225.53316 83 e290969a6ac7f6346456c6565264d75c "pdflatex"
+  "main.aux" 1765646615.73332 979 0971dc0e2a2988ce54332c5547c1a2a3 "pdflatex"
+  "main.bbl" 1765646580.18249 312 f84d4f8f6c56b8af9b0325304b7eca6a "bibtex main"
+  "main.out" 1765646615.7336 83 e290969a6ac7f6346456c6565264d75c "pdflatex"
   "main.tex" 1765644503.18545 930 4723d11bcf02636414f4e5ef52bcad63 ""
-  "main.toc" 1765646225.53316 64 cdab7fd8a6465ba7d99b25dfbc17f5de "pdflatex"
+  "main.toc" 1765646615.73463 64 cdab7fd8a6465ba7d99b25dfbc17f5de "pdflatex"
   (generated)
   "main.aux"
   "main.log"
