@@ -11,4 +11,95 @@
         \label{fig:long_wave}
 \end{figure}
 
-\noindent Il suono e' un'onda di pressione, pero' puo' essere pensata anche come un onda di velocita'. Le zone del gas a bassa pressione si muovono ad alta velocita e viceversa.
+\noindent Il suono e' un'onda di pressione, pero' puo' essere pensata anche come un onda di velocita'. (Le zone del gas a bassa pressione si muovono ad alta velocita e viceversa. DA RIVEDERE)
+Le instabilita' sono problemi in generali molto difficili da affrontare anche nella loro forma piu' semplice. Pertanto in queste prime note ci limitiamo a considerare il caso di perturbazioni \textit{"lineari"} ossia piccole rispetto alla fiamma $\implies$ no esplosioni o shock.
+Le perturbazioni vengono dette \textit{lineari} poiché, assumendone l'ampiezza sufficientemente piccola, è possibile linearizzare attorno allo stato di base (la fiamma). Trascurando i termini non lineari di ordine superiore nella perturbazione, il problema risultante è lineare nella variabile perturbata. In caso di problemi di questo tipo, il suono si espande isotropicamente, ossia in maniera uguale in tutte le direzioni seguendo:
+\begin{equation}
+    c^2 = \gamma RT, \ \gamma = \frac{c_p}{c_v}
+\end{equation}
+
+\noindent Come tutte le onde, le onde sonore soddisfano l'equzione d'onda (ricordi di Maurone nazionale e il suo corso di fenomeni ondulatori):
+\begin{equation}
+    \nabla^2 p - \frac{1}{c^2} \frac{\partial^2 p}{\partial t^2} = 0
+\end{equation}
+
+Se dopo una magistrale in fisica hai effettivamente bisogno di rimetterti a studiare la funzione d'onda e' il caso di cambiare vita, quindi ci metto proprio una discussione piccola piccola per rinfrescare la memoria. Nel caso 1D:
+\begin{equation}
+    \frac{\partial^2 p}{\partial x^2}  - \frac{1}{c^2} \frac{\partial^2 p}{\partial t^2} = 0 \implies p(x,t) = f(ct + x) + g(ct - x)   
+\end{equation}
+
+\noindent La soluzione e' una funzione che si evolve avanti e indietro nella direzione x e solo avanti nel tempo. Una famiglia di funzioni che soddisfa queste condizioni e' quella delle funzinoi armoniche $e^{i\theta}$, dunque:
+\begin{equation}
+    p(x,t) = Re{\{(p_+ e^{ikx} - p_- e^{-ikx})e^{-i\omega t} \}}
+\end{equation}
+\noindent Spesso in acustica si preferisce lavorare nel dominio della trasformata di Fourier. Nel nostro caso specifico di instabilita' termoacustiche e' ancora piu' comodo perche' e' qualcosa che viene bene anche per la teoria del controllo. L'equazione d'onda nel dominio di Fourier diventa una ODE:
+\begin{align} 
+    \frac{\partial^2 \hat{p}}{\partial x^2}  - k^2 \hat{p} = 0, \ k=\frac{\omega}{c}\label{eq:pressione_fourier}, \ \omega = 2\pi f \\
+\hat{p}(x,t) = \hat{p}_+ e^{ikx} + \hat{p}_{-} e^{-ikx} 
+\end{align}
+Da questa brevissimissimima discussione, si puo' vedere da un punto di vista matematico il concetto di \textbf{Risonanza}, attorno a cui gira tutto il problema legato alle instabilita' termoacustiche.
+
+\section{Risonanza}
+La risonanza e' definita come il fenomeno per cui, in un sistema oscillante, l'ampiezza delle oscillazioni indotte da una sollecitazione esterna assume valori molto elevati. Questo fenomeno e' spiegabile da un punto di vista matematico dall'equazione~\ref{eq:pressione_fourier} a cui viene aggiunta una forzante periodica.
+Consideriamo un tubo di lunghezza $L$ aperto in $x=0$ e chiuso in $x=L$, sottoposto a una forzante armonica. L'equazione d'onda forzata nel dominio di Fourier diventa:
+\begin{equation}
+    \frac{\partial^2 \hat{p}}{\partial x^2} + k^2 \hat{p} = -\frac{F_0}{c^2} \delta(x - x_0)
+\end{equation}
+
+dove $F_0$ rappresenta l'ampiezza della forzante posizionata in $x_0$.
+
+Le condizioni al contorno sono:
+\begin{align}
+    \hat{p}(0) &= 0 \quad \text{(estremità aperta)} \\
+    \frac{\partial \hat{p}}{\partial x}\bigg|_{x=L} &= 0 \quad \text{(estremità chiusa)}
+\end{align}
+
+La soluzione puo' essere espressa come serie sui modi normali del sistema:
+\begin{equation}
+    \hat{p}(x) = \sum_{n=1}^{\infty} A_n \sin\left(\frac{(2n-1)\pi x}{2L}\right)
+\end{equation}
+
+dove i numeri d'onda naturali sono $k_n = \frac{(2n-1)\pi}{2L}$, corrispondenti alle frequenze di risonanza:
+\begin{equation}
+    \omega_n = c k_n = \frac{(2n-1)\pi c}{2L}
+\end{equation}
+
+Sostituendo nell'equazione forzata e applicando l'ortogonalità delle funzioni seno, si ottiene l'ampiezza di ciascun modo:
+\begin{equation}
+    A_n = \frac{F_0}{c^2} \frac{\sin(k_n x_0)}{k_n^2 - k^2}
+\end{equation}
+
+Questa espressione puo' essere riscritta come:
+\begin{equation}
+    A_n = \frac{4F_0 L^2}{(2n-1)^2 \pi^2 c^2} \frac{\sin(k_n x_0)}{1 - (\omega/\omega_n)^2} \label{eq:ampiezza_risonanza}
+\end{equation}
+
+\subsection{Divergenza all'esatta frequenza di risonanza}
+
+Dall'equazione~\eqref{eq:ampiezza_risonanza} si osserva che quando la frequenza di eccitazione $\omega$ si avvicina a una delle frequenze naturali $\omega_n$, il denominatore tende a zero:
+\begin{equation}
+    \lim_{\omega \to \omega_n} A_n = \lim_{\omega \to \omega_n} \frac{4F_0 L^2}{(2n-1)^2 \pi^2 c^2} \frac{\sin(k_n x_0)}{1 - (\omega/\omega_n)^2} \to \pm\infty
+\end{equation}
+
+\noindent La divergenza rappresenta la risonanza ideale: in assenza di smorzamento, l'energia fornita dalla forzante si accumula indefinitamente nel modo risonante, e l'ampiezza delle oscillazioni cresce linearmente nel tempo fino a valori infiniti.
+
+\textbf{NOTA: la sezione sulla risonanza l'hai fatta scriver a claude quindi da rivedere}
+
+\section{Risonanza di un cilindro}
+
+In particolare per un cilindro pieno di gas ci sono 3 modi oscillatori:
+\begin{itemize}
+    \item \textbf{Longitudinale}: tipicamente descritto da seni e corrispondenti 
+    \item \textbf{Radiale}: tipicamente descritto da funzioni di Bessel
+    \item \textbf{Azimutale} 
+\end{itemize}
+
+\noindent La figura~\ref{fig:cylinder_resonance} li visualizza tutti e 3 in maniera chiara:
+\FloatBarrier 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{IMAGES/cylinder_resonance.png}
+    \caption{Modi vibrazionali di un cilindro}
+    \label{fig:cylinder_resonance}
+\end{figure}
+\FloatBarrier
