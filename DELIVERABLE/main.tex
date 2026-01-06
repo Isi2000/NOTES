@@ -1,0 +1,79 @@
+\documentclass[12pt,a4paper]{book}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{cite}
+\usepackage{placeins}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{bbm}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{tikz}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\geometry{margin=1in}
+
+\begin{document}
+
+% Custom title page
+\begin{titlepage}
+\centering
+\vspace*{1cm}
+
+% Title
+\begin{center}
+{\LARGE\bfseries Report on pattern identification of critical combustion events}\\[1cm]
+{\large VERSION 1.0}\\[0.5cm]
+{\large \today}\\[1cm]
+\end{center}
+
+\vfill
+
+% Abstract section
+\begin{flushleft}
+{\large\textbf{Abstract:}}\\[0.5cm]
+\end{flushleft}
+
+This report presents methodologies for pattern identification in critical combustion events. The work focuses on the development and application of advanced data analysis techniques to understand and predict combustion instabilities and critical phenomena in reactive flow systems.
+
+\vfill
+
+% Authors section
+\begin{center}
+{\textbf{Authors:}} Isacco Faglioni*, (Soledad le Clainche, Laura Saavedra)\\[0.3cm]
+{\textbf{Reviewer:}} (Alessandro Parente)\\[1cm]
+\end{center}
+
+% Footer with project information
+\begin{center}
+{\small DELIVERABLE PROJECT}\\[0.5cm]
+{\small \today}
+\end{center}
+
+\end{titlepage}
+
+\mainmatter
+
+\tableofcontents
+
+\input{SECTIONS/section1.tex}
+\input{SECTIONS/section2.tex}
+\input{SECTIONS/section3.tex}
+
+\backmatter
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
