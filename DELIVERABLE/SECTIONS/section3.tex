@@ -1,3 +1,123 @@
-\section{Section 3}
+\section{Application of mdHODMDit to Combustion DNS Data}
 
-% Content for section 3 goes here
+This section describes the application of the multi-dimensional iterative Higher-Order Dynamic Mode Decomposition (mdHODMDit) algorithm to the NH$_3$/H$_2$ DNS datasets introduced in Section~2. The method is applied to the 1500~K reference case, which constitutes the primary dataset for assessment of the proposed methodology.
+
+\subsection{Data Structure and Preprocessing}
+
+The raw simulation output is stored as a four-dimensional tensor $\mathcal{T} \in \mathbb{R}^{N_\mathrm{var} \times N_x \times N_y \times N_t}$, where the axes correspond to the reactive scalar variables, the streamwise spatial coordinate $x$, the cross-stream coordinate $y$, and time $t$, respectively. The 1500~K dataset contains $N_\mathrm{var} = 20$ fields (19 species and temperature), with the full spatial and temporal extent provided by the DNS solver.
+
+Before analysis, the tensor is cropped to the region of physical interest. In the streamwise direction, indices $x_{59:1000}$ are retained, corresponding to the range $0.3$--$5.0$~cm downstream of the splitter plate, which encompasses the near-field flame stabilisation region and the initial development of the shear layer. In time, the first 74 snapshots are discarded to remove the initial transient, so the analysis is conducted on the statistically developed portion of the signal. The temporal resolution is $\Delta t = 40~\mu$s.
+
+\subsection{Algorithm Overview}
+
+The mdHODMDit algorithm proceeds through four main stages, iterated until convergence:
+
+\begin{enumerate}
+    \item \textbf{HOSVD compression.} A Higher-Order Singular Value Decomposition (HOSVD) is applied to the tensor. Each mode (variable, $x$, $y$, time) is truncated independently: spatial factor matrices $\mathbf{U}^{(n)}$ and a core tensor $\mathcal{S}$ are retained. The truncation criterion keeps singular value $\sigma_j$ if $\sigma_j / \sigma_\mathrm{max} \geq \varepsilon_\mathrm{tol}$, where $\varepsilon_\mathrm{tol}$ is the tolerance parameter. The result is a compressed temporal matrix $\hat{\mathbf{T}}$ that concentrates the essential dynamics.
+
+    \item \textbf{HODMD on the compressed representation.} A DMD with $d$-delay embedding (DMD-$d$, or HODMD) is performed on $\hat{\mathbf{T}}$. This expands the snapshot matrix with $d-1$ time-lagged copies, improving robustness to noise and enabling identification of dynamics that a standard one-step DMD would miss. The eigendecomposition yields complex eigenvalues whose argument and modulus encode the oscillation frequency and growth/decay rate of each mode, respectively. The corresponding amplitudes are computed via a least-squares solve on the Vandermonde system.
+
+    \item \textbf{Tensor reconstruction.} The DMD expansion is used to reconstruct the full tensor $\tilde{\mathcal{T}}$ from the identified spatio-temporal modes.
+
+    \item \textbf{Iteration.} HOSVD is re-applied to the reconstructed tensor, yielding a new compressed temporal representation. The procedure repeats until the spatial ranks no longer change between successive iterations, indicating that the DMD filtering has converged to a self-consistent low-rank description of the flow.
+\end{enumerate}
+
+After convergence, the final DMD temporal modes are projected back onto the initial HOSVD spatial matrices, recovering physically interpretable spatial structures in the original variable and spatial coordinates.
+
+\subsection{Parameter Sweep}
+
+The analysis is performed over a grid of Hankel delay parameters $d \in \{10, 15, 20, 25, 30, 35, 40, 45\}$ and tolerances $\varepsilon_\mathrm{tol} \in \{5\times10^{-3},\, 2\times10^{-2},\, 3\times10^{-2},\, 4\times10^{-2},\, 5\times10^{-2},\, 7\times10^{-2},\, 1\times10^{-1},\, 2\times10^{-1}\}$. The same tolerance governs both the HOSVD truncation and the amplitude threshold applied to retain DMD modes, so that a single parameter controls the compression level throughout the algorithm.
+
+\subsection{HOSVD Temporal Mode Spectrum}
+
+Figure~\ref{fig:fft_temporal} shows the power spectra (FFT) of the HOSVD temporal modes extracted from the 1500~K dataset at $\varepsilon_\mathrm{tol} = 5\times10^{-2}$. Each panel corresponds to one temporal mode retained after truncation, with the horizontal axis expressed in Strouhal number $St = f \cdot h / U_b$, where $h$ is the half-channel height and $U_b$ the bulk velocity. The spectra reveal that the temporal modes carry well-defined frequency content concentrated at characteristic Strouhal numbers, confirming that the HOSVD compression effectively isolates coherent oscillatory structures prior to the DMD step.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{FFT_temporalmodes_1500K_tol5e-02.png}
+    \caption{FFT spectra of HOSVD temporal modes for the 1500~K dataset at $\varepsilon_\mathrm{tol} = 5\times10^{-2}$. Each panel shows the power spectral density of one retained temporal mode as a function of Strouhal number $St$.}
+    \label{fig:fft_temporal}
+\end{figure}
+\FloatBarrier
+
+\subsection{DMD Mode Amplitude Spectrum}
+
+Figure~\ref{fig:amplitude_spectrum} shows the DMD mode amplitudes as a function of Strouhal number for a selection of parameter combinations ($d = 35, 40, 45$; $\varepsilon_\mathrm{tol} = 5\times10^{-2}$ and $7\times10^{-2}$). Several dominant peaks emerge consistently across parameter settings, notably near $St \approx 0.21$--$0.25$, $St \approx 0.37$--$0.42$, and a high-amplitude mode near $St \approx 0.42$. The robustness of these peaks across different $d$ and $\varepsilon_\mathrm{tol}$ values indicates that they represent genuine physical features of the flame dynamics rather than artefacts of the decomposition parameters.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{PLOT_CASE_1.png}
+    \caption{DMD mode amplitudes as a function of Strouhal number for the 1500~K dataset across selected parameter combinations. Circles and crosses distinguish different tolerances; colours distinguish different delay values $d$.}
+    \label{fig:amplitude_spectrum}
+\end{figure}
+\FloatBarrier
+
+\subsection{Spatial DMD Modes}
+
+The spatial structure of the dominant DMD modes is examined for the configuration $d = 40$, $\varepsilon_\mathrm{tol} = 7\times10^{-2}$. Each mode is represented as a two-dimensional field over the $(x/h,\, y/h)$ domain for each of the six retained reactive scalar variables.
+
+\subsubsection{Mode at $St = 0.214$}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{DMDmode_St0.21_d40_tol7e-02.png}
+    \caption{Spatial DMD mode at $St = 0.214$ ($d=40$, $\varepsilon_\mathrm{tol}=7\times10^{-2}$). Each panel shows the real part of the mode for one reactive scalar field over the streamwise--cross-stream plane.}
+    \label{fig:mode_021}
+\end{figure}
+
+The mode at $St = 0.214$ (Figure~\ref{fig:mode_021}) is the lowest-frequency dominant structure identified in the spectrum. It exhibits elongated streamwise coherence with moderate cross-stream extent, consistent with a large-scale shear-layer oscillation. The spatial structure is concentrated in the downstream half of the domain, suggesting that this mode is associated with the convective growth and saturation of the Kelvin--Helmholtz instability of the mixing layer.
+\FloatBarrier
+
+\subsubsection{Mode at $St = 0.244$}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{DMDmode_St0.24_d40_tol7e-02.png}
+    \caption{Spatial DMD mode at $St = 0.244$ ($d=40$, $\varepsilon_\mathrm{tol}=7\times10^{-2}$).}
+    \label{fig:mode_024}
+\end{figure}
+
+The mode at $St = 0.244$ (Figure~\ref{fig:mode_024}) presents a spatial organisation similar to the $St = 0.214$ mode but with a shorter streamwise wavelength. This suggests a harmonic or sub-harmonic relationship between the two structures, possibly linked to vortex pairing in the developing shear layer.
+\FloatBarrier
+
+\subsubsection{Mode at $St = 0.271$}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{DMDmode_St0.27_d40_tol7e-02.png}
+    \caption{Spatial DMD mode at $St = 0.271$ ($d=40$, $\varepsilon_\mathrm{tol}=7\times10^{-2}$).}
+    \label{fig:mode_027}
+\end{figure}
+
+The mode at $St = 0.271$ (Figure~\ref{fig:mode_027}) shows a transition towards finer spatial scales, with increased cross-stream modulation compared to the lower-frequency modes. This structure may be associated with secondary instabilities developing on top of the primary shear-layer roll-up.
+\FloatBarrier
+
+\subsubsection{Mode at $St = 0.371$}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{DMDmode_St0.37_d40_tol7e-02.png}
+    \caption{Spatial DMD mode at $St = 0.371$ ($d=40$, $\varepsilon_\mathrm{tol}=7\times10^{-2}$).}
+    \label{fig:mode_037}
+\end{figure}
+
+At $St = 0.371$ (Figure~\ref{fig:mode_037}), the mode displays a pronounced alternating pattern in both the streamwise and cross-stream directions. This spatial signature is characteristic of higher-frequency coherent structures embedded in the shear layer, and the increased spatial frequency relative to the lower-$St$ modes suggests a more rapid temporal evolution associated with smaller vortical structures.
+\FloatBarrier
+
+\subsubsection{Mode at $St = 0.422$}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{DMDmode_St0.42_d40_tol7e-02.png}
+    \caption{Spatial DMD mode at $St = 0.422$ ($d=40$, $\varepsilon_\mathrm{tol}=7\times10^{-2}$). This is the highest-amplitude mode in the spectrum.}
+    \label{fig:mode_042}
+\end{figure}
+
+The mode at $St = 0.422$ (Figure~\ref{fig:mode_042}) is the dominant mode in terms of amplitude (Figure~\ref{fig:amplitude_spectrum}). Its spatial structure closely resembles that of the $St = 0.371$ mode but with a slightly higher spatial frequency. The simultaneous presence of both modes with comparable amplitudes suggests a coupled dynamics between these two Strouhal numbers, possibly arising from nonlinear interactions within the reactive shear layer.
+\FloatBarrier
+
+\subsection{Discussion}
+
+The mdHODMDit algorithm successfully extracts a set of physically coherent spatio-temporal modes from the high-dimensional DNS tensor without requiring any reshaping of the data into matrix form. The HOSVD stage effectively compresses the information while preserving the multi-variable structure of the dataset, enabling the subsequent HODMD to operate on a low-dimensional representation that retains the essential dynamics. The iterative loop further refines the decomposition by removing noise and non-coherent contributions, converging to a self-consistent set of modes.
+
+The dominant frequencies identified in the Strouhal range $St \approx 0.2$--$0.5$ are consistent with convective instability mechanisms in non-premixed mixing layers. The spatial modes show a clear progression from large-scale shear-layer structures at low $St$ to finer-scale alternating patterns at higher $St$, reflecting the multi-scale nature of the reactive flow dynamics. The robustness of these features across the parameter sweep provides confidence in their physical significance.

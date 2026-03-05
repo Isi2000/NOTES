@@ -1,3 +1,20 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{grassi2025}
+Giovanni Grassi, Luc Vervisch, and Pascale Domingo.
+\newblock Reduced chemistry for numerical combustion of nh3/h2 fuel blend.
+\newblock {\em Combustion and Flame}, 279:114287, 2025.
+
+\bibitem{sitcomb}
+Xavier Petit, Guillaume Ribert, G~Lartigue, and P~Domingo.
+\newblock Large-eddy simulation of supercritical fluid injection.
+\newblock {\em The Journal of Supercritical Fluids}, 84:61--73, 2013.
+
+\bibitem{c3mech}
+TODO.
+\newblock C3mechv3.5: Detailed chemical mechanism for ammonia-hydrogen
+  combustion.
+\newblock {\em TODO}, 2023.
+\newblock Placeholder -- replace with actual reference.
 
 \end{thebibliography}
