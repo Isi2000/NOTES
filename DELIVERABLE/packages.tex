@@ -1,0 +1,47 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Load needed packages:                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%General Packages
+%=============================
+\usepackage[utf8]{inputenc} % Allows the use of UTF-8 encoding, which supports a wide range of characters and symbols directly in the LaTeX source code.
+\usepackage[T1]{fontenc} % Enhances font encoding to ensure that characters are properly displayed and hyphenated in the document. This is especially useful for documents in languages with accented characters.
+\usepackage{helvet} % Provides the Helvetica font family, which is often used as a substitute for Arial in LaTeX documents. 
+\renewcommand{\familydefault}{\sfdefault} % Sets the default font family to sans-serif (like Helvetica) for the entire document.
+\usepackage{comment} %Provides a convenient way to comment out large blocks of text in your LaTeX source code.
+\usepackage{paralist} %Allows the creation of compact and enumerated lists with more flexibility than the standard itemize and enumerate environments.
+\usepackage{algorithm2e} % Provides an environment for writing algorithms with customizable formatting.
+\usepackage{hyperref} %Enables the creation of hyperlinks in the document, including links to sections, footnotes, and external URLs.
+\usepackage{parskip} %Adjusts paragraph spacing by setting a vertical space between paragraphs, rather than indenting the first line.
+\frenchspacing % Adjusts spacing after periods to be consistent with French typographic conventions, where spacing is reduced after a period.
+\usepackage{xspace} % Ensures proper spacing after commands that introduce new commands or macros, avoiding awkward gaps.
+\usepackage{lastpage} % Provides a way to reference the last page number of the document, useful for creating "Page X of Y" footers.
+\usepackage{ifthen} % Provides conditional statements for LaTeX, allowing for conditional formatting and content inclusion.
+\usepackage{listings} % Used for including source code with syntax highlighting and formatting options.
+\usepackage{amsmath} % Provides advanced mathematical typesetting features, including enhanced support for equations and symbols.
+\usepackage{amssymb} % Provides additional mathematical symbols, including various symbols not available in the standard LaTeX packages.
+\usepackage{amsfonts} % Provides additional fonts for mathematical symbols, including calligraphic and blackboard-bold fonts.
+\usepackage{palatino} %  Uses the Palatino font family for the document, providing a classic serif look.
+\usepackage{xcolor} % Alows Color text
+% macro used in config, must be defined here 
+\newcommand{\newcommandx}[2]{\newcommand{#1}{#2\xspace}}
+
+% IMAGES
+\usepackage{graphicx} % Required for including and manipulating images in the document, such as resizing and rotating.
+\usepackage{graphics} % Provides basic commands for including graphics. Note that graphicx is a more powerful and commonly used alternative.
+
+% TABLES
+\usepackage{tabularx} % Provides a table environment that automatically adjusts column widths to fit the page width.
+\usepackage{booktabs} % Use addlinespace, amd provides improved table formatting commands like \toprule, \midrule, and \bottomrule for better-looking tables.
+\usepackage{cellspace} % Adds extra vertical space above and below table cells to improve readability
+\usepackage{adjustbox} % Provides a way to resize, rotate, and adjust content, including images and tables, within the document.
+
+% STYLING OF PAGES PAGE
+%=============================
+\usepackage[a4paper,pdftex, hmargin=2.5cm,vmargin=3cm, head=75pt,foot=35pt]{geometry} %Customizes page dimensions and margins. In this case, it sets A4 paper size with specific margins and header/footer sizes.
+\usepackage[absolute,overlay]{textpos} % Allows positioning of text at absolute locations on the page, useful for creating custom layouts and adding text blocks at specific coordinates.
+\usepackage{titlesec} %  Allows customization of section headings (like titles, chapters, and sections) in terms of font size, style, and spacing.
+\usepackage[table]{xcolor} % Provides color support for tables and other elements, allowing for colored cells, rows, and columns.
+\usepackage{fancyhdr} % Allows customization of header and footer styles in the document.
+\usepackage{wallpaper} % Allows adding background images to pages, useful for creating custom cover pages and backgrounds.
+

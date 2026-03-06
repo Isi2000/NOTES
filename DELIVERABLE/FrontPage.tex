@@ -1,0 +1,145 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  This is the front page and the preliminary pages                  %
+%  DO NOT TOCUH!                                                     %
+%  All Data should be included in the inputs file                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------%
+%    |D|O| |N|O|T| |T|O|U|C|H|        %
+%-------------------------------------%
+
+%=====================================
+% FRONT PAGE
+%=====================================
+\thispagestyle{empty}
+
+\resizebox{\textwidth}{!}{\includegraphics{logos/ENCODING_name.png}}
+\vspace{2 cm}
+
+\begin{center}
+
+\Hugesize \bfseries \inserttitle 
+
+\end{center}
+
+\vspace*{\fill} 
+
+\begin{textblock*}{\textwidth}(3cm,\dimexpr\textheight -6cm \relax)
+    \centering
+    \textbf{VERSION: \DelVersion}
+\end{textblock*}
+
+
+\begin{textblock*}{\textwidth}(3.5cm,20.5 cm)
+    \textbf{LEADER: \WPLeader}
+\end{textblock*}
+
+\begin{minipage}[c]{0.3\textwidth}
+    \includegraphics[width=\linewidth]{logos/EN-Funded-VerticalLogo.png} % Incluye la imagen y ajusta la ruta
+\end{minipage}
+%
+\begin{minipage}[c]{0.7\textwidth}
+        \small\bfseries \textcolor{gray!80} {This project has received funding from the European Union's \FrameworkProgramme research and innovation programme under grant agreement No \ProjGA.}
+\end{minipage}
+
+\newpage
+%=====================================
+% Deliverable and Project Information
+%=====================================
+%\ClearWallPaper
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{tabularx}{\textwidth}{p{\textwidth}X}
+    \textbf{Action Number:} \ProjGA \\
+        \addlinespace
+    \textbf{Action Acronym:} \ProjAcro \\
+        \addlinespace
+    \textbf{Action title:} \ProjTitle \\
+        \addlinespace
+\end{tabularx}
+\begin{tabularx}{\textwidth}{lX}
+    \textbf{Project Start Date}:  \ProjStart  &	\textbf{Duration}: \ProjDuration months\\
+        \addlinespace
+    \textbf{Coordinator}: \emph{\CoordEntity} & \\
+\end{tabularx}
+
+\vspace{1cm}
+
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Deliverable No}: & \DelNo	\\
+\hline
+\textbf{Deliverable Name}: & \DelTitle	\\
+\hline
+\textbf{Deliverable Version}: & \DelVersion	\\
+\hline
+\textbf{WP No}:& \WP	\\
+\hline
+\textbf{WP Leader}:& \WPLeader	\\
+\hline
+\textbf{Due date}:& \DueDate \\
+\hline
+\textbf{Delivery date}:& \SubDate \\
+\hline
+\end{tabularx}
+
+\vspace{1cm}
+
+\textbf{Dissemination Level}:
+
+\begin{tabularx}{\textwidth}{|c|X|c|}
+\hline
+PU & Public Use	& \ifthenelse{\equal{\DissLevel}{PU\xspace}}{X}{} \\
+\hline
+PP & Restricted to other programme participants (including the Commission Services)	&  \ifthenelse{\equal{\DissLevel}{PP\xspace}}{X}{} \\
+\hline
+RE & Restricted to a group specified by the consortium (including the Commission Services) &  \ifthenelse{\equal{\DissLevel}{RE\xspace}}{X}{} \\
+\hline
+CO & Confidential, only for members of the consortium (including the Commission Services) & \ifthenelse{\equal{\DissLevel}{CO\xspace}}{X}{} \\
+\hline
+\end{tabularx}
+
+\newpage
+
+%=====================================
+% Document Summary
+%=====================================
+\section*{Document Summary Information}
+
+\textbf{Abstract:} 
+
+\MyAbstract
+\newline
+
+\textbf{Keywords:} \KeyWords
+\newline
+
+\input{revisionInfo}
+
+\vspace{1cm}
+
+
+\newpage
+
+%=====================================
+% Acknowledgements & Disclaimer
+%=====================================
+
+\section*{Acknowledgements}
+The ENCODING project has received funding from the European Union's Horizon Europe research and innovation programme under the Marie Sklodowska-Curie grant agreement No. 101072779.
+
+\section*{Disclaimer}
+The results of this presentation reflect only the author(s) views and opinions and do not necessarily reflect those of the European Union. The European Union can not be held responsible for them.
+
+\newpage
+
+%=====================================
+% Table of Contents page
+%=====================================
+\tableofcontents
+\newpage
+
+%=====================================
+% The report
+%=====================================
