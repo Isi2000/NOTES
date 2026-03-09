@@ -1,0 +1,47 @@
+% ============================================================
+%  Section: Methods
+%  Input this file with \input{SECTIONS/methods}
+% ============================================================
+
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Multidimensional Iterative HODMD (mdHODMDit)}
+\label{sec:method_mdhodmd}
+
+Standard HODMD begins by compressing the snapshot matrix via a truncated SVD, mapping
+the high-dimensional spatial snapshots onto a low-dimensional subspace before applying
+the delay-embedding DMD step.
+When the data carry several physical variables and span a multi-dimensional spatial domain,
+collapsing the full tensor into a matrix introduces an implicit coupling among modes that
+belong to different dimensions, and the SVD truncation cannot distinguish noise
+contributions arising from the spatial, temporal, or variable axes independently.
+
+The multidimensional formulation replaces the matrix SVD with an HOSVD of the full data
+tensor $\mathcal{T} \in \mathbb{R}^{N_{\mathrm{var}} \times N_x \times N_y \times N_t}$.
+The HOSVD unfolds $\mathcal{T}$ along each of its four modes in turn, computes the
+$n$-mode singular values $\{\sigma_j^{(n)}\}$ from the corresponding unfolded matrix, and
+retains factor matrices $\mathbf{U}^{(n)}$ by enforcing the truncation criterion
+\begin{equation}
+    \frac{\sigma_j^{(n)}}{\sigma_1^{(n)}} \geq \varepsilon_{\mathrm{tol}},
+    \label{eq:hosvd_trunc}
+\end{equation}
+independently for each mode $n$.
+The result is a compressed core tensor $\mathcal{S}$ and a set of factor matrices
+$\{\mathbf{U}^{(n)}\}_{n=1}^{4}$ such that
+$\mathcal{T} \approx \mathcal{S} \times_1 \mathbf{U}^{(1)} \times_2 \mathbf{U}^{(2)}
+\times_3 \mathbf{U}^{(3)} \times_4 \mathbf{U}^{(4)}$,
+where $\times_n$ denotes the $n$-mode product.
+The temporal factor matrix $\mathbf{U}^{(4)}$, weighted by the corresponding temporal
+singular values, forms the compressed temporal matrix $\hat{\mathbf{T}}$ on which
+the $d$-delay HODMD is subsequently performed.
+
+After the DMD eigendecomposition of $\hat{\mathbf{T}}$, the reduced spatial DMD modes
+are projected back to the original tensor dimensions by contracting with the spatial
+factor matrices $\mathbf{U}^{(1)}, \mathbf{U}^{(2)}, \mathbf{U}^{(3)}$ and the core
+tensor, recovering physically interpretable spatial structures in the full
+variable-$x$-$y$ space without ever vectorising the multi-variable field.
+The procedure is iterated: the reconstructed tensor is re-compressed by HOSVD, and a new
+HODMD is performed, until the spatial ranks no longer change between successive
+iterations, signalling convergence to a self-consistent low-rank description of the
+flow~\cite{leclainche2017}.
