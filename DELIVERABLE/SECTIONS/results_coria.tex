@@ -44,66 +44,75 @@ The same tolerance $\varepsilon_{\mathrm{tol}}$ governs both the HOSVD truncatio
 % -------------------------------------------------------
 \subsubsection{Identification of Physical Frequencies}
 \label{sec:coria_frequencies}
+
+DA TRADURRE
+
+\subsubsection{Identificazione delle Frequenze Fisiche}
+\label{sec:coria_frequencies}
 % -------------------------------------------------------
+Un modo DMD è classificato come \emph{fisico} quando il corrispondente picco spettrale appare in modo consistente su più valori del parametro di ritardo $d$ e rimane insensibile alla scelta di $\varepsilon_{\mathrm{tol}}$. Formalmente, un numero di Strouhal $St_k$ è considerato fisico se emerge come picco dominante --- definito da un'ampiezza normalizzata superiore a una soglia fissa --- in almeno metà delle combinazioni di parametri $\{(d_i, \varepsilon_j)\}$ esplorate nella scansione.
 
-A DMD mode frequency is considered \emph{physical} if the corresponding spectral peak appears consistently across multiple values of the delay parameter $d$ and is not sensitive to the choice of $\varepsilon_{\mathrm{tol}}$. Formally, a Strouhal number $St_k$ is flagged as physical if it is identified as a dominant peak (i.e.\ its normalised amplitude exceeds a fixed threshold) in at least half of the parameter combinations $\{(d_i, \varepsilon_j)\}$ included in the sweep. This robustness criterion filters out artefacts of the decomposition that arise for particular choices of the delay window or compression level, retaining only coherent structures whose temporal periodicity is an intrinsic feature of the flow.
+Questo criterio è motivato dalla natura intrinseca delle strutture coerenti fisiche: i fenomeni di flusso reali esistono indipendentemente da come viene costruita la matrice di osservazione, e le loro firme spettrali devono quindi persistere al variare della dimensione di immersione temporale $d$ e del livello di troncamento SVD $\varepsilon_{\mathrm{tol}}$. La consistenza rispetto a $d$ sfrutta il fatto che gli autovalori di Koopman fisici sono proprietà topologiche dell'attrattore sottostante e sono invarianti rispetto alla particolare immersione con ritardo scelta per approssimarli. L'insensibilità a $\varepsilon_{\mathrm{tol}}$ riflette l'aspettativa che i modi fisici siano supportati dai vettori singolari energeticamente dominanti: un picco che scompare con un moderato inasprimento della soglia di troncamento risiede nel sottospazio numericamente marginale in cui segnale e rumore sono indistinguibili. Insieme, le due condizioni implementano un'analisi di sensibilità ai parametri analoga ai diagrammi di stabilizzazione nella dinamica strutturale o ai test di convergenza nella stima spettrale, in cui la fisicità di un modo è valutata tramite la sua persistenza piuttosto che dalla sua ampiezza. Gli artefatti legati a una particolare scelta della finestra di ritardo o del livello di compressione vengono quindi scartati, conservando unicamente le strutture la cui periodicità temporale è intrinseca al flusso.
 
-The Strouhal number is defined throughout as
+Il numero di Strouhal è definito in tutto il testo come
 \begin{equation}
     St = f \cdot \frac{\ell}{U_b},
-    \label{eq:strouhal}
+\label{eq:strouhal}
 \end{equation}
-where $\ell = 3$~mm is a reference length scale of the mixing layer and $U_b$ is the bulk convective velocity, taken as $U_b = 21.34$, $24.29$, and $27.14$~m~s$^{-1}$ for the 1200~K, 1500~K, and 1700~K cases, respectively.
-
-% -------------------------------------------------------
+dove $\ell = 3$~mm denota una scala di lunghezza di riferimento dello strato di miscelazione e $U_b$ è la velocità convettiva di bulk, pari a $U_b = 21{,}34$, $24{,}29$ e $27{,}14$~m~s$^{-1}$ rispettivamente per i casi a 1200~K, 1500~K e 1700~K.
 \subsubsection{Frequency--Amplitude Spectra}
 \label{sec:freq_amplitude}
 % -------------------------------------------------------
 
-The frequency--amplitude plots shown in Figures~\ref{fig:spectrum_1500K}--\ref{fig:spectrum_1700K} display, for each temperature case, the normalised DMD mode amplitudes $|\hat{a}_k| / \max_k |\hat{a}_k|$ as a function of Strouhal number $St$. Each marker corresponds to one $(d, \varepsilon_{\mathrm{tol}})$ pair; different colours encode different values of $d$ and different marker styles encode different tolerances. Peaks that persist across all curves can therefore be read off directly as physically robust frequencies.
-
-\paragraph{Case 1500~K}
-\label{sec:spectrum_1500K}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{PLOT_CASE_1.png}
-    \caption{Normalised DMD mode amplitudes as a function of Strouhal number for the 1500~K dataset, for $d \in \{35,40,45\}$ and $\varepsilon_{\mathrm{tol}} \in \{5\times10^{-2},\, 7\times10^{-2}\}$. Circles and crosses distinguish the two tolerance levels; colours distinguish the delay values $d$. Vertical dashes would indicate physically robust peaks identified by the robustness criterion.}
-    \label{fig:spectrum_1500K}
-\end{figure}
-\FloatBarrier
-
-Figure~\ref{fig:spectrum_1500K} reveals several dominant peaks in the Strouhal range $St \approx 0.2$--$0.5$. The most prominent structures are located near $St \approx 0.21$--$0.25$, $St \approx 0.27$, $St \approx 0.37$, and $St \approx 0.42$. These peaks are reproducible across all parameter combinations shown, confirming their physical origin. The mode at $St \approx 0.42$ carries the largest amplitude and is therefore identified as the dominant dynamical structure in this configuration.
+The frequency--amplitude plots shown in Figures \ref{fig:spectrum_1200K} \ref{fig:spectrum_1500K} \ref{fig:spectrum_1700K} display, for each temperature case, the normalised DMD mode amplitudes $|\hat{a}_k| / \max_k |\hat{a}_k|$ as a function of Strouhal number $St$. Each marker corresponds to one $(d, \varepsilon_{\mathrm{tol}})$ pair; different colours encode different values of $d$ and different marker styles encode different tolerances. Peaks that persist across all curves can therefore be read off directly as physically robust frequencies.
 
 \paragraph{Case 1200~K}
 \label{sec:spectrum_1200K}
+DA MARCARE IN ROSSO LE FREQUENZE PRINCIPALI SU QUESTO PLOT
 
-\begin{figure}[htbp]
+\FloatBarrier
+\begin{figure}[h!]
     \centering
-    % [PLACEHOLDER] Replace with: \includegraphics[width=\textwidth]{PLOT_CASE_2.png}
-    \fbox{\parbox[c][4cm][c]{0.95\textwidth}{\centering
-          [PLACEHOLDER — frequency--amplitude spectrum for the 1200~K case]}}
+    \includegraphics[width=\textwidth]{Frequency_amplitude_plot1200.png}
     \caption{Normalised DMD mode amplitudes as a function of Strouhal number for the 1200~K dataset, for $d \in \{35,40,45\}$ and $\varepsilon_{\mathrm{tol}} \in \{5\times10^{-2},\, 7\times10^{-2}\}$.}
     \label{fig:spectrum_1200K}
 \end{figure}
 \FloatBarrier
 
-[PLACEHOLDER — describe the dominant Strouhal peaks identified for the 1200~K case, their consistency across parameter combinations, and any qualitative differences with respect to the 1500~K reference.]
+
+
+\paragraph{Case 1500~K}
+\label{sec:spectrum_1500K}
+DA MARCARE IN ROSSO LE FREQUENZE PRINCIPALI SU QUESTO PLOT
+
+%Figure~\ref{fig:spectrum_1500K} reveals several dominant peaks in the Strouhal range $St \approx 0.2$--$0.5$. The most prominent structures are located near $St \approx 0.21$--$0.25$, $St \approx 0.27$, $St \approx 0.37$, and $St \approx 0.42$. These peaks are reproducible across all parameter combinations shown, confirming their physical origin. The mode at $St \approx 0.42$ carries the largest amplitude and is therefore identified as the dominant dynamical structure in this configuration.
+\FloatBarrier
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Frequency_amplitude_plot1500.png}
+    \caption{Normalised DMD mode amplitudes as a function of Strouhal number for the 1500~K dataset, for $d \in \{35,40,45\}$ and $\varepsilon_{\mathrm{tol}} \in \{5\times10^{-2},\, 7\times10^{-2}\}$.}
+    \label{fig:spectrum_1500K}
+\end{figure}
+\FloatBarrier
+
+
 
 \paragraph{Case 1700~K}
 \label{sec:spectrum_1700K}
+DA MARCARE IN ROSSO LE FREQUENZE PRINCIPALI SU QUESTO PLOT
 
-\begin{figure}[htbp]
+\FloatBarrier
+\begin{figure}[h!]
     \centering
-    % [PLACEHOLDER] Replace with: \includegraphics[width=\textwidth]{PLOT_CASE_3.png}
-    \fbox{\parbox[c][4cm][c]{0.95\textwidth}{\centering
-          [PLACEHOLDER — frequency--amplitude spectrum for the 1700~K case]}}
+    \includegraphics[width=\textwidth]{Frequency_amplitude_plot1700.png}
     \caption{Normalised DMD mode amplitudes as a function of Strouhal number for the 1700~K dataset, for $d \in \{35,40,45\}$ and $\varepsilon_{\mathrm{tol}} \in \{5\times10^{-2},\, 7\times10^{-2}\}$.}
     \label{fig:spectrum_1700K}
 \end{figure}
 \FloatBarrier
 
-[PLACEHOLDER — describe the dominant Strouhal peaks identified for the 1700~K case and qualitative differences with respect to the lower-temperature cases.]
+
+\subsubsection*{Discussion of physical frequency variation across different configurations}
+
 
 % -------------------------------------------------------
 \subsubsection{Spatial DMD Modes (1500~K Reference Case)}
@@ -111,7 +120,8 @@ Figure~\ref{fig:spectrum_1500K} reveals several dominant peaks in the Strouhal r
 % -------------------------------------------------------
 
 The spatial structure of the dominant modes is examined in detail for the reference 1500~K case at $d = 40$, $\varepsilon_{\mathrm{tol}} = 7\times10^{-2}$. Each mode is represented as a two-dimensional field over the normalised streamwise--cross-stream plane $(x/h,\, y/h)$, where $h = 5$~cm is the reference height, for each of the retained reactive scalar fields. Figures~\ref{fig:mode_021_coria}--\ref{fig:mode_042_coria} show the real part of the five dominant modes.
-
+\begin{comment}
+    
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{DMDmode_St0.21_d40_tol7e-02.png}
@@ -176,3 +186,4 @@ The spatial modes show a clear progression from large-scale shear-layer structur
 \paragraph{Comparison with matrix-based HODMD}
 
 [PLACEHOLDER — if results from a standard (SVD-based, matrix) HODMD are available for the same dataset, compare the number of modes retained, the dominant frequencies, and the reconstruction error. The key expected advantages of the tensor formulation are: (i) a lower compression rank for the same reconstruction accuracy due to mode-wise truncation, and (ii) modes whose spatial structure is directly interpretable as a multi-variable field rather than a single vectorised pattern.]
+\end{comment}
