@@ -21,20 +21,25 @@
 \usepackage{amsmath} % Provides advanced mathematical typesetting features, including enhanced support for equations and symbols.
 \usepackage{amssymb} % Provides additional mathematical symbols, including various symbols not available in the standard LaTeX packages.
 \usepackage{amsfonts} % Provides additional fonts for mathematical symbols, including calligraphic and blackboard-bold fonts.
-\usepackage{palatino} %  Uses the Palatino font family for the document, providing a classic serif look.
-\usepackage{xcolor} % Alows Color text
+%\usepackage{palatino} %  Uses the Palatino font family for the document, providing a classic serif look.
+%\usepackage{xcolor} % Alows Color text
 % macro used in config, must be defined here 
 \newcommand{\newcommandx}[2]{\newcommand{#1}{#2\xspace}}
 
-% IMAGES
-\usepackage{graphicx} % Required for including and manipulating images in the document, such as resizing and rotating.
-\usepackage{graphics} % Provides basic commands for including graphics. Note that graphicx is a more powerful and commonly used alternative.
 
 % TABLES
 \usepackage{tabularx} % Provides a table environment that automatically adjusts column widths to fit the page width.
 \usepackage{booktabs} % Use addlinespace, amd provides improved table formatting commands like \toprule, \midrule, and \bottomrule for better-looking tables.
 \usepackage{cellspace} % Adds extra vertical space above and below table cells to improve readability
 \usepackage{adjustbox} % Provides a way to resize, rotate, and adjust content, including images and tables, within the document.
+\usepackage{amsthm}     % theorem/lemma/... environments
+\usepackage{placeins}   % \FloatBarrier
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{bbm}
+\usepackage{tikz}
+\usepackage{cite}
+\usepackage{fancyhdr} 
 
 % STYLING OF PAGES PAGE
 %=============================
@@ -42,6 +47,5 @@
 \usepackage[absolute,overlay]{textpos} % Allows positioning of text at absolute locations on the page, useful for creating custom layouts and adding text blocks at specific coordinates.
 \usepackage{titlesec} %  Allows customization of section headings (like titles, chapters, and sections) in terms of font size, style, and spacing.
 \usepackage[table]{xcolor} % Provides color support for tables and other elements, allowing for colored cells, rows, and columns.
-\usepackage{fancyhdr} % Allows customization of header and footer styles in the document.
 \usepackage{wallpaper} % Allows adding background images to pages, useful for creating custom cover pages and backgrounds.
 

@@ -6,20 +6,62 @@
 \section{Methods}
 \label{sec:methods}
 
+\subsection{High Order Dynamic Mode Decomposition}
+\label{sec:dmd_hodmd}
+
+Dynamic Mode Decomposition (DMD)~\cite{schmid2010}  is a data-driven spectral method that extracts spatially coherent structures and their associated temporal dynamics directly from time-resolved snapshot~\footnote{Matrix that has as columns (rows) the time index and all the other unfolded indices as rows (columns)} data.
+Given a sequence of snapshots $\mathbf{v}_k \in \mathbb{R}^{J}$, $k = 1,\dots,K$, DMD seeks a linear operator $\mathbf{A}$ such that $\mathbf{v}_{k+1} \approx \mathbf{A}\,\mathbf{v}_k$, whose leading eigenpairs encode the dominant frequencies and growth/decay rates of the system.
+The full data field is then expressed as a superposition of DMD spatial modes $u_p(\mathbf{x})$ with purely exponential temporal evolution,
+\begin{equation}
+    v(\mathbf{x},t) = \sum_{p=1}^{P} a_p\, u_p(\mathbf{x})\, e^{(\delta_p + i\omega_p)(t-1)\Delta t},
+    \label{eq:dmd_expansion}
+\end{equation}
+where $a_p \geq 0$ are real amplitudes, $\omega_p$ are angular frequencies, $\delta_p$ are growth rates, and $\Delta t$ is the sampling interval.
+Each mode is normalised so that its root-mean-square norm equals unity.
+
+Higher-Order Dynamic Mode Decomposition (HODMD)~\cite{leclainche2017} extends DMD making it more suitable for noisy data and nonlinear phoenomena such as the ones ecnountered dealing with combustion data. The main idea is to extend the assumption that the system's evolution can be described with a linear operator to temporal windows of size $d$. Each snapshot is thus related to the $d$ subsequent snapshots through a set of linear operators.
+This generalised assumption leads to a sliding-window construction of an augmented snapshot matrix and allows for better identification of close frequency even in noisy data. When $d = 1$, HODMD reduces exactly to standard DMD.
+
+The HODMD algorithm proceeds in two main steps:\\
+\emph{Step~1 — Dimensionality reduction via SVD.}\label{subsec:svd_dmd}
+A truncated Singular Value Decomposition (SVD) is applied to the original snapshot matrix, compressing the spatial dimension from $J$ to $N$ retained singular values.
+The tolerance $\varepsilon_{\mathrm{SVD}}$ controls the level of compression by enforcing
+\begin{equation}
+    \frac{\sigma_j}{\sigma_1} \geq \varepsilon_{\mathrm{SVD}},
+    \label{eq:svd_trunc}
+\end{equation}
+where $\sigma_j$ are the singular values in decreasing order.
+The resulting temporal coefficients weighted by the retained singular values form the reduced snapshot matrix, which filters noise.\\
+\emph{Step~2 — High-order Koopman eigenvalue problem.}
+HODMD is applied to the reduced snapshot matrix with delay parameter $d$.
+The eigenvalue problem is solved to extract DMD modes, frequencies and amplitudes.
+A second tolerance $\varepsilon_{\mathrm{DMD}}$ selects physically significant modes by retaining only those whose relative amplitude satisfies
+\begin{equation}
+    \frac{a_p}{\max_p(a_p)} > \varepsilon_{\mathrm{DMD}}.
+    \label{eq:dmd_trunc}
+\end{equation} 
+
+\subsubsection{Physical interpretation}
+
+From a practical point of view DMD looks for coherent structures that behave in an oscillatory manner across the whole dataset. This makes it easier to observe phonomena that cannot be observed when looking at the original data, that often is very complex. A big issue is that the assumption that the system can be described with a matrix even in snapshot form is very strong and it will fail in case of noisy or turbulent data. 
+HODMD is able to obtain better results because instead of looking for oscillatory coherent structures across the whole dataset, it looks for structures that depend on the last d snapshots instead of just the last one. This makes it possible to extract up to $d \times N$  modes instead of N:
+\begin{equation*}
+\underbrace{\mathbf{v}_{k+1} = \mathbf{A}\,\mathbf{v}_k}_{\text{DMD}}
+\quad \longrightarrow \quad
+\underbrace{\mathbf{v}_{k+d} = \mathbf{A}_1\,\mathbf{v}_{k+d-1} + \mathbf{A}_2\,\mathbf{v}_{k+d-2} + \cdots + \mathbf{A}_d\,\mathbf{v}_k}_{\text{HODMD}}
+\end{equation*}
+
+
 \subsection{Multidimensional Iterative HODMD (mdHODMDit)}
 \label{sec:method_mdhodmd}
 
-Standard HODMD begins by compressing the snapshot matrix via a truncated SVD, mapping
-the high-dimensional spatial snapshots onto a low-dimensional subspace before applying
-the delay-embedding DMD step.
-When the data carry several physical variables and span a multi-dimensional spatial domain,
-collapsing the full tensor into a matrix introduces an implicit coupling among modes that
-belong to different dimensions, and the SVD truncation cannot distinguish noise
-contributions arising from the spatial, temporal, or variable axes independently.
+\subsubsection{High Order Singular Value Decompostion}
 
-The multidimensional formulation replaces the matrix SVD with an HOSVD of the full data
-tensor $\mathcal{T} \in \mathbb{R}^{N_{\mathrm{var}} \times N_x \times N_y \times N_t}$.
-The HOSVD unfolds $\mathcal{T}$ along each of its four modes in turn, computes the
+Both DMD and HODMD perform truncated SVD for denoising and dimensionality reduction. This effectively filters out structures that have very low temporal contribution across the whole dataset, which often coincides with noise. Combustion data often carry several physical variables and span a multi-dimensional spatial domain. The application of SVD on the reshaped tensor introduces an implicit coupling among modes that belong to different dimensions, and the SVD truncation cannot distinguish noise contributions arising from the spatial, temporal, or variable axes independently. 
+For this reason, a first improvement over the classical version of HODMD is to introduce High Order Singular Value Decomposition (HOSVD) \cite{de2000multilinear} in the first step. This is a generalization of SVD that allows filtering along each dimension of the tensor. 
+
+It works on data keeping it in tensor form $\mathcal{T} \in \mathbb{R}^{N_{\mathrm{var}} \times N_x \times N_y \times N_t}$.
+First, it unfolds $\mathcal{T}$ along each of its four modes in turn, computes the
 $n$-mode singular values $\{\sigma_j^{(n)}\}$ from the corresponding unfolded matrix, and
 retains factor matrices $\mathbf{U}^{(n)}$ by enforcing the truncation criterion
 \begin{equation}
@@ -31,17 +73,12 @@ The result is a compressed core tensor $\mathcal{S}$ and a set of factor matrice
 $\{\mathbf{U}^{(n)}\}_{n=1}^{4}$ such that
 $\mathcal{T} \approx \mathcal{S} \times_1 \mathbf{U}^{(1)} \times_2 \mathbf{U}^{(2)}
 \times_3 \mathbf{U}^{(3)} \times_4 \mathbf{U}^{(4)}$,
-where $\times_n$ denotes the $n$-mode product.
-The temporal factor matrix $\mathbf{U}^{(4)}$, weighted by the corresponding temporal
-singular values, forms the compressed temporal matrix $\hat{\mathbf{T}}$ on which
-the $d$-delay HODMD is subsequently performed.
+where $\times_n$ denotes the $n$-mode product. These matrices are exactly the ones one would obtain performing truncated SVD on each of the unfodlings.
+Therefore, the temporal factor matrix $\mathbf{U}^{(4)}$ is the same as before.
 
-After the DMD eigendecomposition of $\hat{\mathbf{T}}$, the reduced spatial DMD modes
-are projected back to the original tensor dimensions by contracting with the spatial
-factor matrices $\mathbf{U}^{(1)}, \mathbf{U}^{(2)}, \mathbf{U}^{(3)}$ and the core
-tensor, recovering physically interpretable spatial structures in the full
-variable-$x$-$y$ space without ever vectorising the multi-variable field.
-The procedure is iterated: the reconstructed tensor is re-compressed by HOSVD, and a new
-HODMD is performed, until the spatial ranks no longer change between successive
-iterations, signalling convergence to a self-consistent low-rank description of the
-flow~\cite{leclainche2017}.
+After the DMD eigendecomposition,the reduced spatial DMD modes are projected back to the original tensor dimensions by contracting with the spatial
+factor matrices $\mathbf{U}^{(1)}, \mathbf{U}^{(2)}, \mathbf{U}^{(3)}$ and the core tensor, recovering physically interpretable spatial structures in the full variable-$x$-$y$ space without ever vectorising the multi-variable field, from this the algorithm is called mutlidimensional.
+
+Then, the procedure is iterated. The DMD reconstruction is used to form an updated snapshot tensor, which is re-compressed via HOSVD. The spatial ranks $r_x$, $r_y$, and $r_{\mathrm{var}}$ retained after truncation are monitored: if they 
+differ from those of the previous iteration, the HODMD step is repeated on the new compressed temporal matrix $\hat{V}_1^K$. Convergence is declared when the spatial ranks no longer change between two successive iterations. This can be intepreted as the low-rank spatial  structure implied by the DMD modes is the same as the one identified by HOSVD. The result is a decomposition in which the noise filtering and the dynamic mode 
+identification are consistent, rather than performed independently.

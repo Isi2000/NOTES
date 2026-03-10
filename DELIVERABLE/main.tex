@@ -1,18 +1,13 @@
 \documentclass[a4paper,12pt]{article}
 
 % ── Template infrastructure (files copied from template directory) ──────────
+
 \input{packages}   % template package list
 \input{inputs}     % document-specific metadata
 \input{macros}     % template style definitions (DO NOT TOUCH)
 
 % ── Extra packages needed by existing content (not in template packages.tex)
-\usepackage{amsthm}     % theorem/lemma/... environments
-\usepackage{placeins}   % \FloatBarrier
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage{bbm}
-\usepackage{tikz}
-\usepackage{cite}
+
 
 % ── Graphics search paths: content images in IMAGES/, template assets in figures/
 \graphicspath{{IMAGES/}{figures/}}
@@ -46,11 +41,8 @@
 \input{SECTIONS/methods}                    % methods: mdHODMDit
 \input{SECTIONS/results_coria}              % results and discussion: CORIA dataset
 
-% ---------------------------------------------------------------------------
-%  BIBLIOGRAPHY
-% ---------------------------------------------------------------------------
 \newpage
 \bibliographystyle{plain}
-\bibliography{references}
+\bibliography{bib}
 
 \end{document}
