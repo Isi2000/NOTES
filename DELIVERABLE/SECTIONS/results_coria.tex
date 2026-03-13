@@ -1,28 +1,20 @@
-% ============================================================
-%  Section: Results and Discussion
-%  Input this file with \input{SECTIONS/results_coria}
-% ============================================================
-
 \section{Results and Discussion}
 \label{sec:results}
 
 \subsection{mdHODMDit Applied to the CORIA Dataset}
 \label{sec:results_coria}
+This section presents the application of the multidimensional iterative Higher-Order Dynamic Mode Decomposition (mdHODMDit) algorithm to the three NH$_3$/H$_2$ DNS datasets from CORIA described in Section~\ref{sec:DATA_CORIA}. The work is carried out in collaboration with CORIA and builds upon previous developments related to the mdHODMDit methodology, particularly the work of Pablo López Salazar. Within the present study, the computational workflow was applied to the CORIA datasets, leading to the analysis of the results discussed in this section.
 
-This section presents the application of the multidimensional iterative Higher-Order Dynamic Mode Decomposition (mdHODMDit) algorithm to the three NH$_3$/H$_2$ DNS datasets from CORIA described in Section~\ref{sec:DATA_CORIA}.
-
-% -------------------------------------------------------
 \subsubsection{Data Structure and Preprocessing}
 \label{sec:coria_preprocessing}
+
+The DNS output for each temperature case is stored as a four-dimensional tensor $\mathcal{T} \in \mathbb{R}^{N_{\mathrm{var}} \times N_x \times N_y \times N_t}$, where the axes correspond to the reactive scalar variables, the streamwise spatial coordinate $x$, the cross-stream coordinate $y$, and time $t$, respectively.
+
+Before analysis, the tensor is restricted to the region of physical interest. In the streamwise direction, indices $x_{60:1000}$ are retained, corresponding to the range $[0.3, 5.0]$~cm downstream of the splitter plate, which encompasses the near-field flame stabilisation region and the initial development of the shear layer. In time, the first 74 snapshots are discarded to remove the initial transient, so the analysis is performed on the statistically developed portion of the signal. The temporal resolution is $\Delta t = 40~\mu$s.
+
+For this kind of data, scaling is important due to the differences in the order of magnitude of the variables considered and the differences between their units of measurement \cite{corrochano2023higher, parente2013principal}. Since there is no universally accepted quantitative criterion to determine which scaling method is most appropriate, the analysis was performed using both auto scaling $x_{i}^{\text{scaled}} = \frac{x_i - \mu_x}{\sigma_x}$ and range scaling $x_{i}^{\text{scaled}} = \frac{x_i - x_{\min}}{x_{\max} - x_{\min}}$. The analysis yielded similar results for both scaling methods, identifying the same main frequencies.
+
 % -------------------------------------------------------
-
-The DNS output for each temperature case is stored as a four-dimensional tensor $\mathcal{T} \in \mathbb{R}^{N_{\mathrm{var}} \times N_x \times N_y \times N_t}$, where the axes correspond to the reactive scalar variables, the streamwise spatial coordinate $x$, the cross-stream coordinate $y$, and time $t$, respectively. %Each snapshot contains $N_{\mathrm{var}} = 20$ fields (19 species and temperature); the full spatial domain consists of $2400 \times 200$ cells at 50~$\mu$m resolution.
-
-Before analysis, the tensor is restricted to the region of physical interest. In the streamwise direction, indices $x_{60:1000}$ are retained, corresponding to the range $[0.3, 5.0]$~cm downstream of the splitter plate, which encompasses the near-field flame stabilisation region and the initial development of the shear layer. In time, the first 74 snapshots are discarded to remove the initial transient, so the analysis is performed on the statistically developed portion of the signal. The temporal resolution is $\Delta t = 40~\mu$s. 
-For this kind of data scaling is extremely important due to the differences in order of magnitude of the variables considered and the difference between units of measurement \cite{corrochano2023higher}, \cite{parente2013principal}. There is no way to determine quantitatively which scaling criteria is best, thus the method was applied to both data scaled with auto scaling and range scaling. The analysis yielded similar results for both scaling methods, identifying the same main frequencies.
-
-For this kind of data, scaling is extremely important due to the differences in the order of magnitude of the variables considered and the differences between their units of measurement \cite{corrochano2023higher, parente2013principal}. Since there is no universally accepted quantitative criterion to determine which scaling method is most appropriate, the analysis was performed using both auto scaling $x_{i}^{\text{scaled}} = \frac{x_i - \mu_x}{\sigma_x}$ and range scaling $x_{i}^{\text{scaled}} = \frac{x_i - x_{\min}}{x_{\max} - x_{\min}}$.
-
 \subsubsection{Parameter Calibration}
 \label{sec:coria_params}
 % -------------------------------------------------------
@@ -44,31 +36,24 @@ The same tolerance $\varepsilon_{\mathrm{tol}}$ governs both the HOSVD truncatio
 % -------------------------------------------------------
 \subsubsection{Identification of Physical Frequencies}
 \label{sec:coria_frequencies}
-
-DA TRADURRE
-
-\subsubsection{Identificazione delle Frequenze Fisiche}
-\label{sec:coria_frequencies}
 % -------------------------------------------------------
-Un modo DMD è classificato come \emph{fisico} quando il corrispondente picco spettrale appare in modo consistente su più valori del parametro di ritardo $d$ e rimane insensibile alla scelta di $\varepsilon_{\mathrm{tol}}$. Formalmente, un numero di Strouhal $St_k$ è considerato fisico se emerge come picco dominante --- definito da un'ampiezza normalizzata superiore a una soglia fissa --- in almeno metà delle combinazioni di parametri $\{(d_i, \varepsilon_j)\}$ esplorate nella scansione.
-
-Questo criterio è motivato dalla natura intrinseca delle strutture coerenti fisiche: i fenomeni di flusso reali esistono indipendentemente da come viene costruita la matrice di osservazione, e le loro firme spettrali devono quindi persistere al variare della dimensione di immersione temporale $d$ e del livello di troncamento SVD $\varepsilon_{\mathrm{tol}}$. La consistenza rispetto a $d$ sfrutta il fatto che gli autovalori di Koopman fisici sono proprietà topologiche dell'attrattore sottostante e sono invarianti rispetto alla particolare immersione con ritardo scelta per approssimarli. L'insensibilità a $\varepsilon_{\mathrm{tol}}$ riflette l'aspettativa che i modi fisici siano supportati dai vettori singolari energeticamente dominanti: un picco che scompare con un moderato inasprimento della soglia di troncamento risiede nel sottospazio numericamente marginale in cui segnale e rumore sono indistinguibili. Insieme, le due condizioni implementano un'analisi di sensibilità ai parametri analoga ai diagrammi di stabilizzazione nella dinamica strutturale o ai test di convergenza nella stima spettrale, in cui la fisicità di un modo è valutata tramite la sua persistenza piuttosto che dalla sua ampiezza. Gli artefatti legati a una particolare scelta della finestra di ritardo o del livello di compressione vengono quindi scartati, conservando unicamente le strutture la cui periodicità temporale è intrinseca al flusso.
-
-Il numero di Strouhal è definito in tutto il testo come
+A DMD mode is identified as physical when its spectral peak appears across different $d$ values and it's resilient to the tolerance threshold $\varepsilon_{\mathrm{tol}}$. This is due to the fact that the coherent structures exist indipendently on how the observation matrix is built, thus should be found indipendently on how the $d$ parameter varies, while keeping in mind the previous discussion. The relative resilience of the peaks with respect to $\varepsilon_{\mathrm{tol}}$ is because relevant structures should be associated to relevant eigenvectors and not ones close to noise threshold. Frequencies are expressed in units of Strouhal number: 
 \begin{equation}
     St = f \cdot \frac{\ell}{U_b},
 \label{eq:strouhal}
 \end{equation}
-dove $\ell = 3$~mm denota una scala di lunghezza di riferimento dello strato di miscelazione e $U_b$ è la velocità convettiva di bulk, pari a $U_b = 21{,}34$, $24{,}29$ e $27{,}14$~m~s$^{-1}$ rispettivamente per i casi a 1200~K, 1500~K e 1700~K.
+where $\ell = 3$~mm is the reference lenght of the mixing layer and  $U_b$ is the bulk speed, respectively $U_b = 21{,}34$, $24{,}29$ e $27{,}14$~m~s$^{-1}$ for cases at 1200~K, 1500~K e 1700~K.
+
+
 \subsubsection{Frequency--Amplitude Spectra}
 \label{sec:freq_amplitude}
-% -------------------------------------------------------
 
-The frequency--amplitude plots shown in Figures \ref{fig:spectrum_1200K} \ref{fig:spectrum_1500K} \ref{fig:spectrum_1700K} display, for each temperature case, the normalised DMD mode amplitudes $|\hat{a}_k| / \max_k |\hat{a}_k|$ as a function of Strouhal number $St$. Each marker corresponds to one $(d, \varepsilon_{\mathrm{tol}})$ pair; different colours encode different values of $d$ and different marker styles encode different tolerances. Peaks that persist across all curves can therefore be read off directly as physically robust frequencies.
+The frequency--amplitude plots shown in Figures~\ref{fig:spectrum_1200K}, \ref{fig:spectrum_1500K}, and \ref{fig:spectrum_1700K} display, for each temperature case, the normalised DMD mode amplitudes $|\hat{a}_k| / \max_k |\hat{a}_k|$ as a function of Strouhal number $St$. Each marker corresponds to one $(d, \varepsilon_{\mathrm{tol}})$ pair; different colours encode different values of $d$ and different marker styles encode different tolerances. Peaks that persist across all curves can therefore be read off directly as physically robust frequencies.
 
 \paragraph{Case 1200~K}
 \label{sec:spectrum_1200K}
-DA MARCARE IN ROSSO LE FREQUENZE PRINCIPALI SU QUESTO PLOT
+
+The spectrum for the 1200~K case, shown in Figure~\ref{fig:spectrum_1200K}, is characterised by a rich distribution of modes spanning a broad Strouhal range up to $St \approx 1.7$. The dominant peak is located at $St \approx 0.42$ and is reproduced consistently across all $(d, \varepsilon_{\mathrm{tol}})$ combinations, confirming its physical robustness. Secondary peaks of significant amplitude are identified at $St \approx 0.85$, $St \approx 1.1$, $St \approx 1.3$,, $St \approx 1.7$. These peaks are approximately integer multiples of the dominant frequency and therefore interpretable as higher harmonics of the fundamental shear-layer instability. 
 
 \FloatBarrier
 \begin{figure}[h!]
@@ -79,13 +64,10 @@ DA MARCARE IN ROSSO LE FREQUENZE PRINCIPALI SU QUESTO PLOT
 \end{figure}
 \FloatBarrier
 
-
-
 \paragraph{Case 1500~K}
 \label{sec:spectrum_1500K}
-DA MARCARE IN ROSSO LE FREQUENZE PRINCIPALI SU QUESTO PLOT
 
-%Figure~\ref{fig:spectrum_1500K} reveals several dominant peaks in the Strouhal range $St \approx 0.2$--$0.5$. The most prominent structures are located near $St \approx 0.21$--$0.25$, $St \approx 0.27$, $St \approx 0.37$, and $St \approx 0.42$. These peaks are reproducible across all parameter combinations shown, confirming their physical origin. The mode at $St \approx 0.42$ carries the largest amplitude and is therefore identified as the dominant dynamical structure in this configuration.
+The 1500~K spectrum, shown in Figure~\ref{fig:spectrum_1500K}, exhibits a structure closely analogous to the 1200~K case, with the dominant peak again located at $St \approx 0.42$. Secondary peaks are found at $St \approx 0.78$, $St \approx 0.95$, and $St \approx 0.1$, $St \approx 1.5$. The overall behaviour is similar to the previous case reported in Fig~\ref{fig:spectrum_1200K} with the harmonic sequence translated. 
 \FloatBarrier
 \begin{figure}[h!]
     \centering
@@ -95,11 +77,10 @@ DA MARCARE IN ROSSO LE FREQUENZE PRINCIPALI SU QUESTO PLOT
 \end{figure}
 \FloatBarrier
 
-
-
 \paragraph{Case 1700~K}
 \label{sec:spectrum_1700K}
-DA MARCARE IN ROSSO LE FREQUENZE PRINCIPALI SU QUESTO PLOT
+
+The 1700~K case, shown in Figure~\ref{fig:spectrum_1700K}, presents a different spectral structure. The dominant peak remains at $St \approx 0.40$, consistent with the lower-temperature cases, but the overall spectrum is sparser: maximum relevant Strouhal number observed is $St \approx 1.25$ and fewer secondary modes are retained.
 
 \FloatBarrier
 \begin{figure}[h!]
@@ -110,6 +91,15 @@ DA MARCARE IN ROSSO LE FREQUENZE PRINCIPALI SU QUESTO PLOT
 \end{figure}
 \FloatBarrier
 
+% -------------------------------------------------------
+\subsubsection*{Discussion of physical frequency variation across different configurations}
+% -------------------------------------------------------
+
+The comparison between the three frequency--amplitude spectra allows for some considerations on the nature of the flow. The main dominant frequency at $St \approx 0.42$ across all cases suggests that the primary instability mechanism is kinematically controlled, governed by the shear between the two inlet streams rather than by the thermal boundary condition. This is consistent with the Kelvin--Helmholtz roll-up mechanism at the splitter plate, whose characteristic frequency scales with the bulk convective velocity independently of the preheat level.
+
+The most significant difference between the three is in the secondary spectral content. At 1200~K and 1500~K, the spectra has an harmonic structure with modes distributed up to $St \approx 1.7$. At 1700~K, there are less secondary modes and the parameter sensitivity islower, indicating a dynamically simpler and more coherent flow. This evolution is physically consistent with the expected effect of increased thermal loading: higher air preheat temperatures intensify the heat release rate and the associated gas expansion, which tends to suppress secondary instabilities such as vortex pairing and subharmonic modes while leaving the fundamental roll-up frequency unaffected.
+DA FAR CONTROLLARE A SOLE
+The observation that the dominant Strouhal number is preserved while the harmonic content is selectively attenuated suggests that thermal effects act as a modulatory mechanism on the shear-layer dynamics rather than altering its primary instability mechanism.
 
 \subsubsection*{Discussion of physical frequency variation across different configurations}
 
