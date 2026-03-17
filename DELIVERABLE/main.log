@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.14)  13 MAR 2026 17:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.14)  17 MAR 2026 16:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -407,6 +407,29 @@ Package: amsthm 2017/10/31 v2.20.4
 \dth@everypar=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen256
+\captionmargin@=\dimen257
+\captionwidth=\dimen258
+\caption@tempdima=\dimen259
+\caption@indent=\dimen260
+\caption@parindent=\dimen261
+\caption@hangindent=\dimen262
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count288
+\c@continuedfloat=\count289
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+\c@subfigure=\count290
+\c@subtable=\count291
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks34
@@ -415,11 +438,11 @@ Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
 ) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip84
-\enit@outerparindent=\dimen256
+\enit@outerparindent=\dimen263
 \enit@toks=\toks36
 \enit@inbox=\box61
-\enit@count@id=\count288
-\enitdp@description=\count289
+\enit@count@id=\count292
+\enitdp@description=\count293
 ) (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/bbm.sty
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
 LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
@@ -428,8 +451,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks37
-\pgfutil@tempdima=\dimen257
-\pgfutil@tempdimb=\dimen258
+\pgfutil@tempdima=\dimen264
+\pgfutil@tempdimb=\dimen265
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box62
  (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
@@ -446,26 +469,26 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks40
 ))
-\pgf@x=\dimen259
-\pgf@y=\dimen260
-\pgf@xa=\dimen261
-\pgf@ya=\dimen262
-\pgf@xb=\dimen263
-\pgf@yb=\dimen264
-\pgf@xc=\dimen265
-\pgf@yc=\dimen266
-\pgf@xd=\dimen267
-\pgf@yd=\dimen268
+\pgf@x=\dimen266
+\pgf@y=\dimen267
+\pgf@xa=\dimen268
+\pgf@ya=\dimen269
+\pgf@xb=\dimen270
+\pgf@yb=\dimen271
+\pgf@xc=\dimen272
+\pgf@yc=\dimen273
+\pgf@xd=\dimen274
+\pgf@yd=\dimen275
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count290
-\c@pgf@countb=\count291
-\c@pgf@countc=\count292
-\c@pgf@countd=\count293
+\c@pgf@counta=\count294
+\c@pgf@countb=\count295
+\c@pgf@countc=\count296
+\c@pgf@countd=\count297
 \t@pgf@toka=\toks41
 \t@pgf@tokb=\toks42
 \t@pgf@tokc=\toks43
-\pgf@sys@id@count=\count294
+\pgf@sys@id@count=\count298
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -476,8 +499,8 @@ File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
 File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 ))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count295
-\pgfsyssoftpath@bigbuffer@items=\count296
+\pgfsyssoftpath@smallbuffer@items=\count299
+\pgfsyssoftpath@bigbuffer@items=\count300
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -486,6 +509,12 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
+ (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks44
+\minrowclearance=\skip85
+)
+\rownum=\count301
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -498,52 +527,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen269
-\pgfmath@count=\count297
+\pgfmath@dimen=\dimen276
+\pgfmath@count=\count302
 \pgfmath@box=\box63
-\pgfmath@toks=\toks44
-\pgfmath@stack@operand=\toks45
-\pgfmath@stack@operation=\toks46
+\pgfmath@toks=\toks45
+\pgfmath@stack@operand=\toks46
+\pgfmath@stack@operation=\toks47
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count298
+\c@pgfmathroundto@lastzeros=\count303
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen270
-\pgf@picmaxx=\dimen271
-\pgf@picminy=\dimen272
-\pgf@picmaxy=\dimen273
-\pgf@pathminx=\dimen274
-\pgf@pathmaxx=\dimen275
-\pgf@pathminy=\dimen276
-\pgf@pathmaxy=\dimen277
-\pgf@xx=\dimen278
-\pgf@xy=\dimen279
-\pgf@yx=\dimen280
-\pgf@yy=\dimen281
-\pgf@zx=\dimen282
-\pgf@zy=\dimen283
+\pgf@picminx=\dimen277
+\pgf@picmaxx=\dimen278
+\pgf@picminy=\dimen279
+\pgf@picmaxy=\dimen280
+\pgf@pathminx=\dimen281
+\pgf@pathmaxx=\dimen282
+\pgf@pathminy=\dimen283
+\pgf@pathmaxy=\dimen284
+\pgf@xx=\dimen285
+\pgf@xy=\dimen286
+\pgf@yx=\dimen287
+\pgf@yy=\dimen288
+\pgf@zx=\dimen289
+\pgf@zy=\dimen290
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen284
-\pgf@path@lasty=\dimen285
+\pgf@path@lastx=\dimen291
+\pgf@path@lasty=\dimen292
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen286
-\pgf@shorten@start@additional=\dimen287
+\pgf@shorten@end@additional=\dimen293
+\pgf@shorten@start@additional=\dimen294
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfpic=\box64
 \pgf@hbox=\box65
 \pgf@layerbox@main=\box66
-\pgf@picture@serial@count=\count299
+\pgf@picture@serial@count=\count304
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen288
+\pgflinewidth=\dimen295
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen289
-\pgf@pt@y=\dimen290
-\pgf@pt@temp=\dimen291
+\pgf@pt@x=\dimen296
+\pgf@pt@y=\dimen297
+\pgf@pt@temp=\dimen298
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
@@ -552,12 +581,12 @@ File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen292
+\pgfarrowsep=\dimen299
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen293
-\pgf@sys@shading@range@num=\count300
-\pgf@shadingcount=\count301
+\pgf@max=\dimen300
+\pgf@sys@shading@range@num=\count305
+\pgf@shadingcount=\count306
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
@@ -578,47 +607,47 @@ File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen294
-\pgf@nodesepend=\dimen295
+\pgf@nodesepstart=\dimen301
+\pgf@nodesepend=\dimen302
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen296
-\pgffor@skip=\dimen297
-\pgffor@stack=\toks47
-\pgffor@toks=\toks48
+\pgffor@iter=\dimen303
+\pgffor@skip=\dimen304
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count302
-\pgfplotmarksize=\dimen298
+\pgf@plot@mark@count=\count307
+\pgfplotmarksize=\dimen305
 )
-\tikz@lastx=\dimen299
-\tikz@lasty=\dimen300
-\tikz@lastxsaved=\dimen301
-\tikz@lastysaved=\dimen302
-\tikz@lastmovetox=\dimen303
-\tikz@lastmovetoy=\dimen304
-\tikzleveldistance=\dimen305
-\tikzsiblingdistance=\dimen306
+\tikz@lastx=\dimen306
+\tikz@lasty=\dimen307
+\tikz@lastxsaved=\dimen308
+\tikz@lastysaved=\dimen309
+\tikz@lastmovetox=\dimen310
+\tikz@lastmovetoy=\dimen311
+\tikzleveldistance=\dimen312
+\tikzsiblingdistance=\dimen313
 \tikz@figbox=\box69
 \tikz@figbox@bg=\box70
 \tikz@tempbox=\box71
 \tikz@tempbox@bg=\box72
-\tikztreelevel=\count303
-\tikznumberofchildren=\count304
-\tikznumberofcurrentchild=\count305
-\tikz@fig@count=\count306
+\tikztreelevel=\count308
+\tikznumberofchildren=\count309
+\tikznumberofcurrentchild=\count310
+\tikz@fig@count=\count311
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count307
-\pgfmatrixcurrentcolumn=\count308
-\pgf@matrix@numberofcolumns=\count309
+\pgfmatrixcurrentrow=\count312
+\pgfmatrixcurrentcolumn=\count313
+\pgf@matrix@numberofcolumns=\count314
 )
-\tikz@expandcount=\count310
+\tikz@expandcount=\count315
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
@@ -627,100 +656,81 @@ LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 ) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
-\f@nch@headwidth=\skip85
-\f@nch@O@elh=\skip86
-\f@nch@O@erh=\skip87
-\f@nch@O@olh=\skip88
-\f@nch@O@orh=\skip89
-\f@nch@O@elf=\skip90
-\f@nch@O@erf=\skip91
-\f@nch@O@olf=\skip92
-\f@nch@O@orf=\skip93
+\f@nch@headwidth=\skip86
+\f@nch@O@elh=\skip87
+\f@nch@O@erh=\skip88
+\f@nch@O@olh=\skip89
+\f@nch@O@orh=\skip90
+\f@nch@O@elf=\skip91
+\f@nch@O@erf=\skip92
+\f@nch@O@olf=\skip93
+\f@nch@O@orf=\skip94
 ) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count311
-\Gm@cntv=\count312
-\c@Gm@tempcnt=\count313
-\Gm@bindingoffset=\dimen307
-\Gm@wd@mp=\dimen308
-\Gm@odd@mp=\dimen309
-\Gm@even@mp=\dimen310
-\Gm@layoutwidth=\dimen311
-\Gm@layoutheight=\dimen312
-\Gm@layouthoffset=\dimen313
-\Gm@layoutvoffset=\dimen314
-\Gm@dimlist=\toks49
+\Gm@cnth=\count316
+\Gm@cntv=\count317
+\c@Gm@tempcnt=\count318
+\Gm@bindingoffset=\dimen314
+\Gm@wd@mp=\dimen315
+\Gm@odd@mp=\dimen316
+\Gm@even@mp=\dimen317
+\Gm@layoutwidth=\dimen318
+\Gm@layoutheight=\dimen319
+\Gm@layouthoffset=\dimen320
+\Gm@layoutvoffset=\dimen321
+\Gm@dimlist=\toks50
 ) (/usr/share/texlive/texmf-dist/tex/latex/textpos/textpos.sty
 Package: textpos 2019/04/15 v1.9.1
 
 Package: textpos 2019/04/15 1.9.1, absolute positioning of text on the page
 \TP@textbox=\box73
 \TP@holdbox=\box74
-\TPHorizModule=\dimen315
-\TPVertModule=\dimen316
-\TP@margin=\dimen317
-\TP@absmargin=\dimen318
+\TPHorizModule=\dimen322
+\TPVertModule=\dimen323
+\TP@margin=\dimen324
+\TP@absmargin=\dimen325
 Grid set 16 x 16 = 37.34424pt x 52.81541pt
-\TPboxrulesize=\dimen319
-\TP@ox=\dimen320
-\TP@oy=\dimen321
-\TP@tbargs=\toks50
-\TP@prevdepth=\dimen322
+\TPboxrulesize=\dimen326
+\TP@ox=\dimen327
+\TP@oy=\dimen328
+\TP@tbargs=\toks51
+\TP@prevdepth=\dimen329
 TextBlockOrigin set to 0pt x 0pt
 ) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box75
-\beforetitleunit=\skip94
-\aftertitleunit=\skip95
-\ttl@plus=\dimen323
-\ttl@minus=\dimen324
-\ttl@toksa=\toks51
-\titlewidth=\dimen325
-\titlewidthlast=\dimen326
-\titlewidthfirst=\dimen327
-)
-
-/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/packages.tex:50: LaTeX Error: Option clash for package xcolor.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 \usepackage
-                {wallpaper} % Allows adding background images to pages, usef...
-The package xcolor has already been loaded with options:
-  []
-There has now been an attempt to load it with options
-  [table]
-Adding the global options:
-  ,table
-to your \documentclass declaration may fix this.
-Try typing  <return>  to proceed.
-
-(/usr/share/texlive/texmf-dist/tex/latex/wallpaper/wallpaper.sty
+\beforetitleunit=\skip95
+\aftertitleunit=\skip96
+\ttl@plus=\dimen330
+\ttl@minus=\dimen331
+\ttl@toksa=\toks52
+\titlewidth=\dimen332
+\titlewidthlast=\dimen333
+\titlewidthfirst=\dimen334
+) (/usr/share/texlive/texmf-dist/tex/latex/wallpaper/wallpaper.sty
 Package: wallpaper 2005/01/18, v1.01 easy wallpaper formatting (MHFW)
  (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
 )
-\wpXoffset=\skip96
-\wpYoffset=\skip97
-\tileXoffset=\skip98
-\tileYoffset=\skip99
-\tilewidth=\skip100
-\tileheight=\skip101
-\tileX=\skip102
-\tileY=\skip103
+\wpXoffset=\skip97
+\wpYoffset=\skip98
+\tileXoffset=\skip99
+\tileYoffset=\skip100
+\tilewidth=\skip101
+\tileheight=\skip102
+\tileX=\skip103
+\tileY=\skip104
 )) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/inputs.tex
 Package hyperref Info: Option `colorlinks' set `true' on input line 89.
 ) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/macros.tex)
-\c@theorem=\count314
-\c@example=\count315
+\c@theorem=\count319
+\c@example=\count320
  (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count316
+\l__kernel_color_stack_int=\count321
 \l__pdf_internal_box=\box76
 ) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.aux)
 \openout1 = `main.aux'.
@@ -754,37 +764,41 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count317
+\c@section@level=\count322
 )
 LaTeX Info: Redefining \ref on input line 30.
 LaTeX Info: Redefining \pageref on input line 30.
 LaTeX Info: Redefining \nameref on input line 30.
+ (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.out) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 30.
-\c@lstlisting=\count318
+\c@lstlisting=\count323
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count319
-\scratchdimen=\dimen328
+\scratchcounter=\count324
+\scratchdimen=\dimen335
 \scratchbox=\box78
-\nofMPsegments=\count320
-\nofMParguments=\count321
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count322
-\MPscratchDim=\dimen329
-\MPnumerator=\count323
-\makeMPintoPDFobject=\count324
-\everyMPtoPDFconversion=\toks53
+\nofMPsegments=\count325
+\nofMParguments=\count326
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count327
+\MPscratchDim=\dimen336
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
+\everyMPtoPDFconversion=\toks54
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) ABD: EveryShipout initializing macros
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ ABD: EveryShipout initializing macros
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
@@ -819,7 +833,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/FrontPage.tex
-<logos/ENCODING_name.png, id=7, 1373.13pt x 347.3778pt>
+<logos/ENCODING_name.png, id=67, 1373.13pt x 347.3778pt>
 File: logos/ENCODING_name.png Graphic file (type png)
 <use logos/ENCODING_name.png>
 Package pdftex.def Info: logos/ENCODING_name.png  used on input line 16.
@@ -829,7 +843,7 @@ Overfull \hbox (2.52942pt too wide) in paragraph at lines 16--18
 [][]  
  []
 
-<logos/EN-Funded-VerticalLogo.png, id=8, 219.219pt x 222.1098pt>
+<logos/EN-Funded-VerticalLogo.png, id=68, 219.219pt x 222.1098pt>
 File: logos/EN-Funded-VerticalLogo.png Graphic file (type png)
 <use logos/EN-Funded-VerticalLogo.png>
 Package pdftex.def Info: logos/EN-Funded-VerticalLogo.png  used on input line 38.
@@ -858,5 +872,211 @@ Underfull \hbox (badness 1558) in paragraph at lines 85--85
 []|\T1/phv/m/n/12 Report on Pat-tern Iden-ti-fi-ca-tion of Crit-i-cal Com-bus-tion
  []
 
-<logos/ENCODING_icon.png, id=18, 875.9124pt x 916.1427pt>
-File: logos
+<logos/ENCODING_icon.png, id=78, 875.9124pt x 916.1427pt>
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 103.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+[2 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/logos/ENCODING_icon.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
+
+ []
+
+
+Overfull \hbox (15.67601pt too wide) in paragraph at lines 115--117
+[]\T1/phv/b/n/12 Keywords: \T1/phv/m/n/12 Com-bus-tion, DNS, NH$[]$/H$[]$, Dy-namic Mode De-com-po-si-tion, HODMD, HOSVD,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--117
+
+ []
+
+(/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/revisionInfo.tex
+Overfull \hbox (6.81523pt too wide) in paragraph at lines 15--15
+[]|\T1/phv/b/n/12 Version| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/phv/b/n/12 Checked by WP
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 24--119
+
+ []
+
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 123.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+[3]
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 135.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+ [4] (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.toc)
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 141.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+ [5]) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/SECTIONS/Introduction.tex) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/SECTIONS/datasets.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 6.
+
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 10.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+[6]
+<IMAGES/../IMAGES/DATASETS/coria_3snap.png, id=119, 721.2546pt x 346.1733pt>
+File: IMAGES/../IMAGES/DATASETS/coria_3snap.png Graphic file (type png)
+<use IMAGES/../IMAGES/DATASETS/coria_3snap.png>
+Package pdftex.def Info: IMAGES/../IMAGES/DATASETS/coria_3snap.png  used on input line 17.
+(pdftex.def)             Requested size: 386.96027pt x 185.72116pt.
+) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/SECTIONS/methods.tex
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 9.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+ [7 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/../IMAGES/DATASETS/coria_3snap.png>]
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 48.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+ [8]
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 81.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+ [9]) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/SECTIONS/results_coria.tex
+Overfull \hbox (0.62653pt too wide) in paragraph at lines 6--7
+\T1/phv/m/n/12 namic Mode De-com-po-si-tion (md-HOD-MDit) al-go-rithm to the three NH$[]$/H$[]$ DNS datasets
+ []
+
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 24.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+[10]
+Overfull \hbox (22.37343pt too wide) in paragraph at lines 46--46
+|\T1/phv/m/n/17.28 4.1 Frequency--Amplitude Spec-tra and as-so-ci-ated DMD modes| 
+ []
+
+<IMAGES/Frequency_amplitude_plot1200.png, id=175, 855.195pt x 277.035pt>
+File: IMAGES/Frequency_amplitude_plot1200.png Graphic file (type png)
+<use IMAGES/Frequency_amplitude_plot1200.png>
+Package pdftex.def Info: IMAGES/Frequency_amplitude_plot1200.png  used on input line 59.
+(pdftex.def)             Requested size: 455.24411pt x 147.47038pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 63.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+[11]
+<IMAGES/Frequency_amplitude_plot1500.png, id=190, 855.195pt x 277.035pt>
+File: IMAGES/Frequency_amplitude_plot1500.png Graphic file (type png)
+<use IMAGES/Frequency_amplitude_plot1500.png>
+Package pdftex.def Info: IMAGES/Frequency_amplitude_plot1500.png  used on input line 110.
+(pdftex.def)             Requested size: 455.24411pt x 147.47038pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 114.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+[12 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/Frequency_amplitude_plot1200.png>]
+<IMAGES/Frequency_amplitude_plot1700.png, id=200, 855.6768pt x 277.5168pt>
+File: IMAGES/Frequency_amplitude_plot1700.png Graphic file (type png)
+<use IMAGES/Frequency_amplitude_plot1700.png>
+Package pdftex.def Info: IMAGES/Frequency_amplitude_plot1700.png  used on input line 162.
+(pdftex.def)             Requested size: 455.24411pt x 147.6464pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 166.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+[13 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/Frequency_amplitude_plot1500.png>]
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 208.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+ [14 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/Frequency_amplitude_plot1700.png>]
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 222.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+ [15])
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 44.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+ [16] (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.bbl
+Underfull \hbox (badness 2229) in paragraph at lines 4--8
+[]\T1/phv/m/n/12 Adrián Cor-rochano, Giuseppe D'Alessio, Alessan-dro Par-ente, and Soledad
+ []
+
+) 
+AED: lastpage setting LastPage
+File: logos/ENCODING_icon.png Graphic file (type png)
+<use logos/ENCODING_icon.png>
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 48.
+(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
+[17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
+ (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 04B4D796E99A5D66C95B298D536F0C54;1151.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
+ ) 
+Here is how much of TeX's memory you used:
+ 23966 strings out of 481239
+ 425910 string characters out of 5920377
+ 694605 words of memory out of 5000000
+ 38625 multiletter control sequences out of 15000+600000
+ 583993 words of font info for 94 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 65i,15n,102p,1878b,560s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on /home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.pdf (17 pages, 1935892 bytes).
+PDF statistics:
+ 290 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 168 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,7 +1,7 @@
 \section{Results and Discussion}
 \label{sec:results}
 
-\subsection{mdHODMDit Applied to the CORIA Dataset}
+\subsection{mdHODMDit Applied to the CORIA Dataset} 
 \label{sec:results_coria}
 This section presents the application of the multidimensional iterative Higher-Order Dynamic Mode Decomposition (mdHODMDit) algorithm to the three NH$_3$/H$_2$ DNS datasets from CORIA described in Section~\ref{sec:DATA_CORIA}. The work is carried out in collaboration with CORIA and builds upon previous developments related to the mdHODMDit methodology, particularly the work of Pablo López Salazar. Within the present study, the computational workflow was applied to the CORIA datasets, leading to the analysis of the results discussed in this section.
 
@@ -10,14 +10,12 @@ This section presents the application of the multidimensional iterative Higher-O
 
 The DNS output for each temperature case is stored as a four-dimensional tensor $\mathcal{T} \in \mathbb{R}^{N_{\mathrm{var}} \times N_x \times N_y \times N_t}$, where the axes correspond to the reactive scalar variables, the streamwise spatial coordinate $x$, the cross-stream coordinate $y$, and time $t$, respectively.
 
-Before analysis, the tensor is restricted to the region of physical interest. In the streamwise direction, indices $x_{60:1000}$ are retained, corresponding to the range $[0.3, 5.0]$~cm downstream of the splitter plate, which encompasses the near-field flame stabilisation region and the initial development of the shear layer. In time, the first 74 snapshots are discarded to remove the initial transient, so the analysis is performed on the statistically developed portion of the signal. The temporal resolution is $\Delta t = 40~\mu$s.
+Before analysis, the tensor is restricted to the region of physical interest. In the streamwise direction, indices $x_{60:1000}$ are retained, corresponding to the range $[0.3, 5.0]$~cm downstream of the splitter plate, which encompasses the near-field flame stabilisation region and the initial development of the shear layer. In time, the first 74 snapshots are discarded to remove the initial transient. The temporal resolution is $\Delta t = 40~\mu$s.
 
 For this kind of data, scaling is important due to the differences in the order of magnitude of the variables considered and the differences between their units of measurement \cite{corrochano2023higher, parente2013principal}. Since there is no universally accepted quantitative criterion to determine which scaling method is most appropriate, the analysis was performed using both auto scaling $x_{i}^{\text{scaled}} = \frac{x_i - \mu_x}{\sigma_x}$ and range scaling $x_{i}^{\text{scaled}} = \frac{x_i - x_{\min}}{x_{\max} - x_{\min}}$. The analysis yielded similar results for both scaling methods, identifying the same main frequencies.
 
-% -------------------------------------------------------
 \subsubsection{Parameter Calibration}
 \label{sec:coria_params}
-% -------------------------------------------------------
 
 The analysis is performed over a grid of Hankel delay parameters
 \begin{equation}
@@ -45,10 +43,10 @@ A DMD mode is identified as physical when its spectral peak appears across diffe
 where $\ell = 3$~mm is the reference lenght of the mixing layer and  $U_b$ is the bulk speed, respectively $U_b = 21{,}34$, $24{,}29$ e $27{,}14$~m~s$^{-1}$ for cases at 1200~K, 1500~K e 1700~K.
 
 
-\subsubsection{Frequency--Amplitude Spectra}
+\subsubsection{Frequency--Amplitude Spectra and associated DMD modes}
 \label{sec:freq_amplitude}
 
-The frequency--amplitude plots shown in Figures~\ref{fig:spectrum_1200K}, \ref{fig:spectrum_1500K}, and \ref{fig:spectrum_1700K} display, for each temperature case, the normalised DMD mode amplitudes $|\hat{a}_k| / \max_k |\hat{a}_k|$ as a function of Strouhal number $St$. Each marker corresponds to one $(d, \varepsilon_{\mathrm{tol}})$ pair; different colours encode different values of $d$ and different marker styles encode different tolerances. Peaks that persist across all curves can therefore be read off directly as physically robust frequencies.
+The frequency--amplitude plots shown in Figures~\ref{fig:spectrum_1200K}, \ref{fig:spectrum_1500K}, and \ref{fig:spectrum_1700K} display, for each temperature case, the normalised DMD mode amplitudes $|\hat{a}_k| / \max_k |\hat{a}_k|$ as a function of Strouhal number $St$. Each marker corresponds to one $(d, \varepsilon_{\mathrm{tol}})$ pair; different colours encode different values of $d$ and different marker styles encode different tolerances. Peaks that persist across all curves can therefore be read off directly as physically robust frequencies. To showcase the coherent structures associated to these freuqencies, temperature is choosen as the rapresentative variable due to the fact that in many cases is a variable of interest for both experimental and theoretical problems. Despite this, coherent structures for every variable can be plotted.
 
 \paragraph{Case 1200~K}
 \label{sec:spectrum_1200K}
@@ -64,6 +62,44 @@ The spectrum for the 1200~K case, shown in Figure~\ref{fig:spectrum_1200K}, is c
 \end{figure}
 \FloatBarrier
 
+The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1200K} are shown in Figure~\ref{fig:modes_1200K}.
+
+\FloatBarrier
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 1}
+        \label{fig:modes_1200K_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 2}
+        \label{fig:modes_1200K_2}
+    \end{subfigure}
+    \\[1em]
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 3}
+        \label{fig:modes_1200K_3}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 4}
+        \label{fig:modes_1200K_4}
+    \end{subfigure}
+    \caption{[PLACEHOLDER] DMD modes associated with the dominant peaks in the 1200~K spectrum.}
+    \label{fig:modes_1200K}
+\end{figure}
+\FloatBarrier
+
+
 \paragraph{Case 1500~K}
 \label{sec:spectrum_1500K}
 
@@ -76,6 +112,44 @@ The 1500~K spectrum, shown in Figure~\ref{fig:spectrum_1500K}, exhibits a struct
     \label{fig:spectrum_1500K}
 \end{figure}
 \FloatBarrier
+
+The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1500K} are shown in Figure~\ref{fig:modes_1500K}.
+
+\FloatBarrier
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 1}
+        \label{fig:modes_1500K_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 2}
+        \label{fig:modes_1500K_2}
+    \end{subfigure}
+    \\[1em]
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 3}
+        \label{fig:modes_1500K_3}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 4}
+        \label{fig:modes_1500K_4}
+    \end{subfigure}
+    \caption{[PLACEHOLDER] DMD modes associated with the dominant peaks in the 1500~K spectrum.}
+    \label{fig:modes_1500K}
+\end{figure}
+\FloatBarrier
+
 
 \paragraph{Case 1700~K}
 \label{sec:spectrum_1700K}
@@ -91,89 +165,58 @@ The 1700~K case, shown in Figure~\ref{fig:spectrum_1700K}, presents a different 
 \end{figure}
 \FloatBarrier
 
-% -------------------------------------------------------
-\subsubsection*{Discussion of physical frequency variation across different configurations}
-% -------------------------------------------------------
+The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1700K} are shown in Figure~\ref{fig:modes_1700K}.
 
-The comparison between the three frequency--amplitude spectra allows for some considerations on the nature of the flow. The main dominant frequency at $St \approx 0.42$ across all cases suggests that the primary instability mechanism is kinematically controlled, governed by the shear between the two inlet streams rather than by the thermal boundary condition. This is consistent with the Kelvin--Helmholtz roll-up mechanism at the splitter plate, whose characteristic frequency scales with the bulk convective velocity independently of the preheat level.
-
-The most significant difference between the three is in the secondary spectral content. At 1200~K and 1500~K, the spectra has an harmonic structure with modes distributed up to $St \approx 1.7$. At 1700~K, there are less secondary modes and the parameter sensitivity islower, indicating a dynamically simpler and more coherent flow. This evolution is physically consistent with the expected effect of increased thermal loading: higher air preheat temperatures intensify the heat release rate and the associated gas expansion, which tends to suppress secondary instabilities such as vortex pairing and subharmonic modes while leaving the fundamental roll-up frequency unaffected.
-DA FAR CONTROLLARE A SOLE
-The observation that the dominant Strouhal number is preserved while the harmonic content is selectively attenuated suggests that thermal effects act as a modulatory mechanism on the shear-layer dynamics rather than altering its primary instability mechanism.
-
-\subsubsection*{Discussion of physical frequency variation across different configurations}
-
-
-% -------------------------------------------------------
-\subsubsection{Spatial DMD Modes (1500~K Reference Case)}
-\label{sec:spatial_modes}
-% -------------------------------------------------------
-
-The spatial structure of the dominant modes is examined in detail for the reference 1500~K case at $d = 40$, $\varepsilon_{\mathrm{tol}} = 7\times10^{-2}$. Each mode is represented as a two-dimensional field over the normalised streamwise--cross-stream plane $(x/h,\, y/h)$, where $h = 5$~cm is the reference height, for each of the retained reactive scalar fields. Figures~\ref{fig:mode_021_coria}--\ref{fig:mode_042_coria} show the real part of the five dominant modes.
-\begin{comment}
-    
-\begin{figure}[htbp]
+\FloatBarrier
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth]{DMDmode_St0.21_d40_tol7e-02.png}
-    \caption{Spatial DMD mode at $St = 0.214$ ($d = 40$, $\varepsilon_{\mathrm{tol}} = 7\times10^{-2}$, 1500~K case). Each panel shows the real part of the mode for one reactive scalar field over the streamwise--cross-stream plane.}
-    \label{fig:mode_021_coria}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 1}
+        \label{fig:modes_1700K_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 2}
+        \label{fig:modes_1700K_2}
+    \end{subfigure}
+    \\[1em]
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 3}
+        \label{fig:modes_1700K_3}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
+        \caption{[PLACEHOLDER] Mode 4}
+        \label{fig:modes_1700K_4}
+    \end{subfigure}
+    \caption{[PLACEHOLDER] DMD modes associated with the dominant peaks in the 1700~K spectrum.}
+    \label{fig:modes_1700K}
 \end{figure}
 \FloatBarrier
 
-The mode at $St = 0.214$ (Figure~\ref{fig:mode_021_coria}) is the lowest-frequency dominant structure identified in the spectrum. It exhibits elongated streamwise coherence with moderate cross-stream extent, consistent with a large-scale shear-layer oscillation associated with the convective growth of the Kelvin--Helmholtz instability of the mixing layer.
+\subsubsection*{Discussion: Spectral and Spatial Evolution Across Preheat Temperatures}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{DMDmode_St0.24_d40_tol7e-02.png}
-    \caption{Spatial DMD mode at $St = 0.244$ ($d = 40$, $\varepsilon_{\mathrm{tol}} = 7\times10^{-2}$, 1500~K case).}
-    \label{fig:mode_024_coria}
-\end{figure}
-\FloatBarrier
+The three preheat temperature cases investigated here represent distinct combustion regimes with direct relevance to the efficiency--pollutant trade-off inherent in NH$_3$/H$_2$ combustion. The 1200K case, in practical application has lower thermal efficiency, while the high temperature one, i.e. 1700~K is overall more efficient due to a more complete combustion but at the cost of significantly enhanced NOx formation. The 1500~K case sits at the boundary between these two regimes and is therefore of particular practical interest as a candidate operating point for studying the tradoff between combustion efficiency and pollutant emissions. In particular we focused on understanding the behaviour of the flow rather than the chemical one.
 
-The mode at $St = 0.244$ (Figure~\ref{fig:mode_024_coria}) presents a spatial organisation similar to the $St = 0.214$ mode but with a shorter streamwise wavelength, suggesting a harmonic or sub-harmonic relationship possibly linked to vortex pairing in the developing shear layer.
+At 1200~k the structure of the flow found by the algorithm is harmonic, with a dominant peak at $St \approx 0.42$ is accompanied by secondary peaks at approximately integer multiples of this frequency extending up to $St \approx 1.7$. This is the sign of a strongly periodic shear layer instability, in which the primary roll up vortex and its successive pairings organize the flow in a regular pattern.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{DMDmode_St0.27_d40_tol7e-02.png}
-    \caption{Spatial DMD mode at $St = 0.271$ ($d = 40$, $\varepsilon_{\mathrm{tol}} = 7\times10^{-2}$, 1500~K case).}
-    \label{fig:mode_027_coria}
-\end{figure}
-\FloatBarrier
+On the other hand, at 1700~K, the spectral picture changes substantially. While the dominant frequency is preserved at $St \approx 0.40$, confirming that the primary instability mechanism remains kinematically controlled by the shear between the two inlet streams, the harmonic content is severly reduced, and the overall spectrum is sparser. This evolution is physically consistent with the effect of increased thermal loading: the elevated heat release rate and associated gas expansion at 1700~K tend to suppress vortex pairing and subharmonic modes, leading to a quasi-periodic, more turbulent flow. 
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{DMDmode_St0.37_d40_tol7e-02.png}
-    \caption{Spatial DMD mode at $St = 0.371$ ($d = 40$, $\varepsilon_{\mathrm{tol}} = 7\times10^{-2}$, 1500~K case).}
-    \label{fig:mode_037_coria}
-\end{figure}
-\FloatBarrier
+The 1500~K case contains the transition between the two cases. In this spectrum we can find dominant harmonic structures as in the 1200~K, but additionally the creation of quasi-periodic frequencies that are not in a neighborhood of the main one. This quasi-periodic spectral content can be interpreted as a signature of the competing dynamics active at this operating point: the primary shear-layer instability is still present, but thermal effects are beginning to modify the nonlinear interactions.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{DMDmode_St0.42_d40_tol7e-02.png}
-    \caption{Spatial DMD mode at $St = 0.422$ ($d = 40$, $\varepsilon_{\mathrm{tol}} = 7\times10^{-2}$, 1500~K case). This is the highest-amplitude mode in the spectrum.}
-    \label{fig:mode_042_coria}
-\end{figure}
-\FloatBarrier
+The coherent structures corresponding to the main physical frequencies identified provide further information about the dynamics of the phoenomenon. At 1200~K, the modes with highest amplitude are spatially extended structures concentrated in the far field of the domain as shown in the Figure~DAMETTERE, reflecting the downstream convection and roll-up of large-scale vortices that have had space and time to develop along the mixing layer. At 1700~K the dominant spatial activity is shifted towards the near field, immediately downstream of the splitter plate. This can be explained by the fact that the stronger heat release ties the energetically significant dynamics to the flame attachment as shown in Figure~DA METTERE with less coherent large-scale activity further downstream. 
+The transient case, i.e. 1500~K has energetically significant DMD modes in both the far field and the near field regions as shown in the DMD modes associated to the frequencies DAMETTERE and the DMD MODES DA METTERE. In this regime the instabilities are affected by both the far field convective instability and the energy release near the inlet.
 
-The mode at $St = 0.422$ (Figure~\ref{fig:mode_042_coria}) is the dominant mode in terms of amplitude. Its spatial structure closely resembles that of the $St = 0.371$ mode but with a higher spatial frequency. The simultaneous presence of both modes with comparable amplitudes suggests a coupled dynamics, possibly arising from nonlinear interactions within the reactive shear layer.
+\section{Conclusions}
 
-% -------------------------------------------------------
-\subsubsection{Discussion}
-\label{sec:discussion_coria}
-% -------------------------------------------------------
+The algorithm proposed has identified that the preheat temperature can be seen as a modulatory parameter on the shear-layer instability. The increase in temperature suppresses the secondary harmonics and shift the dynamics of the instability from the far field to the near one. The speactral profile of the flow changes from periodic to quasi periodic. 
+Further investigation of the 1500~K operating point, through parametric studies and refined modal decomposition techniques, may enable the identification of conditions that simultaneously minimise NOx emissions and maximise combustion efficiency
 
-The mdHODMDit algorithm, in its multidimensional HOSVD-based formulation, successfully extracts physically coherent spatio-temporal modes from the high-dimensional DNS tensors of all three temperature cases without requiring any reshaping of the data into matrix form. The independent truncation of each tensor mode by HOSVD enables a more targeted noise filtering compared to a standard SVD applied to a vectorised snapshot matrix: the variable axis is compressed according to the co-variance structure among the 20 reactive scalars, while the spatial axes are compressed independently along $x$ and $y$, allowing the method to exploit the anisotropy of the flow geometry.
-
-\paragraph{Variation with preheat temperature}
-
-The dominant Strouhal numbers identified in the 1500~K reference case lie in the range $St \approx 0.21$--$0.42$. [PLACEHOLDER — once results for the 1200~K and 1700~K cases are available, describe how the dominant frequencies shift with preheat temperature. Expected behaviour: an increase in bulk velocity with temperature raises the absolute frequency of the Kelvin--Helmholtz instability; the Strouhal number, which normalises by $U_b$, may remain approximately constant if the instability scales with the local velocity, or may shift if the density ratio across the shear layer changes significantly with preheat.]
-
-\paragraph{Physical interpretation of the dominant modes}
-
-The spatial modes show a clear progression from large-scale shear-layer structures at low $St$ to finer-scale alternating patterns at higher $St$, reflecting the multi-scale nature of the reactive flow dynamics. The modes at $St \approx 0.21$--$0.25$ are consistent with the primary convective instability of the non-premixed mixing layer, in which vortices form and grow downstream of the splitter plate. The higher-frequency modes at $St \approx 0.37$--$0.42$ likely correspond to secondary instabilities or harmonics of the primary roll-up, and their high amplitude in the 1500~K case indicates a vigorous nonlinear energy transfer between the two frequency bands. The fact that the spatial support of all identified modes is concentrated in the region $x/h \lesssim [PLACEHOLDER]$ suggests that the dominant dynamics are governed by the near-field development of the shear layer rather than by the far-field flame structure.
-
-\paragraph{Comparison with matrix-based HODMD}
-
-[PLACEHOLDER — if results from a standard (SVD-based, matrix) HODMD are available for the same dataset, compare the number of modes retained, the dominant frequencies, and the reconstruction error. The key expected advantages of the tensor formulation are: (i) a lower compression rank for the same reconstruction accuracy due to mode-wise truncation, and (ii) modes whose spatial structure is directly interpretable as a multi-variable field rather than a single vectorised pattern.]
-\end{comment}

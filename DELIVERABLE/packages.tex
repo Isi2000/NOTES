@@ -2,6 +2,9 @@
 %  Load needed packages:                                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% xcolor must be loaded with [table] before tikz to avoid option clash
+\PassOptionsToPackage{table}{xcolor}
+
 %General Packages
 %=============================
 \usepackage[utf8]{inputenc} % Allows the use of UTF-8 encoding, which supports a wide range of characters and symbols directly in the LaTeX source code.
@@ -34,6 +37,7 @@
 \usepackage{adjustbox} % Provides a way to resize, rotate, and adjust content, including images and tables, within the document.
 \usepackage{amsthm}     % theorem/lemma/... environments
 \usepackage{placeins}   % \FloatBarrier
+\usepackage{subcaption} % subfigure environments
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage{bbm}
