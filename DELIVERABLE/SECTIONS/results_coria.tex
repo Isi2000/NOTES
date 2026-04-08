@@ -69,32 +69,32 @@ The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1200K
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
-        \caption{[PLACEHOLDER] Mode 1}
+        \includegraphics[width=\linewidth]{IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.42.png}
+        \caption{Mode at $St = 0.42$}
         \label{fig:modes_1200K_1}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
-        \caption{[PLACEHOLDER] Mode 2}
+        \includegraphics[width=\linewidth]{IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.84.png}
+        \caption{Mode at $St = 0.84$}
         \label{fig:modes_1200K_2}
     \end{subfigure}
     \\[1em]
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
-        \caption{[PLACEHOLDER] Mode 3}
+        \includegraphics[width=\linewidth]{IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.26.png}
+        \caption{Mode at $St = 1.26$}
         \label{fig:modes_1200K_3}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
-        \caption{[PLACEHOLDER] Mode 4}
+        \includegraphics[width=\linewidth]{IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.68.png}
+        \caption{Mode at $St = 1.68$}
         \label{fig:modes_1200K_4}
     \end{subfigure}
-    \caption{[PLACEHOLDER] DMD modes associated with the dominant peaks in the 1200~K spectrum.}
+    \caption{DMD modes associated with the dominant peaks in the 1200~K spectrum, i.e. main harmonics.}
     \label{fig:modes_1200K}
 \end{figure}
 \FloatBarrier
@@ -151,6 +151,23 @@ The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1500K
 \FloatBarrier
 
 
+\paragraph{Quasi-periodic content and combination frequencies — 1500~K}
+\label{sec:spectrum_1500K_combination}
+
+The frequency--amplitude spectrum of the 1500~K case, reproduced in Figure~\ref{fig:spectrum_1500K_combination} with an extended annotation, reveals a second family of spectral peaks that cannot be reduced to integer multiples of the dominant frequency $f \approx St\,0.405$. A secondary base frequency $f_2 \approx St\,0.204$ is identified, together with its combination tones $f + f_2 \approx St\,0.607$, $2f + f_2 \approx St\,1.013$, and $3f + f_2 \approx St\,1.418$. These peaks are highlighted with green dashed ellipses in Figure~\ref{fig:spectrum_1500K_combination}, while the main harmonic series ($f$, $2f$, $3f$) retains the red annotation from the previous figures.
+
+The appearance of a second incommensurate frequency $f_2 \approx f/2$ and its combination tones with $f$ is a hallmark of quasi-periodic dynamics. While $f_2$ is numerically close to the sub-harmonic $f/2 = St\,0.2025$, the finite offset ($\delta St \approx 0.002$) and the clean recurrence of the pattern $nf + f_2$ across four successive multiples confirm that the two frequencies are not exactly commensurate, i.e.\ the system is not undergoing a simple period-doubling but rather operating on a two-frequency torus. [PLACEHOLDER: to be revised once the physical origin of $f_2$ is clarified — candidate mechanisms include a secondary Kelvin--Helmholtz mode, a thermoacoustic feedback loop, or a parametric instability driven by heat-release fluctuations.]
+
+\FloatBarrier
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{IMAGES/Frequency_amplitude_plot1500_combination.png}
+    \caption{Frequency--amplitude spectrum for the 1500~K dataset ($d \in \{35,40,45\}$, $\varepsilon_{\mathrm{tol}} \in \{5\times10^{-2},\,7\times10^{-2}\}$). Red solid ellipses mark the main harmonic series ($f$, $2f$, $3f$); green dashed ellipses mark the quasi-periodic combination tones ($f_2$, $f+f_2$, $2f+f_2$, $3f+f_2$).}
+    \label{fig:spectrum_1500K_combination}
+\end{figure}
+\FloatBarrier
+
+
 \paragraph{Case 1700~K}
 \label{sec:spectrum_1700K}
 
@@ -170,34 +187,43 @@ The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1700K
 \FloatBarrier
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[b]{0.48\textwidth}
+    % Top row: three main harmonics
+    \begin{subfigure}[b]{0.32\textwidth}
         \centering
-        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
-        \caption{[PLACEHOLDER] Mode 1}
+        \includegraphics[width=\linewidth]{IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.41.png}
+        \caption{Mode at $St = 0.41$}
         \label{fig:modes_1700K_1}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.32\textwidth}
         \centering
-        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
-        \caption{[PLACEHOLDER] Mode 2}
+        \includegraphics[width=\linewidth]{IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.82.png}
+        \caption{Mode at $St = 0.82$}
         \label{fig:modes_1700K_2}
     \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St1.23.png}
+        \caption{Mode at $St = 1.23$}
+        \label{fig:modes_1700K_3}
+    \end{subfigure}
     \\[1em]
+    % Bottom row: modes at blue-marked frequencies
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
-        \caption{[PLACEHOLDER] Mode 3}
-        \label{fig:modes_1700K_3}
+        \includegraphics[width=\linewidth]{IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.11.png}
+        \caption{Mode at $St = 0.11$}
+        \label{fig:modes_1700K_4}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \fbox{\rule{0pt}{4cm}\rule{0.9\linewidth}{0pt}}
-        \caption{[PLACEHOLDER] Mode 4}
-        \label{fig:modes_1700K_4}
+        \includegraphics[width=\linewidth]{IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.19.png}
+        \caption{Mode at $St = 0.19$}
+        \label{fig:modes_1700K_5}
     \end{subfigure}
-    \caption{[PLACEHOLDER] DMD modes associated with the dominant peaks in the 1700~K spectrum.}
+    \caption{DMD temperature modes for the 1700~K dataset. Top row: modes at the three main harmonic frequencies ($St = 0.41,\,0.82,\,1.23$). Bottom row: modes at the additional frequencies highlighted in blue in Figure~\ref{fig:spectrum_1700K} ($St = 0.11,\,0.19$).}
     \label{fig:modes_1700K}
 \end{figure}
 \FloatBarrier

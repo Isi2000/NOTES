@@ -52,6 +52,7 @@ HODMD is able to obtain better results because instead of looking for oscillator
 \end{equation*}
 
 
+
 \subsection{Multidimensional Iterative HODMD (mdHODMDit)}
 \label{sec:method_mdhodmd}
 
@@ -75,6 +76,16 @@ $\mathcal{T} \approx \mathcal{S} \times_1 \mathbf{U}^{(1)} \times_2 \mathbf{U}^{
 \times_3 \mathbf{U}^{(3)} \times_4 \mathbf{U}^{(4)}$,
 where $\times_n$ denotes the $n$-mode product. These matrices are exactly the ones one would obtain performing truncated SVD on each of the unfodlings.
 Therefore, the temporal factor matrix $\mathbf{U}^{(4)}$ is the same as before.
+
+\FloatBarrier
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{../IMAGES/HODMD.png}
+    \caption{Scheme rapresenting High Order Dynamic Mode Decomposition on combustion data}
+    \label{fig:hodmd}
+\end{figure}
+\FloatBarrier
+
 
 After the DMD eigendecomposition,the reduced spatial DMD modes are projected back to the original tensor dimensions by contracting with the spatial
 factor matrices $\mathbf{U}^{(1)}, \mathbf{U}^{(2)}, \mathbf{U}^{(3)}$ and the core tensor, recovering physically interpretable spatial structures in the full variable-$x$-$y$ space without ever vectorising the multi-variable field, from this the algorithm is called mutlidimensional.
