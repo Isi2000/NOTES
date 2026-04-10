@@ -91,5 +91,10 @@ After the DMD eigendecomposition,the reduced spatial DMD modes are projected bac
 factor matrices $\mathbf{U}^{(1)}, \mathbf{U}^{(2)}, \mathbf{U}^{(3)}$ and the core tensor, recovering physically interpretable spatial structures in the full variable-$x$-$y$ space without ever vectorising the multi-variable field, from this the algorithm is called mutlidimensional.
 
 Then, the procedure is iterated. The DMD reconstruction is used to form an updated snapshot tensor, which is re-compressed via HOSVD. The spatial ranks $r_x$, $r_y$, and $r_{\mathrm{var}}$ retained after truncation are monitored: if they 
-differ from those of the previous iteration, the HODMD step is repeated on the new compressed temporal matrix $\hat{V}_1^K$. Convergence is declared when the spatial ranks no longer change between two successive iterations. This can be intepreted as the low-rank spatial  structure implied by the DMD modes is the same as the one identified by HOSVD. The result is a decomposition in which the noise filtering and the dynamic mode 
-identification are consistent, rather than performed independently.
+differ from those of the previous iteration, the HODMD step is repeated on the new compressed temporal matrix $\hat{V}_1^K$. Convergence is declared when the spatial ranks no longer change between two successive iterations. This can be intepreted as the low-rank spatial  structure implied by the DMD modes is the same as the one identified by HOSVD. 
+% -------------------------------------------------------
+
+\subsubsection{Identification of Physical Frequencies}
+\label{sec:coria_frequencies}
+% -------------------------------------------------------
+Once the analysis is calibrated and run for a sufficient number of parameters, one can find physical frequencies and modes. In order to find these modes, one must look at the frequency amplitude spectra, focusing on the peaks, i.e. frequencies. Physical modes should exist regardless of how the observer matrix is built and Therefore be consistent across a wide range of $d$ parameter. Moreover relevant structures should be associated to relevant eigenvectors and not ones close to noise threshold, thus beeing resilient to various tolerance thresholds $\varepsilon_{\mathrm{tol}}$.

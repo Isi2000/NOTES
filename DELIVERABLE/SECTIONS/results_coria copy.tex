@@ -3,16 +3,21 @@
 
 \subsection{mdHODMDit Applied to the CORIA Dataset} 
 \label{sec:results_coria}
-This section presents the application of the multidimensional iterative Higher-Order Dynamic Mode Decomposition (mdHODMDit) algorithm to the three NH$_3$/H$_2$ DNS datasets from CORIA described in Section~\ref{sec:DATA_CORIA}. The work is carried out in collaboration with CORIA and builds upon previous developments related to the mdHODMDit methodology, particularly the work of Pablo López Salazar. Within the present study, the computational workflow was applied to the CORIA datasets, leading to the analysis of the results discussed in this section.
+
+The main results reported in this section are build upon the work of Pablo López Salazar that first started the collaboration with CORIA. mdHODMDit described in section~\ref{sec:method_mdhodmd} is applied to extract core physical behaviour of the system in the three cases reported in section~\ref{sec:datasets}. 
 
 \subsubsection{Data Structure and Preprocessing}
 \label{sec:coria_preprocessing}
 
-The DNS output for each temperature case is stored as a four-dimensional tensor $\mathcal{T} \in \mathbb{R}^{N_{\mathrm{var}} \times N_x \times N_y \times N_t}$, where the axes correspond to the reactive scalar variables, the streamwise spatial coordinate $x$, the cross-stream coordinate $y$, and time $t$, respectively.
-
-Before analysis, the tensor is restricted to the region of physical interest. In the streamwise direction, indices $x_{60:1000}$ are retained, corresponding to the range $[0.3, 5.0]$~cm downstream of the splitter plate, which encompasses the near-field flame stabilisation region and the initial development of the shear layer. In time, the first 74 snapshots are discarded to remove the initial transient. The temporal resolution is $\Delta t = 40~\mu$s.
-
+For each case, data is organized in a four dimensional tensor: $\mathcal{T} \in \mathbb{R}^{N_{\mathrm{var}} \times N_x \times N_y \times N_t}$, in which the dimension correspond to variables, the streamwise spatial coordinate $x$, the cross-stream coordinate $y$, and time $t$, respectively.
+In order to study the region of physical interest, i.e. the one in which the instability develops and evolves the domain of the streamwise direction is restricted to the range $[0.3, 5.0]$~cm downstream of the splitter plate. This is the near-field flame stabilization region and the initial development of the shear layer. Data was also processed in time discarding the initial transient regime. 
 For this kind of data, scaling is important due to the differences in the order of magnitude of the variables considered and the differences between their units of measurement \cite{corrochano2023higher, parente2013principal}. Since there is no universally accepted quantitative criterion to determine which scaling method is most appropriate, the analysis was performed using both auto scaling $x_{i}^{\text{scaled}} = \frac{x_i - \mu_x}{\sigma_x}$ and range scaling $x_{i}^{\text{scaled}} = \frac{x_i - x_{\min}}{x_{\max} - x_{\min}}$. The analysis yielded similar results for both scaling methods, identifying the same main frequencies.
+For convenience, frequencies are expressed in units of Strouhal number: 
+\begin{equation}
+    St = f \cdot \frac{\ell}{U_b},
+\label{eq:strouhal}
+\end{equation}
+where $\ell = 3$~mm is the reference lenght of the mixing layer and  $U_b$ is the bulk speed, respectively $U_b = 21{,}34$, $24{,}29$ e $27{,}14$~m~s$^{-1}$ for cases at 1200~K, 1500~K e 1700~K.
 
 \subsubsection{Parameter Calibration}
 \label{sec:coria_params}
@@ -29,18 +34,9 @@ and tolerance values
       5\times10^{-2},\, 7\times10^{-2},\, 1\times10^{-1},\, 2\times10^{-1}\}.
     \label{eq:tol_values}
 \end{equation}
-The same tolerance $\varepsilon_{\mathrm{tol}}$ governs both the HOSVD truncation (equation~\eqref{eq:hosvd_trunc}) and the amplitude threshold applied to retain DMD modes, so that a single parameter controls the compression level throughout the algorithm.
+The same tolerance $\varepsilon_{\mathrm{tol}}$ governs both the HOSVD truncation (equation~\eqref{eq:hosvd_trunc}) and the amplitude threshold applied to retain DMD modes.
 
-% -------------------------------------------------------
-\subsubsection{Identification of Physical Frequencies}
-\label{sec:coria_frequencies}
-% -------------------------------------------------------
-A DMD mode is identified as physical when its spectral peak appears across different $d$ values and it's resilient to the tolerance threshold $\varepsilon_{\mathrm{tol}}$. This is due to the fact that the coherent structures exist indipendently on how the observation matrix is built, thus should be found indipendently on how the $d$ parameter varies, while keeping in mind the previous discussion. The relative resilience of the peaks with respect to $\varepsilon_{\mathrm{tol}}$ is because relevant structures should be associated to relevant eigenvectors and not ones close to noise threshold. Frequencies are expressed in units of Strouhal number: 
-\begin{equation}
-    St = f \cdot \frac{\ell}{U_b},
-\label{eq:strouhal}
-\end{equation}
-where $\ell = 3$~mm is the reference lenght of the mixing layer and  $U_b$ is the bulk speed, respectively $U_b = 21{,}34$, $24{,}29$ e $27{,}14$~m~s$^{-1}$ for cases at 1200~K, 1500~K e 1700~K.
+
 
 
 \subsubsection{Frequency--Amplitude Spectra and associated DMD modes}
@@ -107,11 +103,12 @@ The 1500~K spectrum, shown in Figure~\ref{fig:spectrum_1500K}, exhibits a struct
 \FloatBarrier
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth]{IMAGES/Frequency_amplitude_plot1500_combination.png}
+    \includegraphics[width=\textwidth]{IMAGES/Spectrum_1500K_d25_30_35_40_tol4e-02_5e-02.png}
     \caption{Frequency--amplitude spectrum for the 1500~K dataset ($d \in \{35,40,45\}$, $\varepsilon_{\mathrm{tol}} \in \{5\times10^{-2},\,7\times10^{-2}\}$). Red solid ellipses mark the main harmonic series ($f$, $2f$, $3f$); green dashed ellipses mark the quasi-periodic combination tones ($f_2$, $f+f_2$, $2f+f_2$, $3f+f_2$).}
     \label{fig:spectrum_1500K_combination}
 \end{figure}
 \FloatBarrier
+
 
 
 The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1500K} are shown in Figure~\ref{fig:modes_1500K}.
