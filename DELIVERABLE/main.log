@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.14)  14 APR 2026 18:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.14)  15 APR 2026 19:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -833,7 +833,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/FrontPage.tex
-<logos/ENCODING_name.png, id=67, 1373.13pt x 347.3778pt>
+<logos/ENCODING_name.png, id=63, 1373.13pt x 347.3778pt>
 File: logos/ENCODING_name.png Graphic file (type png)
 <use logos/ENCODING_name.png>
 Package pdftex.def Info: logos/ENCODING_name.png  used on input line 16.
@@ -843,7 +843,7 @@ Overfull \hbox (2.52942pt too wide) in paragraph at lines 16--18
 [][]  
  []
 
-<logos/EN-Funded-VerticalLogo.png, id=68, 219.219pt x 222.1098pt>
+<logos/EN-Funded-VerticalLogo.png, id=64, 219.219pt x 222.1098pt>
 File: logos/EN-Funded-VerticalLogo.png Graphic file (type png)
 <use logos/EN-Funded-VerticalLogo.png>
 Package pdftex.def Info: logos/EN-Funded-VerticalLogo.png  used on input line 38.
@@ -872,7 +872,7 @@ Underfull \hbox (badness 1558) in paragraph at lines 85--85
 []|\T1/phv/m/n/12 Report on Pat-tern Iden-ti-fi-ca-tion of Crit-i-cal Com-bus-tion
  []
 
-<logos/ENCODING_icon.png, id=78, 875.9124pt x 916.1427pt>
+<logos/ENCODING_icon.png, id=74, 875.9124pt x 916.1427pt>
 File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
 Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 103.
@@ -949,7 +949,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 6.
 
-<IMAGES/../IMAGES/DATASETS/coria_3snap.png, id=115, 721.2546pt x 346.1733pt>
+<IMAGES/../IMAGES/DATASETS/coria_3snap.png, id=110, 721.2546pt x 346.1733pt>
 File: IMAGES/../IMAGES/DATASETS/coria_3snap.png Graphic file (type png)
 <use IMAGES/../IMAGES/DATASETS/coria_3snap.png>
 Package pdftex.def Info: IMAGES/../IMAGES/DATASETS/coria_3snap.png  used on input line 17.
@@ -958,83 +958,40 @@ File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
 Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 21.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
-[6]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 25.
-
-
-LaTeX Warning: Citation `frascino2025' on page 7 undefined on input line 28.
-
-
-LaTeX Warning: Citation `frascino2025' on page 7 undefined on input line 28.
-
-
-LaTeX Warning: Citation `dong2022' on page 7 undefined on input line 31.
-
-
-Overfull \hbox (46.15489pt too wide) in paragraph at lines 31--32
-[]\T1/phv/m/n/12 The con-fig-u-ra-tion con-sists of three co-flowing streams: a cen-tral cold fuel jet of 25% H$[]$/75% CH$[]$
- []
-
+[6]) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/SECTIONS/methods.tex
 File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
-Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 32.
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 21.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
-[7 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/../IMAGES/DATASETS/coria_3snap.png>]) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/SECTIONS/methods.tex
+ [7 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/../IMAGES/DATASETS/coria_3snap.png>]
 File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
-Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 24.
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 59.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
  [8]
-File: logos/ENCODING_icon.png Graphic file (type png)
-<use logos/ENCODING_icon.png>
-Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 63.
-(pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
- [9]
-<IMAGES/../IMAGES/HODMD.png, id=158, 1413.28pt x 770.88pt>
+<IMAGES/../IMAGES/HODMD.png, id=148, 1413.28pt x 770.88pt>
 File: IMAGES/../IMAGES/HODMD.png Graphic file (type png)
 <use IMAGES/../IMAGES/HODMD.png>
 Package pdftex.def Info: IMAGES/../IMAGES/HODMD.png  used on input line 83.
 (pdftex.def)             Requested size: 386.96027pt x 211.06929pt.
 File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
-Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 96.
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 92.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
- [10 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/../IMAGES/HODMD.png>]) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/SECTIONS/results_coria copy.tex
+ [9 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/../IMAGES/HODMD.png>]) (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/SECTIONS/results_coria copy.tex
 File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
-Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 22.
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 16.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
- [11]
+ [10]
 Overfull \hbox (22.37343pt too wide) in paragraph at lines 42--42
 |\T1/phv/m/n/17.28 4.1 Frequency--Amplitude Spec-tra and as-so-ci-ated DMD modes| 
  []
 
 
-LaTeX Warning: Reference `fig:spectrum_1500K' on page 12 undefined on input line 45.
+LaTeX Warning: Reference `fig:spectrum_1500K' on page 11 undefined on input line 45.
 
-<IMAGES/Frequency_amplitude_plot1200.png, id=184, 855.6768pt x 277.5168pt>
+<IMAGES/Frequency_amplitude_plot1200.png, id=171, 855.6768pt x 277.5168pt>
 File: IMAGES/Frequency_amplitude_plot1200.png Graphic file (type png)
 <use IMAGES/Frequency_amplitude_plot1200.png>
 Package pdftex.def Info: IMAGES/Frequency_amplitude_plot1200.png  used on input line 55.
@@ -1046,28 +1003,28 @@ File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
 Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 59.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
-[12]
-<IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.42.png, id=195, 711.1368pt x 130.5678pt>
+[11]
+<IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.42.png, id=185, 711.1368pt x 130.5678pt>
 File: IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.42.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.42.png>
 Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.42.png  used on input line 68.
 (pdftex.def)             Requested size: 218.51521pt x 40.11896pt.
-<IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.84.png, id=196, 711.1368pt x 130.5678pt>
+<IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.84.png, id=186, 711.1368pt x 130.5678pt>
 File: IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.84.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.84.png>
 Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.84.png  used on input line 75.
 (pdftex.def)             Requested size: 218.51521pt x 40.11896pt.
-<IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.26.png, id=197, 711.1368pt x 130.5678pt>
+<IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.26.png, id=187, 711.1368pt x 130.5678pt>
 File: IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.26.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.26.png>
 Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.26.png  used on input line 82.
 (pdftex.def)             Requested size: 218.51521pt x 40.11896pt.
-<IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.68.png, id=198, 711.1368pt x 130.5678pt>
+<IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.68.png, id=188, 711.1368pt x 130.5678pt>
 File: IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.68.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.68.png>
 Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.68.png  used on input line 89.
 (pdftex.def)             Requested size: 218.51521pt x 40.11896pt.
-<IMAGES/Spectrum_1500K_d25_30_35_40_tol4e-02_5e-02.png, id=201, 854.7132pt x 277.035pt>
+<IMAGES/Spectrum_1500K_d25_30_35_40_tol4e-02_5e-02.png, id=191, 854.7132pt x 277.035pt>
 File: IMAGES/Spectrum_1500K_d25_30_35_40_tol4e-02_5e-02.png Graphic file (type png)
 <use IMAGES/Spectrum_1500K_d25_30_35_40_tol4e-02_5e-02.png>
 Package pdftex.def Info: IMAGES/Spectrum_1500K_d25_30_35_40_tol4e-02_5e-02.png  used on input line 106.
@@ -1080,104 +1037,85 @@ File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
 Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 110.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
-[13 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/Frequency_amplitude_plot1200.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.42.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.84.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.26.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.68.png>]
-<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.41.png, id=218, 715.473pt x 146.4672pt>
+[12 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/Frequency_amplitude_plot1200.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.42.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St0.84.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.26.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1200/DMD_mode_St1.68.png>]
+<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.41.png, id=207, 715.473pt x 131.0496pt>
 File: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.41.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.41.png>
 Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.41.png  used on input line 121.
-(pdftex.def)             Requested size: 218.51521pt x 44.73164pt.
-<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.81.png, id=219, 715.473pt x 146.4672pt>
+(pdftex.def)             Requested size: 218.51521pt x 40.02306pt.
+<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.81.png, id=208, 715.473pt x 131.0496pt>
 File: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.81.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.81.png>
 Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.81.png  used on input line 128.
-(pdftex.def)             Requested size: 218.51521pt x 44.73164pt.
-<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.22.png, id=220, 715.473pt x 146.4672pt>
+(pdftex.def)             Requested size: 218.51521pt x 40.02306pt.
+<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.22.png, id=209, 715.473pt x 131.0496pt>
 File: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.22.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.22.png>
 Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.22.png  used on input line 135.
-(pdftex.def)             Requested size: 218.51521pt x 44.73164pt.
-<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.47.png, id=221, 715.473pt x 146.4672pt>
+(pdftex.def)             Requested size: 218.51521pt x 40.02306pt.
+<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.47.png, id=210, 715.473pt x 131.0496pt>
 File: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.47.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.47.png>
 Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.47.png  used on input line 142.
-(pdftex.def)             Requested size: 218.51521pt x 44.73164pt.
-
-Overfull \hbox (36.65288pt too wide) in paragraph at lines 152--153
-[]\T1/phv/m/n/12 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, QUA CI MANCA
- []
-
-
-Overfull \hbox (18.48044pt too wide) in paragraph at lines 152--153
-\T1/phv/m/n/12 FISICO. IN PAR-TI-CO-LARE, SI PUÒ NO-TARE CHE LE MODAL-ITÀ AS-SO-CIATI A QUESTE
- []
-
-
-Overfull \hbox (17.11374pt too wide) in paragraph at lines 152--153
-\T1/phv/m/n/12 FRE-QUENZE MOSTRANO STRUT-TURE SPAZIALI CHE NON SONO PRE-SENTI NELLE
- []
-
-
-Overfull \hbox (25.69484pt too wide) in paragraph at lines 152--153
-\T1/phv/m/n/12 MODAL-ITÀ AS-SO-CIATI ALLE FRE-QUENZE AR-MONICHE, SUG-GERENDO CHE QUESTE
- []
-
-<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.20.png, id=222, 715.473pt x 146.4672pt>
+(pdftex.def)             Requested size: 218.51521pt x 40.02306pt.
+<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.20.png, id=213, 715.473pt x 131.0496pt>
 File: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.20.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.20.png>
-Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.20.png  used on input line 158.
-(pdftex.def)             Requested size: 218.51521pt x 44.73164pt.
-<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.61.png, id=223, 715.473pt x 146.4672pt>
+Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.20.png  used on input line 157.
+(pdftex.def)             Requested size: 218.51521pt x 40.02306pt.
+<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.61.png, id=214, 715.473pt x 131.0496pt>
 File: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.61.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.61.png>
-Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.61.png  used on input line 165.
-(pdftex.def)             Requested size: 218.51521pt x 44.73164pt.
-<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.01.png, id=224, 715.473pt x 146.4672pt>
+Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.61.png  used on input line 164.
+(pdftex.def)             Requested size: 218.51521pt x 40.02306pt.
+<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.01.png, id=215, 715.473pt x 131.0496pt>
 File: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.01.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.01.png>
-Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.01.png  used on input line 172.
-(pdftex.def)             Requested size: 218.51521pt x 44.73164pt.
-<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.42.png, id=225, 715.473pt x 146.4672pt>
+Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.01.png  used on input line 171.
+(pdftex.def)             Requested size: 218.51521pt x 40.02306pt.
+<IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.42.png, id=216, 715.473pt x 131.0496pt>
 File: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.42.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.42.png>
-Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.42.png  used on input line 179.
-(pdftex.def)             Requested size: 218.51521pt x 44.73164pt.
+Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.42.png  used on input line 178.
+(pdftex.def)             Requested size: 218.51521pt x 40.02306pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
-Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 186.
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 185.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
-[14 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/Spectrum_1500K_d25_30_35_40_tol4e-02_5e-02.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.41.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.81.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.22.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.47.png>]
-<IMAGES/Frequency_amplitude_plot1700.png, id=239, 855.6768pt x 277.5168pt>
+[13 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/Spectrum_1500K_d25_30_35_40_tol4e-02_5e-02.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.41.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.81.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.22.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.47.png>]
+<IMAGES/Frequency_amplitude_plot1700.png, id=233, 855.6768pt x 277.5168pt>
 File: IMAGES/Frequency_amplitude_plot1700.png Graphic file (type png)
 <use IMAGES/Frequency_amplitude_plot1700.png>
-Package pdftex.def Info: IMAGES/Frequency_amplitude_plot1700.png  used on input line 208.
+Package pdftex.def Info: IMAGES/Frequency_amplitude_plot1700.png  used on input line 196.
 (pdftex.def)             Requested size: 455.24411pt x 147.6464pt.
-<IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.41.png, id=242, 711.1368pt x 130.5678pt>
+<IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.41.png, id=236, 711.1368pt x 130.5678pt>
 File: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.41.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.41.png>
-Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.41.png  used on input line 222.
+Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.41.png  used on input line 210.
 (pdftex.def)             Requested size: 145.68144pt x 26.74664pt.
-<IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.82.png, id=243, 711.1368pt x 130.5678pt>
+<IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.82.png, id=237, 711.1368pt x 130.5678pt>
 File: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.82.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.82.png>
-Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.82.png  used on input line 229.
+Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.82.png  used on input line 217.
 (pdftex.def)             Requested size: 145.68144pt x 26.74664pt.
-<IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St1.23.png, id=244, 711.1368pt x 130.5678pt>
+<IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St1.23.png, id=238, 711.1368pt x 130.5678pt>
 File: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St1.23.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St1.23.png>
-Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St1.23.png  used on input line 236.
+Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St1.23.png  used on input line 224.
 (pdftex.def)             Requested size: 145.68144pt x 26.74664pt.
-<IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.11.png, id=245, 711.1368pt x 130.5678pt>
+<IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.11.png, id=239, 711.1368pt x 130.5678pt>
 File: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.11.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.11.png>
-Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.11.png  used on input line 244.
+Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.11.png  used on input line 232.
 (pdftex.def)             Requested size: 218.51521pt x 40.11896pt.
-<IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.19.png, id=246, 711.1368pt x 130.5678pt>
+<IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.19.png, id=240, 711.1368pt x 130.5678pt>
 File: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.19.png Graphic file (type png)
 <use IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.19.png>
-Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.19.png  used on input line 251.
+Package pdftex.def Info: IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.19.png  used on input line 239.
 (pdftex.def)             Requested size: 218.51521pt x 40.11896pt.
 
 
@@ -1185,19 +1123,19 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
-Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 258.
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 246.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
-[15 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.20.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.61.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.01.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.42.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/Frequency_amplitude_plot1700.png>]
+[14 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.20.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St0.61.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.01.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1500/DMD_mode_St1.42.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/Frequency_amplitude_plot1700.png>]
 File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
-Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 279.
+Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 259.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
- [16 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.41.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.82.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St1.23.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.11.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.19.png>])
+ [15 </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.41.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.82.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St1.23.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.11.png> </home/isacco/DELIVERABLE/NOTES/DELIVERABLE/IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.19.png>])
 File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
 Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 44.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
- [17] (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.bbl
+ [16] (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.bbl
 Underfull \hbox (badness 2229) in paragraph at lines 4--8
 []\T1/phv/m/n/12 Adrián Cor-rochano, Giuseppe D'Alessio, Alessan-dro Par-ente, and Soledad
  []
@@ -1208,14 +1146,14 @@ File: logos/ENCODING_icon.png Graphic file (type png)
 <use logos/ENCODING_icon.png>
 Package pdftex.def Info: logos/ENCODING_icon.png  used on input line 48.
 (pdftex.def)             Requested size: 27.19844pt x 28.45274pt.
-[18]
+[17]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
  (/home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: ED148C432D909D03355462B693B17EBC;1189.
+(rerunfilecheck)             Checksum: 7C3B14FCE3E3D0F80586BBC67895B1D9;1104.
 
 
 LaTeX Warning: There were undefined references.
@@ -1223,18 +1161,18 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 24105 strings out of 481239
- 431971 string characters out of 5920377
- 697898 words of memory out of 5000000
- 38738 multiletter control sequences out of 15000+600000
+ 24099 strings out of 481239
+ 431895 string characters out of 5920377
+ 696950 words of memory out of 5000000
+ 38734 multiletter control sequences out of 15000+600000
  585849 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,14n,102p,1878b,615s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,15n,102p,1878b,615s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on /home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.pdf (18 pages, 3882712 bytes).
+Output written on /home/isacco/DELIVERABLE/NOTES/DELIVERABLE/main.pdf (17 pages, 3841265 bytes).
 PDF statistics:
- 349 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 258 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 343 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 

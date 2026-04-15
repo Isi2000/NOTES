@@ -1,0 +1,110 @@
+====================================================================
+CHAT: Descriptive text for quasi-periodic DMD modes (1500K case)
+Date: 2026-04-15
+====================================================================
+
+USER REQUEST:
+Look at the current directory and discuss how to fill the placeholder:
+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, QUA CI MANCA TESTO
+DESCRITTIVO SULLE MODALITÀ ASSOCIATE ALLE FREQUENZE QUASI-PERIODICHE,
+CHE SONO QUELLE PIÙ INTERESSANTI DA UN PUNTO DI VISTA FISICO. IN
+PARTICOLARE, SI PUÒ NOTARE CHE LE MODALITÀ ASSOCIATI A QUESTE FREQUENZE
+MOSTRANO STRUTTURE SPAZIALI CHE NON SONO PRESENTI NELLE MODALITÀ ASSOCIATI
+ALLE FREQUENZE ARMONICHE, SUGGERENDO CHE QUESTE FREQUENZE QUASI-PERIODICHE
+POTREBBERO ESSERE LEGATE A DYNAMICS DIVERSI DA QUELLI DELLA INSTABILITÀ
+PRINCIPALE DELLA SHEAR LAYER."
+
+====================================================================
+CONTEXT SUMMARY
+====================================================================
+
+File: SECTIONS/results_coria copy.tex, line 152
+
+The placeholder sits between two figures:
+  - fig:modes_1500K        — DMD modes at the HARMONIC frequencies
+                             (St = 0.41, 0.81, 1.22, 1.47 → f, 2f, 3f, 4f)
+  - fig:comb_modes_1500K   — DMD modes at the QUASI-PERIODIC COMBINATION
+                             frequencies
+                             (St = 0.20, 0.61, 1.01, 1.42 → f2, f+f2, 2f+f2, 3f+f2)
+
+There is also a commented-out draft paragraph (lines 188–196) that covers
+the spectral identification of f2 and the two-frequency torus argument.
+That block is good physics but is framed as a spectral paragraph. What is
+missing is the spatial/modal description that goes with fig:comb_modes_1500K.
+
+====================================================================
+WHAT THE TEXT NEEDS TO DO
+====================================================================
+
+1. TRANSITION SENTENCE
+   Bridge from the harmonic modes (fig:modes_1500K) to the combination-tone
+   modes (fig:comb_modes_1500K), explaining that we now look at the
+   quasi-periodic family.
+
+2. SPATIAL DESCRIPTION OF THE COMBINATION-TONE MODES
+   This is where the specific visual content of the images must be described.
+   The key claim from the placeholder note is that these modes show spatial
+   structures NOT PRESENT in the harmonic ones. Typical candidates:
+     - Different streamwise wavelength (longer or shorter spatial periodicity)
+     - Structures more prominent in the near-field vs. far-field (or vice versa)
+     - Asymmetric or cross-stream structures absent in the nf modes
+     - Modes concentrated around the flame base rather than the shear layer
+       roll-up region
+
+3. PHYSICAL INTERPRETATION
+   The combination tones nf + f2 arise from nonlinear interaction of two
+   incommensurate base frequencies, so their modes reflect the joint spatial
+   imprint of two distinct mechanisms. The fact that f2 ≈ f/2 but is not
+   exactly commensurate (quasi-periodic, not period-doubling) points to a
+   second independent oscillator. Candidates from the commented-out draft:
+     - Secondary Kelvin-Helmholtz mode
+     - Thermoacoustic feedback loop
+     - Parametric instability driven by heat-release fluctuations
+
+====================================================================
+DRAFT TEXT PROPOSAL
+(bracketed parts must be filled in after inspecting the images)
+====================================================================
+
+The DMD modes associated with the quasi-periodic combination frequencies
+are shown in Figure~\ref{fig:comb_modes_1500K}. In contrast to the harmonic
+modes in Figure~\ref{fig:modes_1500K}, these structures exhibit [describe
+what you observe, e.g. "a markedly different spatial organisation, with
+activity concentrated in the near-field region immediately downstream of
+the splitter plate" or "elongated cross-stream structures extending beyond
+the shear layer core"]. The spatial signature changes progressively from
+St = 0.20 to St = 1.42, yet all four modes share [note what they have in
+common that differs from the harmonic family].
+
+The presence of these modes is a direct consequence of the quasi-periodic
+spectral structure identified in Figure~\ref{fig:spectrum_1500K_combination}:
+the combination tones nf + f2 arise from nonlinear interaction between the
+dominant shear-layer instability at f and a secondary incommensurate frequency
+f2 ≈ St 0.20. Since f2 is not an integer multiple of f (the finite offset
+δSt ≈ 0.002 and the clean recurrence of the pattern across four successive
+multiples confirm incommensurability), the corresponding DMD modes are not
+simply harmonics of the primary roll-up vortex but carry independent spatial
+information. This suggests that a second dynamical mechanism — distinct from
+the primary Kelvin–Helmholtz shear-layer instability — is active at 1500 K,
+potentially linked to [thermoacoustic feedback / a secondary instability of
+the flame / parametric forcing by heat-release fluctuations — choose the most
+appropriate given your physical understanding].
+
+====================================================================
+OPEN QUESTIONS TO SHARPEN THE TEXT
+====================================================================
+
+1. What do the combination-tone mode images actually look like compared to
+   the harmonic ones? (e.g. are the structures more near-field? more
+   symmetric/asymmetric? shorter or longer wavelength?)
+
+2. Do you have a hypothesis for the physical origin of f2? The commented-out
+   draft lists three candidates — do you lean toward one?
+
+3. Is the discussion at lines 260–271 meant to be the place for the deeper
+   physical discussion, and this paragraph just needs a lighter descriptive
+   bridge? Or should this paragraph carry the full physical argument?
+
+====================================================================
+END OF CHAT
+====================================================================

@@ -47,7 +47,7 @@ The frequency--amplitude plots shown in Figures~\ref{fig:spectrum_1200K}, \ref{f
 \paragraph{Case 1200~K}
 \label{sec:spectrum_1200K}
 
-The spectrum for the 1200~K case, shown in Figure~\ref{fig:spectrum_1200K}, is characterised by a rich distribution of modes spanning a broad Strouhal range up to $St \approx 1.7$. The dominant peak is located at $St \approx 0.42$ and is reproduced consistently across all $(d, \varepsilon_{\mathrm{tol}})$ combinations, confirming its physical robustness. Secondary peaks of significant amplitude are identified at $St \approx 0.85$, $St \approx 1.1$, $St \approx 1.3$,, $St \approx 1.7$. These peaks are approximately integer multiples of the dominant frequency and therefore interpretable as higher harmonics of the fundamental shear-layer instability. 
+The spectrum for the 1200~K case, shown in Figure~\ref{fig:spectrum_1200K}, is characterised by a rich distribution of modes spanning a broad Strouhal range up to $St \approx 1.7$. The dominant peak is located at $St \approx 0.42$ and is reproduced consistently across all $(d, \varepsilon_{\mathrm{tol}})$ combinations, confirming its physical robustness. Secondary peaks of significant amplitude are identified at $St \approx 0.84$, $St \approx 1.26$, $St \approx 1.68$. These peaks are approximately integer multiples of the dominant frequency and therefore interpretable as higher harmonics of the fundamental shear-layer instability. 
 
 \FloatBarrier
 \begin{figure}[h!]
@@ -90,7 +90,7 @@ The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1200K
         \caption{Mode at $St = 1.68$}
         \label{fig:modes_1200K_4}
     \end{subfigure}
-    \caption{DMD modes associated with the dominant peaks in the 1200~K spectrum, i.e. main harmonics.}
+    \caption{DMD temperature modes for the 1200~K dataset at the main harmonic frequencies ($St = 0.42$, $0.84$, $1.26$, $1.68$), corresponding to $f$, $2f$, $3f$, and $4f$ respectively.}
     \label{fig:modes_1200K}
 \end{figure}
 \FloatBarrier
@@ -99,12 +99,12 @@ The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1200K
 \paragraph{Case 1500~K}
 \label{sec:spectrum_1500K}
 
-The 1500~K spectrum, shown in Figure~\ref{fig:spectrum_1500K_combination}, exhibits a structure closely analogous to the 1200~K case, with the dominant peak again located at $St \approx 0.42$. Secondary peaks are found at $St \approx 0.78$, $St \approx 0.95$, and $St \approx 0.1$, $St \approx 1.5$.  In this case however, the spectrum shows other spectral peaks as highlighted in Figure~\ref{fig:spectrum_1500K_combination} in green. These peaks rapresent the interaction between main frequencies typical of the quasi periodic regime. 
+The 1500~K spectrum, shown in Figure~\ref{fig:spectrum_1500K_combination}, exhibits a structure closely analogous to the 1200~K case, with the dominant peak again located at $St \approx 0.42$. Secondary peaks are found at $St \approx 0.81$, $St \approx 1.22$, and $St \approx 1.47$.  In this case however, the spectrum shows other spectral peaks as highlighted in Figure~\ref{fig:spectrum_1500K_combination} in green. These peaks rapresent the interaction between main frequencies typical of the quasi periodic regime. 
 \FloatBarrier
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{IMAGES/Spectrum_1500K_d25_30_35_40_tol4e-02_5e-02.png}
-    \caption{Frequency--amplitude spectrum for the 1500~K dataset ($d \in \{35,40,45\}$, $\varepsilon_{\mathrm{tol}} \in \{5\times10^{-2},\,7\times10^{-2}\}$). Red solid ellipses mark the main harmonic series ($f$, $2f$, $3f$); green dashed ellipses mark the quasi-periodic combination tones ($f_2$, $f+f_2$, $2f+f_2$, $3f+f_2$).}
+    \caption{Normalised DMD mode amplitudes as a function of Strouhal number for the 1500~K dataset, for $d \in \{35,40,45\}$ and $\varepsilon_{\mathrm{tol}} \in \{5\times10^{-2},\, 7\times10^{-2}\}$. Red solid ellipses mark the main harmonic series ($f$, $2f$, $3f$); green dashed ellipses mark the quasi-periodic combination tones ($f_2$, $f+f_2$, $2f+f_2$, $3f+f_2$).}
     \label{fig:spectrum_1500K_combination}
 \end{figure}
 \FloatBarrier
@@ -148,8 +148,7 @@ The associated modes to the main harmonic frequencies circled in red in Figure~\
 \end{figure}
 \FloatBarrier
 
-
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, QUA CI MANCA TESTO DESCRITTIVO SULLE MODALITÀ ASSOCIATE ALLE FREQUENZE QUASI-PERIODICHE, CHE SONO QUELLE PIÙ INTERESSANTI DA UN PUNTO DI VISTA FISICO. IN PARTICOLARE, SI PUÒ NOTARE CHE LE MODALITÀ ASSOCIATI A QUESTE FREQUENZE MOSTRANO STRUTTURE SPAZIALI CHE NON SONO PRESENTI NELLE MODALITÀ ASSOCIATI ALLE FREQUENZE ARMONICHE, SUGGERENDO CHE QUESTE FREQUENZE QUASI-PERIODICHE POTREBBERO ESSERE LEGATE A DYNAMICS DIVERSI DA QUELLI DELLA INSTABILITÀ PRINCIPALE DELLA SHEAR LAYER.
+Figure~\ref{fig:comb_modes_1500K} shows the modes associated to the quasi-periodic combination frequencies highlighted in green in Figure~\ref{fig:spectrum_1500K_combination}.
 \FloatBarrier
 \begin{figure}[h!]
     \centering
@@ -185,22 +184,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, QUA CI MANCA TESTO DESCRITTI
 \end{figure}
 \FloatBarrier
 
-\begin{comment}
-    
-\paragraph{Quasi-periodic content and combination frequencies — 1500~K}
-\label{sec:spectrum_1500K_combination}
-
-The frequency--amplitude spectrum of the 1500~K case, reproduced in Figure~\ref{fig:spectrum_1500K_combination} with an extended annotation, reveals a second family of spectral peaks that cannot be reduced to integer multiples of the dominant frequency $f \approx St\,0.405$. A secondary base frequency $f_2 \approx St\,0.204$ is identified, together with its combination tones $f + f_2 \approx St\,0.607$, $2f + f_2 \approx St\,1.013$, and $3f + f_2 \approx St\,1.418$. These peaks are highlighted with green dashed ellipses in Figure~\ref{fig:spectrum_1500K_combination}, while the main harmonic series ($f$, $2f$, $3f$) retains the red annotation from the previous figures.
-
-The appearance of a second incommensurate frequency $f_2 \approx f/2$ and its combination tones with $f$ is a hallmark of quasi-periodic dynamics. While $f_2$ is numerically close to the sub-harmonic $f/2 = St\,0.2025$, the finite offset ($\delta St \approx 0.002$) and the clean recurrence of the pattern $nf + f_2$ across four successive multiples confirm that the two frequencies are not exactly commensurate, i.e.\ the system is not undergoing a simple period-doubling but rather operating on a two-frequency torus. [PLACEHOLDER: to be revised once the physical origin of $f_2$ is clarified — candidate mechanisms include a secondary Kelvin--Helmholtz mode, a thermoacoustic feedback loop, or a parametric instability driven by heat-release fluctuations.]
-\end{comment}
-
-
 
 \paragraph{Case 1700~K}
 \label{sec:spectrum_1700K}
 
-The 1700~K case, shown in Figure~\ref{fig:spectrum_1700K}, presents a different spectral structure. The dominant peak remains at $St \approx 0.40$, consistent with the lower-temperature cases, but the overall spectrum is sparser: maximum relevant Strouhal number observed is $St \approx 1.25$ and fewer secondary modes are retained.
+The 1700~K case, shown in Figure~\ref{fig:spectrum_1700K}, presents a different spectral structure. The dominant peak remains at $St \approx 0.40$, consistent with the lower-temperature cases, but the overall spectrum is sparser: maximum relevant Strouhal number observed is $St \approx 1.25$ and fewer secondary modes are retained. In addition to the main harmonic series, two low-frequency peaks at $St \approx 0.11$ and $St \approx 0.19$, highlighted in blue in Figure~\ref{fig:spectrum_1700K}, are identified across multiple parameter combinations.
 
 \FloatBarrier
 \begin{figure}[h!]
@@ -259,21 +247,15 @@ The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1700K
 
 \subsubsection*{Discussion: Spectral and Spatial Evolution Across Preheat Temperatures}
 
-The three preheat temperature cases investigated here represent distinct combustion regimes with direct relevance to the efficiency--pollutant trade-off inherent in NH$_3$/H$_2$ combustion. The 1200K case, in practical application has lower thermal efficiency, while the high temperature one, i.e. 1700~K is overall more efficient due to a more complete combustion but at the cost of significantly enhanced NOx formation. The 1500~K case sits at the boundary between these two regimes and is therefore of particular practical interest as a candidate operating point for studying the tradoff between combustion efficiency and pollutant emissions. In particular we focused on understanding the behaviour of the flow rather than the chemical one.
+The main focus of this analysis was that of understanding how flow changes in the three cases, rather than investigating the difference in chemical behaviour. Despite this, in practical cases these regimes yield different efficiency-poolutants tradoff, with the lowest temperature case beeing the least efficient and least polluting one and the higher temperature case to have the highest $NO_x$ emission levels and most mixing. 
 
-At 1200~k the structure of the flow found by the algorithm is harmonic, with a dominant peak at $St \approx 0.42$ is accompanied by secondary peaks at approximately integer multiples of this frequency extending up to $St \approx 1.7$. This is the sign of a strongly periodic shear layer instability, in which the primary roll up vortex and its successive pairings organize the flow in a regular pattern.
+The first case analyzed, i.e. 1200~K has an harmonic flow with with a dominant peak at $St \approx 0.42$ is accompanied by secondary peaks at approximately integer multiples of this frequency extending up to $St \approx 1.7$. This is the sign of a strongly periodic shear layer instability, and the modes reported in Figure~\ref{fig:modes_1200K} show that the phenomenon develops in the far field. This is reflects downstream convection and roll-up of large-scale vortices that have had space and time to develop along the mixing layer.
 
-On the other hand, at 1700~K, the spectral picture changes substantially. While the dominant frequency is preserved at $St \approx 0.40$, confirming that the primary instability mechanism remains kinematically controlled by the shear between the two inlet streams, the harmonic content is severly reduced, and the overall spectrum is sparser. This evolution is physically consistent with the effect of increased thermal loading: the elevated heat release rate and associated gas expansion at 1700~K tend to suppress vortex pairing and subharmonic modes, leading to a quasi-periodic, more turbulent flow. 
+On the other hand, at 1700~K, the spectral picture changes substantially. While the dominant frequency is preserved at $St \approx 0.40$, confirming that the primary instability mechanism remains kinematically controlled by the shear between the two inlet streams, the harmonic content is severly reduced, and the overall spectrum is sparser. By observing the modes reported in Figure~\ref{fig:modes_1700K}, one can see that the main instability develops in the near field. This can be explained by the fact that the stronger heat release ties the energetically significant dynamics to the  attachment point.
 
-The 1500~K case contains the transition between the two cases. In this spectrum we can find dominant harmonic structures as in the 1200~K, but additionally the creation of quasi-periodic frequencies that are not in a neighborhood of the main one. This quasi-periodic spectral content can be interpreted as a signature of the competing dynamics active at this operating point: the primary shear-layer instability is still present, but thermal effects are beginning to modify the nonlinear interactions.
+The 1500~K case contains the transition between the two cases. This is particularly relevant from a physical point of view due to the fact that is a balance between the two regimes. In turn this means that understanding the flow structure might help in designing more efficient combustion processes that suppress $NO_x$ formation.
+In this spectrum we can find dominant harmonic structures as in the 1200~K, but additionally the creation of quasi-periodic frequencies highlighted in green in Figure~\ref{fig:spectrum_1500K_combination}. This quasi-periodic spectral content can be interpreted as a signature of the competing dynamics active at this operating point: the primary shear-layer instability is still present, but thermal effects are beginning to modify the nonlinear interactions.
+The transient case, i.e. 1500~K has energetically significant DMD modes in both the far field and the near field regions as shown in Figures~\ref{fig:modes_1500K} and \ref{fig:comb_modes_1500K}. In this regime the instabilities are affected by both the far field convective instability and the energy release near the inlet.
 
-The coherent structures corresponding to the main physical frequencies identified provide further information about the dynamics of the phoenomenon. At 1200~K, the modes with highest amplitude are spatially extended structures concentrated in the far field of the domain as shown in the Figure~\ref{fig:modes_1200K}, reflecting the downstream convection and roll-up of large-scale vortices that have had space and time to develop along the mixing layer. At 1700~K the dominant spatial activity is shifted towards the near field, immediately downstream of the splitter plate. This can be explained by the fact that the stronger heat release ties the energetically significant dynamics to the flame attachment as shown in Figure~\ref{fig:modes_1700K} with less coherent large-scale activity further downstream.
-The transient case, i.e. 1500~K has energetically significant DMD modes in both the far field and the near field regions as shown in the DMD modes associated to the frequencies \ref{fig:modes_1500K} and the DMD MODES \ref{fig:comb_modes_1500K}. In this regime the instabilities are affected by both the far field convective instability and the energy release near the inlet.
-\begin{comment}
-    
-\section{Conclusions}
-
-The algorithm proposed has identified that the preheat temperature can be seen as a modulatory parameter on the shear-layer instability. The increase in temperature suppresses the secondary harmonics and shift the dynamics of the instability from the far field to the near one. The speactral profile of the flow changes from periodic to quasi periodic. 
-Further investigation of the 1500~K operating point, through parametric studies and refined modal decomposition techniques, may enable the identification of conditions that simultaneously minimise NOx emissions and maximise combustion efficiency
-\end{comment}
+Overall, the spectral and spatial analysis consistently shows that increasing preheat temperature progressively anchors the dominant flow dynamics to the near-field region and reduces the coherence of large-scale harmonic structures, with the 1500~K case capturing the transitional regime where both mechanisms are simultaneously active. Further investigation along this research direction, extending the modal analysis to additional operating conditions and coupling it with chemical kinetics data, is expected to provide deeper insight into the mechanisms governing pollutant formation and to support the design of NH$_3$/H$_2$ combustion systems with reduced NO$_x$ emissions.
 
