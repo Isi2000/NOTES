@@ -45,3 +45,108 @@ The data used in the present work is not the raw DNS output but a spatially filt
 %   4. Number of snapshots and temporal spacing Delta_t for each case?
 % -------------------------------------------------------
 \end{comment}
+
+\subsection{ULB hydrogen-fueled flameless furnace}
+\label{sec:DATA_ULB}
+
+This dataset consists of computational fluid dynamics simulations of a hydrogen-fueled semi-industrial furnace operating under flameless combustion conditions. The work is conducted by Isacco Faglioni (UPM Madrid), Chiara Novelli (ULB Brussels), and Alessandro Parente (ULB Brussels, BRITE) as part of the CYPHER project. Two main methodological approaches are applied to this dataset: uncertainty quantification using POD/GPR and tensor-based reduced order modeling using HOSVD/GPR.
+
+The furnace is based on the ULB-modified SPRF (Semi-industrial Perfectly stirred Reactor Furnace) configuration, consisting of a cubic combustion chamber (700 × 700 × 700 mm inner dimensions) fired by a bottom-mounted commercial burner with an integrated heat exchanger for air preheating. The fuel injection system features a centrally located nozzle with 8 mm internal diameter, surrounded by a coaxial air jet with variable diameter to adjust entrainment.
+
+\FloatBarrier
+\begin{figure}[htbp]
+    \centering
+    % TODO: Add figure showing the ULB furnace geometry and temperature field
+    % \includegraphics[width=0.85\textwidth]{../IMAGES/DATASETS/ulb_furnace.png}
+    \caption{[PLACEHOLDER] Cross-section of the ULB flameless furnace showing the geometry and qualitative sketch of the mean temperature field.}
+    \label{fig:ulb_data}
+\end{figure}
+\FloatBarrier
+
+\subsubsection*{Uncertainty quantification study}
+
+The first application focuses on uncertainty quantification using POD/GPR methodology to assess parametric uncertainty propagation in 2D RANS simulations. The analysis considers 9 uncertain input parameters: 3 kinetic rate constants (reactions R3, R5, R16 of H$_2$ core mechanism), 3 turbulence model parameters (realizable $k-\varepsilon$ constants $C_{2\varepsilon}$, $\sigma_k$, $\sigma_\varepsilon$), 1 combustion model parameter (PaSR mixing constant $C_{mix}$), and 2 operational parameters (fuel and air mass flow rates).
+
+Operating conditions include 100\% H$_2$ fuel, 15 kW nominal power, 5.1 kW cooling power, equivalence ratio $\phi = 0.8$, and 16 mm air inlet diameter. The dataset comprises 128 RANS simulations using Latin Hypercube Sampling, with temperature and species mass fractions (H$_2$O, OH) monitored across 48 probe locations. The sensitivity analysis reveals that turbulence parameter $C_{2\varepsilon}$ and combustion constant $C_{mix}$ dominate the response variance (91.4\% total contribution), with air mass flow rate contributing significantly in recirculation regions.
+
+\subsubsection*{Tensor-based reduced order modeling}
+
+The second application develops an alternative approach using High Order Singular Value Decomposition (HOSVD) combined with Gaussian Process Regression to create digital twins for flameless combustion. The data is structured as a 5-way tensor $\mathcal{T} \in \mathbb{R}^{N_\phi \times N_{H_2} \times N_p \times N_{feat} \times N_{cells}}$ representing 20 operating conditions across equivalence ratio $\phi \in \{1.1, 1.2, 1.3, 1.4, 1.6\}$, H$_2$ blending $\{0.0, 0.3\}$ vol\%, and pressure $\{1, 2\}$ atm.
+
+The HOSVD+GPR methodology decomposes the tensor into a core and factor matrices, interpolates only along the equivalence ratio dimension while freezing other factors, and reconstructs fields for unseen conditions. This approach outperforms classical POD+GPR on all 10 thermochemical variables, demonstrating superior data efficiency in scarce training regimes. The multilinear decomposition preserves physical interpretability and maintains consistency across parameter dimensions, making it particularly suitable for parametric interpolation in reactive flow digital twins.
+
+\subsubsection*{Results and Discussion}
+
+\paragraph{Uncertainty Quantification Results}
+
+% TODO: Add description of POD/GPR model validation
+% TODO: Discuss k-fold cross validation results
+
+\FloatBarrier
+\begin{figure}[htbp]
+    \centering
+    % TODO: Add figure showing POD/GPR validation results
+    % \includegraphics[width=0.85\textwidth]{../IMAGES/RESULTS/ulb_pod_validation.png}
+    \caption{[PLACEHOLDER] POD/GPR model validation results showing temperature parity plot and cross-validation metrics.}
+    \label{fig:ulb_pod_validation}
+\end{figure}
+\FloatBarrier
+
+% TODO: Describe uncertainty propagation in temperature predictions
+% TODO: Discuss variance bands and experimental comparison
+
+\FloatBarrier
+\begin{figure}[htbp]
+    \centering
+    % TODO: Add figure showing uncertainty propagation
+    % \includegraphics[width=0.85\textwidth]{../IMAGES/RESULTS/ulb_uncertainty_propagation.png}
+    \caption{[PLACEHOLDER] Uncertainty propagation for temperature predictions along different axial locations showing 25th-75th percentiles and experimental measurements.}
+    \label{fig:ulb_uncertainty}
+\end{figure}
+\FloatBarrier
+
+% TODO: Present global sensitivity analysis results
+
+\FloatBarrier
+\begin{figure}[htbp]
+    \centering
+    % TODO: Add figure showing Sobol indices
+    % \includegraphics[width=0.85\textwidth]{../IMAGES/RESULTS/ulb_sobol_indices.png}
+    \caption{[PLACEHOLDER] Total order Sobol indices of the most impactful parameters at probe locations in the ULB furnace.}
+    \label{fig:ulb_sobol}
+\end{figure}
+\FloatBarrier
+
+\paragraph{Tensor-based Model Performance}
+
+% TODO: Describe HOSVD+GPR vs POD+GPR comparison
+% TODO: Discuss superior performance across all thermochemical variables
+
+\FloatBarrier
+\begin{figure}[htbp]
+    \centering
+    % TODO: Add figure showing NRMSE comparison
+    % \includegraphics[width=0.85\textwidth]{../IMAGES/RESULTS/ulb_nrmse_comparison.png}
+    \caption{[PLACEHOLDER] NRMSE comparison between HOSVD+GPR and POD+GPR across all thermochemical variables.}
+    \label{fig:ulb_nrmse}
+\end{figure}
+\FloatBarrier
+
+% TODO: Show temperature field reconstruction results
+
+\FloatBarrier
+\begin{figure}[htbp]
+    \centering
+    % TODO: Add figure showing temperature field reconstruction
+    % \includegraphics[width=0.85\textwidth]{../IMAGES/RESULTS/ulb_temperature_reconstruction.png}
+    \caption{[PLACEHOLDER] Temperature field reconstruction for unseen condition. Left: CFD reference. Center: HOSVD+GPR. Right: POD+GPR.}
+    \label{fig:ulb_temp_reconstruction}
+\end{figure}
+\FloatBarrier
+
+\paragraph{Discussion}
+
+% TODO: Discuss implications of uncertainty quantification findings
+% TODO: Explain advantages of tensor-based approach
+% TODO: Comment on data efficiency and physical interpretability
+% TODO: Discuss limitations and future work directions
