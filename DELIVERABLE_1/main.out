@@ -1,0 +1,15 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{HODMD Analysis of the NH3/H2 Non-Premixed Reacting Mixing Layer}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{NH3/H2 non-premixed mixing layer}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Methods}{section.2}% 4
+\BOOKMARK [3][-]{subsubsection.2.2.1}{High Order Dynamic Mode Decomposition}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Multidimensional Iterative HODMD \(mdHODMDit\)}{subsection.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Results and Discussion}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Data Structure and Preprocessing}{subsection.2.3}% 8
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Parameter Calibration}{subsection.2.3}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Frequency\205Amplitude Spectra and associated DMD modes}{subsection.2.3}% 10
+\BOOKMARK [1][-]{section.3}{HOSVD+GPR Surrogate Model for the ULB Hydrogen-Fuelled Flameless Furnace}{}% 11
+\BOOKMARK [2][-]{subsection.3.1}{ULB hydrogen-fueled flameless furnace}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.2}{Methods}{section.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.2.1}{HOSVD+GPR reduced order model for parametric interpolation}{subsection.3.2}% 14
+\BOOKMARK [2][-]{subsection.3.3}{Results and Discussion}{section.3}% 15

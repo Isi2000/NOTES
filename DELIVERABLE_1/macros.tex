@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  This file defines the style of the template                       %
+%  DO NOT TOCUH!                                                     % 
+% If you want any other feature, please, ask Patricia                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------%
+%    |D|O| |N|O|T| |T|O|U|C|H|        %
+%-------------------------------------%
+
+\title{\DelNo \DelTitle}
+
+\makeatletter
+\let\inserttitle\@title
+\makeatother
+
+%%%% PAGE STYLE %%%%%
+% Header and footer
+%----------
+\pagestyle{fancy} % Activates fancyhdr package
+\fancyhf{} % Cleans pre-determined header and footer
+
+\fancyhead[R]{\footnotesize \color{gray} \inserttitle | \FP: \DelVersion - \SubDate}
+
+\fancyfoot[L]{\footnotesize \color{gray} \ProjAcro - \ProjGA}
+\fancyfoot[C]{\footnotesize \raisebox{-0.4\height}{\includegraphics[height=1cm]{logos/ENCODING_icon.png}}}
+\fancyfoot[R]{\footnotesize \color{gray}{\bfseries \thepage}}
+
+\renewcommand{\footrulewidth}{0.4pt}
+\futurelet\TMPfootrule\def\footrule{{\color{gray}\TMPfootrule}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+
+
+%%%% FRONT PAGE TITLE STYLE %%%%%
+% Define the size for the title
+\newcommand{\Hugesize}{\fontsize{40}{50}\selectfont \color{primarycolor}}
+
+%%%% SECTION STYLE %%%%%
+% Section Style
+\titleformat{name=\section}[block]{\sffamily\huge \color{primarycolor}}{\thesection}{6pt}{}
+\titleformat{name=\section,numberless}[block]{\sffamily\Large\centering }{}{0pt}{}
+
+% Subsection Style
+\titleformat{name=\subsection}[block]{\sffamily\LARGE \color{primarycolor}}{\thesubsection}{6pt}{}
+
+% Subsubsection Style
+\titleformat{name=\subsubsection}[block]{\sffamily\Large \color{primarycolor}}{\thesubsection}{6pt}{}
+
+
+%%%% SECTION STYLE %%%%%
+
+\newcommand{\titlepagex}{\input{FrontPage}}

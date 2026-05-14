@@ -1,0 +1,61 @@
+\begin{thebibliography}{10}
+
+\bibitem{aversano2021digital}
+Gianmarco Aversano, Marco Ferrarotti, and Alessandro Parente.
+\newblock Digital twin of a combustion furnace operating in flameless
+  conditions: reduced-order model development from cfd simulations.
+\newblock {\em Proceedings of the Combustion Institute}, 38(4):5373--5381,
+  2021.
+
+\bibitem{corrochano2023higher}
+Adri{\'a}n Corrochano, Giuseppe D’Alessio, Alessandro Parente, and Soledad
+  Le~Clainche.
+\newblock Higher order dynamic mode decomposition to model reacting flows.
+\newblock {\em International Journal of Mechanical Sciences}, 249:108219, 2023.
+
+\bibitem{de2000multilinear}
+Lieven De~Lathauwer, Bart De~Moor, and Joos Vandewalle.
+\newblock A multilinear singular value decomposition.
+\newblock {\em SIAM journal on Matrix Analysis and Applications},
+  21(4):1253--1278, 2000.
+
+\bibitem{giuntini2024continuously}
+Lorenzo Giuntini, Chiara Novelli, M~Mustafa Kamal, Marianna Cafiero, Chiara
+  Galletti, Axel Coussement, and Alessandro Parente.
+\newblock Continuously-staged nh3 oxidation in a stagnation-point reverse-flow
+  combustor for low nox emissions.
+\newblock {\em Proceedings of the Combustion Institute}, 40(1-4):105674, 2024.
+
+\bibitem{grassi2025}
+Giovanni Grassi, Luc Vervisch, and Pascale Domingo.
+\newblock Reduced chemistry for numerical combustion of nh3/h2 fuel blend.
+\newblock {\em Combustion and Flame}, 279:114287, 2025.
+
+\bibitem{leclainche2017}
+Soledad Le~Clainche and Jos{\'e}~M Vega.
+\newblock Higher order dynamic mode decomposition.
+\newblock {\em SIAM Journal on Applied Dynamical Systems}, 16(2):882--925,
+  2017.
+
+\bibitem{parente2013principal}
+Alessandro Parente and James~C Sutherland.
+\newblock Principal component analysis of turbulent combustion data: Data
+  pre-processing and manifold sensitivity.
+\newblock {\em Combustion and flame}, 160(2):340--350, 2013.
+
+\bibitem{sitcomb}
+Xavier Petit, Guillaume Ribert, G~Lartigue, and P~Domingo.
+\newblock Large-eddy simulation of supercritical fluid injection.
+\newblock {\em The Journal of Supercritical Fluids}, 84:61--73, 2013.
+
+\bibitem{schmid2010}
+Peter~J Schmid.
+\newblock Dynamic mode decomposition of numerical and experimental data.
+\newblock {\em Journal of fluid mechanics}, 656:5--28, 2010.
+
+\bibitem{williams1995gaussian}
+Christopher Williams and Carl Rasmussen.
+\newblock Gaussian processes for regression.
+\newblock {\em Advances in neural information processing systems}, 8, 1995.
+
+\end{thebibliography}

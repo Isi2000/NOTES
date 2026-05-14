@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Introduction}{6}{section.1}%
+\contentsline {section}{\numberline {2}HODMD Analysis of the NH$_3$/H$_2$ Non-Premixed Reacting Mixing Layer}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}NH$_3$/H$_2$ non-premixed mixing layer}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Methods}{7}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}High Order Dynamic Mode Decomposition}{7}{subsubsection.2.2.1}%
+\contentsline {paragraph}{Physical interpretation}{8}{equation.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.2}Multidimensional Iterative HODMD (mdHODMDit)}{8}{subsubsection.2.2.2}%
+\contentsline {paragraph}{High Order Singular Value Decompostion}{8}{subsubsection.2.2.2}%
+\contentsline {paragraph}{Identification of Physical Frequencies}{10}{figure.caption.2}%
+\contentsline {subsection}{\numberline {2.3}Results and Discussion}{10}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Data Structure and Preprocessing}{10}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Parameter Calibration}{11}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Frequency--Amplitude Spectra and associated DMD modes}{11}{subsubsection.2.3.3}%
+\contentsline {paragraph}{Case 1200\nobreakspace {}K}{11}{subsubsection.2.3.3}%
+\contentsline {paragraph}{Case 1500\nobreakspace {}K}{12}{figure.caption.4}%
+\contentsline {paragraph}{Case 1700\nobreakspace {}K}{13}{figure.caption.7}%
+\contentsline {section}{\numberline {3}HOSVD+GPR Surrogate Model for the ULB Hydrogen-Fuelled Flameless Furnace}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}ULB hydrogen-fueled flameless furnace}{15}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Methods}{16}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}HOSVD+GPR reduced order model for parametric interpolation}{16}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Results and Discussion}{17}{subsection.3.3}%

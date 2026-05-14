@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+
+% ── Template infrastructure (files copied from template directory) ──────────
+
+\input{packages}   % template package list
+\input{inputs}     % document-specific metadata
+\input{macros}     % template style definitions (DO NOT TOUCH)
+
+% ── Extra packages needed by existing content (not in template packages.tex)
+
+
+% ── Graphics search paths: content images in IMAGES/, template assets in figures/
+\graphicspath{{IMAGES/}{figures/}}
+
+% ── Theorem environments (preserved from original document) ─────────────────
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+
+% ── Reviewer annotation commands ─────────────────────────────────────────────
+\newcommand{\reviewerOne}[1]{\textcolor{red}{#1}}
+\newcommand{\reviewerTwo}[1]{\textcolor{blue}{#1}}
+\newcommand{\reviewerThree}[1]{\textcolor{green}{#1}}
+\newcommand{\reviewerFour}[1]{\textcolor{pink}{#1}}
+\newcommand{\reviewerFive}[1]{\textcolor{orange}{#1}}
+
+% ===========================================================================
+\begin{document}
+% ===========================================================================
+
+% Front matter: cover, project info table, abstract, ToC (all from template)
+\input{FrontPage}
+
+% ---------------------------------------------------------------------------
+%  DOCUMENT BODY
+% ---------------------------------------------------------------------------
+\input{SECTIONS/Introduction}
+\input{SECTIONS/coria_section}              % CORIA: data + methods + results
+\input{SECTIONS/ulb_section}               % ULB: data + methods + results
+\newpage
+\bibliographystyle{plain}
+\bibliography{bib.bib}
+
+\end{document}
