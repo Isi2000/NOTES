@@ -1,7 +1,3 @@
-% ============================================================
-%  Section: Methods
-%  Input this file with \input{SECTIONS/methods}
-% ============================================================
 
 \section{Methods}
 \label{sec:methods}
@@ -51,8 +47,6 @@ HODMD is able to obtain better results because instead of looking for oscillator
 \underbrace{\mathbf{v}_{k+d} = \mathbf{A}_1\,\mathbf{v}_{k+d-1} + \mathbf{A}_2\,\mathbf{v}_{k+d-2} + \cdots + \mathbf{A}_d\,\mathbf{v}_k}_{\text{HODMD}}
 \end{equation*}
 
-
-
 \subsection{Multidimensional Iterative HODMD (mdHODMDit)}
 \label{sec:method_mdhodmd}
 
@@ -86,26 +80,20 @@ Therefore, the temporal factor matrix $\mathbf{U}^{(4)}$ is the same as before.
 \end{figure}
 \FloatBarrier
 
-
 After the DMD eigendecomposition,the reduced spatial DMD modes are projected back to the original tensor dimensions by contracting with the spatial
 factor matrices $\mathbf{U}^{(1)}, \mathbf{U}^{(2)}, \mathbf{U}^{(3)}$ and the core tensor, recovering physically interpretable spatial structures in the full variable-$x$-$y$ space without ever vectorising the multi-variable field, from this the algorithm is called mutlidimensional.
 
 Then, the procedure is iterated. The DMD reconstruction is used to form an updated snapshot tensor, which is re-compressed via HOSVD. The spatial ranks $r_x$, $r_y$, and $r_{\mathrm{var}}$ retained after truncation are monitored: if they 
 differ from those of the previous iteration, the HODMD step is repeated on the new compressed temporal matrix $\hat{V}_1^K$. Convergence is declared when the spatial ranks no longer change between two successive iterations. This can be intepreted as the low-rank spatial  structure implied by the DMD modes is the same as the one identified by HOSVD. 
-% -------------------------------------------------------
 
 \subsubsection{Identification of Physical Frequencies}
 \label{sec:coria_frequencies}
-% -------------------------------------------------------
 Once the analysis is calibrated and run for a sufficient number of parameters, one can find physical frequencies and modes. In order to find these modes, one must look at the frequency amplitude spectra, focusing on the peaks, i.e. frequencies. Physical modes should exist regardless of how the observer matrix is built and Therefore be consistent across a wide range of $d$ parameter. Moreover relevant structures should be associated to relevant eigenvectors and not ones close to noise threshold, thus beeing resilient to various tolerance thresholds $\varepsilon_{\mathrm{tol}}$.
-
-% -------------------------------------------------------
 
 \subsection{HOSVD+GPR reduced order model for parametric interpolation}
 \label{sec:method_hosvd_gpr}
 
 The method is developed in the scope of surragate modeling. In particular, a crucial step towards the realization of fully working digital twins is the ability of leveraging high fidelity simulations to generate data for new operating conditions. In other words, the goal is that of beeing able to predict the behaviour of the system in unseen points of the operating condition space, so in practice the task is that of super resolution. Proper Orthogonal Decomposition (POD) combined with Gaussian Process Regression (GPR) has been succesfully employed in the past for this task~\cite{aversano2021digital}. The approach proposed here extends it to tensorial data by replacing the matrix SVD with High Order Singular Value Decomposition (HOSVD)~\cite{de2000multilinear}.
-
 
 \subsubsection*{Decomposition}
 
@@ -140,7 +128,6 @@ The full pipeline is summarised schematically in Figure~\ref{fig:ulb_pipeline}.
 \FloatBarrier
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.80\textwidth]{../IMAGES/METHODS/hosvd_pipeline.png}
     \caption{[FIGURE: schematic of the HOSVD+GPR pipeline. Add when available.]}
     \label{fig:ulb_pipeline}
 \end{figure}

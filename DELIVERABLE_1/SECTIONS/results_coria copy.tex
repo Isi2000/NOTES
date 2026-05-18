@@ -36,9 +36,6 @@ and tolerance values
 \end{equation}
 The same tolerance $\varepsilon_{\mathrm{tol}}$ governs both the HOSVD truncation (equation~\eqref{eq:hosvd_trunc}) and the amplitude threshold applied to retain DMD modes.
 
-
-
-
 \subsubsection{Frequency--Amplitude Spectra and associated DMD modes}
 \label{sec:freq_amplitude}
 
@@ -95,7 +92,6 @@ The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1200K
 \end{figure}
 \FloatBarrier
 
-
 \paragraph{Case 1500~K}
 \label{sec:spectrum_1500K}
 
@@ -108,8 +104,6 @@ The 1500~K spectrum, shown in Figure~\ref{fig:spectrum_1500K_combination}, exhib
     \label{fig:spectrum_1500K_combination}
 \end{figure}
 \FloatBarrier
-
-
 
 The associated modes to the main harmonic frequencies circled in red in Figure~\ref{fig:spectrum_1500K_combination} are shown in Figure~\ref{fig:modes_1500K}.
 
@@ -184,7 +178,6 @@ Figure~\ref{fig:comb_modes_1500K} shows the modes associated to the quasi-period
 \end{figure}
 \FloatBarrier
 
-
 \paragraph{Case 1700~K}
 \label{sec:spectrum_1700K}
 
@@ -204,7 +197,6 @@ The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1700K
 \FloatBarrier
 \begin{figure}[h!]
     \centering
-    % Top row: three main harmonics
     \begin{subfigure}[b]{0.32\textwidth}
         \centering
         \includegraphics[width=\linewidth]{IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.41.png}
@@ -226,7 +218,6 @@ The associated modes to the highlighted points in Figure~\ref{fig:spectrum_1700K
         \label{fig:modes_1700K_3}
     \end{subfigure}
     \\[1em]
-    % Bottom row: modes at blue-marked frequencies
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{IMAGES/DMD_MODES_main_freqs_T1700/DMD_mode_St0.11.png}
@@ -291,12 +282,9 @@ $T$     & 0.0484 & 0.0626 & 22.6\,\% \\
 
 HOSVD+GPR outperforms POD+GPR on every thermochemical variable. The largest gains appear for the minor species: NO$_2$ (74.8\%), NH$_2$ (70.6\%), and H$_2$ (58.3\%). Temperature, the smoothest field, still yields a 22.6\% reduction in error.
 
-% [DISCUSS: comment on why the minor species benefit more — you likely have an intuition from looking at the fields (e.g., sharper spatial gradients, stronger sensitivity to $\phi$, larger relative errors in the POD case)]
-
 \FloatBarrier
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.88\textwidth]{../IMAGES/RESULTS/ulb_nrmse_comparison.png}
     \caption{[FIGURE: bar chart of NRMSE comparison across all variables. Add when available.]}
     \label{fig:ulb_nrmse}
 \end{figure}
@@ -307,7 +295,6 @@ Figure~\ref{fig:ulb_temp_reconstruction} shows the temperature field reconstruct
 \FloatBarrier
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.88\textwidth]{../IMAGES/RESULTS/ulb_temperature_reconstruction.png}
     \caption{Temperature field reconstruction for a held-out condition ($\phi = 1.3$). Left: CFD reference. Centre: HOSVD+GPR (NRMSE\,=\,0.0484). Right: POD+GPR (NRMSE\,=\,0.0626). [Add figure when available.]}
     \label{fig:ulb_temp_reconstruction}
 \end{figure}
@@ -315,8 +302,3 @@ Figure~\ref{fig:ulb_temp_reconstruction} shows the temperature field reconstruct
 
 \subsubsection*{Discussion}
 
-% [DISCUSS: explain why the multilinear structure is a good match for this problem — the parameters $\phi$, $H_2$, $p$ have physically distinct effects on the flow, so separate factor matrices are a natural fit. This is why freezing $\mathbf{U}_{H_2}$ and $\mathbf{U}_p$ works: the model does not need to re-learn their effect during interpolation]
-
-% [DISCUSS: limitations — interpolation is currently only along $\phi$; why was $\phi$ the natural active dimension? What would it take to extend to simultaneous multi-parameter GPR?]
-
-% [DISCUSS: future directions — the poster mentions extending to the JHC burner with more configurations; what does that require in terms of data and what challenges do you anticipate?]
